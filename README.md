@@ -8,40 +8,41 @@ super agentes especialistas em Recrutamento & Seleção: **Sofia** (Triagem), **
 
 | Seção | Conteúdo |
 | --- | --- |
-| Hero | Demo animada de atribuição de tarefa à Sofia + métricas (340% ROI, −67% TTH) |
-| Diferença | Chatbot vs. Automatizador vs. Super Agente |
-| Camada 1 | Poderes humanos (@assign, chat, @mention, 500+ habilidades) |
-| Camada 2 | Superpoderes (24/7, Ambient, Configure-e-esqueça, Self-learning) |
-| Camada 3 | Os 7 pilares da superinteligência (tabs interativas) |
-| A família | Cards dos 5 agentes com voz, skills e amostras de conversa |
-| Org | "Agentes têm gestor — o gestor é humano" |
-| Contador | 48.000 horas/ano devolvidas (count-up animado) |
-| Skills | Marquee com 60+ skills tipadas em 9 famílias |
-| Autonomia | Escada de 4 níveis: Sombra → Copiloto → Tutelado → Autônomo Total |
-| Tecnologia | 7 sistemas proprietários + stack de modelos + 50+ integrações |
-| Builder | Monte seu próprio agente sem código |
-| Entrega | Software · Copilot · Autopilot (a tese "Serviços: o Novo Software") |
-| Segurança | LGPD, SOC 2, ISO 27001, trilha de auditoria, zero retenção |
-| Depoimentos · Billing justo · FAQ · CTA final | — |
+| Hero | Aura quente + texto fantasma gigante + persona mascarada flutuante + métricas |
+| Agentes | Tabs interativas (rotação automática) + 5 cards de persona com tilt 3D |
+| Banner Builder | Painel gradiente animado — "construa o agente exato" |
+| Produto | Stepper progressivo "um briefing sobe um time inteiro" |
+| Humanamente possível | Checklist de poderes + chat demo da Vera (typing + aprovação) |
+| Contador | 4,2M tarefas executadas (count-up) |
+| Nuvem de skills | 4 fileiras de habilidades em marquee com persona central |
+| Aurora | Transição clara → escura |
+| Superpoderes | Anatomia raio-x com scrollspy dos 7 pilares |
+| Tecnologia | Dashboards neon: equalizer, matriz de pontos, radar, gauges, leaderboard |
+| Segurança | Split-face "você vê / o agente vê" + 3 cards (auditoria, zero retenção, reflexão) |
+| Billing | Cartão "fair billing" com sheen animado |
+| FAQ · CTA final | Accordion + painel gradiente com os 5 agentes |
 
 ## Stack
 
 HTML + CSS + JavaScript puros, sem build. Fontes via Google Fonts
-(Space Grotesk, Inter, JetBrains Mono). Avatares dos agentes são SVGs originais inline.
+(Space Grotesk, Inter, JetBrains Mono). Toda a arte — os bustos humanos com
+visores iridescentes, a figura raio-x e as visualizações de dados — é SVG/CSS
+original feito à mão.
 
 ## Como rodar
 
 ```bash
-# qualquer servidor estático serve; por exemplo:
 python3 -m http.server 8000
-# depois abra http://localhost:8000
+# abra http://localhost:8000
 ```
 
 Ou simplesmente abra `index.html` no navegador.
 
 ## Design system
 
-- **Base:** verde-tinta `#081511` · creme `#f6f3ea` · papel `#fdfcf8`
-- **Acento:** lima elétrico `#c8f169` · menta `#2fbf8f`
-- **Agentes:** Sofia `#7c5cff` · Rafael `#ff7847` · Luna `#4cc9f0` · Iris `#ffc53d` · Vera `#ff5c8a`
-- Acessibilidade: `prefers-reduced-motion` respeitado em todas as animações.
+- **Base clara:** branco `#ffffff` · cinza `#f6f5fa` · tinta `#0e0d13`
+- **Gradiente da marca:** rosa `#ff3dd8` → violeta `#8a5cff` → azul `#3fa9ff` (+ âmbar `#ffb02e`)
+- **Metade escura:** preto `#060609` com neon verde `#46f7a7` e ciano `#35d6ff`
+- **Bordas animadas:** `@property --ga` + `conic-gradient` com máscara
+- **Motions:** scrollspy (anatomia), tilt 3D, count-up, marquees, typing, sheen, aurora
+- Acessibilidade: `prefers-reduced-motion` respeitado em todas as animações
