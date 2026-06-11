@@ -3,1033 +3,641 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harpiö Mind · Super Agentes de R&S — A primeira HRtech AI-native do Brasil</title>
-  <meta name="description" content="Sofia, Rafael, Luna, Iris e Vera — cinco super agentes de IA especialistas em Recrutamento & Seleção. Com memória, autonomia e 500+ habilidades, operando 24/7 dentro do seu funil." />
-  <meta property="og:title" content="Harpiö Mind · Super Agentes de R&S" />
-  <meta property="og:description" content="O primeiro time digital de R&S do Brasil. Você decide até onde a máquina vai." />
+  <title>Harpiö Mind · Super Agentes de R&S — humanos com superpoderes</title>
+  <meta name="description" content="Uma nova era para os humanos do R&S. Sofia, Rafael, Luna, Iris e Vera: super agentes de IA com memória, autonomia e 500+ habilidades, trabalhando 24/7 no seu funil." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23081511'/><text x='32' y='44' font-size='36' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23C8F169'>H</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23ff3dd8'/><stop offset='.5' stop-color='%238a5cff'/><stop offset='1' stop-color='%233fa9ff'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='32' y='45' font-size='36' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'>H</text></svg>" />
 </head>
 <body>
 
-  <!-- ============ SVG SPRITE · AVATARES ORIGINAIS DOS AGENTES ============ -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <!-- Sofia · Triagem · violeta · óculos de analista -->
-      <symbol id="av-sofia" viewBox="0 0 120 120">
-        <rect x="14" y="18" width="92" height="88" rx="30" fill="#7C5CFF"/>
-        <rect x="14" y="18" width="92" height="88" rx="30" fill="url(#shine)" opacity=".25"/>
-        <circle cx="44" cy="58" r="13" fill="none" stroke="#0B0F0D" stroke-width="4.5"/>
-        <circle cx="78" cy="58" r="13" fill="none" stroke="#0B0F0D" stroke-width="4.5"/>
-        <line x1="57" y1="58" x2="65" y2="58" stroke="#0B0F0D" stroke-width="4.5" stroke-linecap="round"/>
-        <circle cx="44" cy="58" r="4.5" fill="#0B0F0D"/>
-        <circle cx="78" cy="58" r="4.5" fill="#0B0F0D"/>
-        <path d="M48 84 Q61 92 74 84" fill="none" stroke="#0B0F0D" stroke-width="4.5" stroke-linecap="round"/>
-        <rect x="50" y="6" width="20" height="9" rx="4.5" fill="#C8F169"/>
-      </symbol>
-      <!-- Rafael · Sourcing · coral · antena de radar -->
-      <symbol id="av-rafael" viewBox="0 0 120 120">
-        <circle cx="60" cy="66" r="46" fill="#FF7847"/>
-        <circle cx="60" cy="66" r="46" fill="url(#shine)" opacity=".25"/>
-        <line x1="60" y1="20" x2="60" y2="8" stroke="#0B0F0D" stroke-width="4.5" stroke-linecap="round"/>
-        <circle cx="60" cy="6" r="5" fill="#C8F169" stroke="#0B0F0D" stroke-width="2.5"/>
-        <circle cx="44" cy="60" r="6" fill="#0B0F0D"/>
-        <circle cx="76" cy="60" r="6" fill="#0B0F0D"/>
-        <path d="M44 82 Q60 96 76 82" fill="#0B0F0D"/>
-        <path d="M22 42 Q32 34 42 40" fill="none" stroke="#0B0F0D" stroke-width="3.5" stroke-linecap="round" opacity=".35"/>
-      </symbol>
-      <!-- Luna · Monitoring · ciano · olho fechado, vigia noturna -->
-      <symbol id="av-luna" viewBox="0 0 120 120">
-        <path d="M60 12 C 92 12 110 38 108 66 C 106 94 86 110 58 108 C 28 106 12 86 14 58 C16 32 34 12 60 12 Z" fill="#4CC9F0"/>
-        <path d="M60 12 C 92 12 110 38 108 66 C 106 94 86 110 58 108 C 28 106 12 86 14 58 C16 32 34 12 60 12 Z" fill="url(#shine)" opacity=".22"/>
-        <circle cx="44" cy="60" r="6" fill="#0B0F0D"/>
-        <path d="M68 60 Q76 66 84 60" fill="none" stroke="#0B0F0D" stroke-width="4.5" stroke-linecap="round"/>
-        <path d="M48 84 Q60 90 72 84" fill="none" stroke="#0B0F0D" stroke-width="4.5" stroke-linecap="round"/>
-        <path d="M88 22 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 Z" fill="#C8F169"/>
-      </symbol>
-      <!-- Iris · Analytics · âmbar · olhos de barra de gráfico -->
-      <symbol id="av-iris" viewBox="0 0 120 120">
-        <path d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z" rx="20" fill="#FFC53D"/>
-        <path d="M60 8 L106 34 L106 86 L60 112 L14 86 L14 34 Z" fill="url(#shine)" opacity=".22"/>
-        <rect x="38" y="50" width="9" height="18" rx="4" fill="#0B0F0D"/>
-        <rect x="73" y="44" width="9" height="24" rx="4" fill="#0B0F0D"/>
-        <path d="M46 84 Q60 92 74 84" fill="none" stroke="#0B0F0D" stroke-width="4.5" stroke-linecap="round"/>
-      </symbol>
-      <!-- Vera · Comunicação · rosa · headset e sorriso largo -->
-      <symbol id="av-vera" viewBox="0 0 120 120">
-        <rect x="12" y="16" width="96" height="92" rx="46" fill="#FF5C8A"/>
-        <rect x="12" y="16" width="96" height="92" rx="46" fill="url(#shine)" opacity=".22"/>
-        <path d="M24 56 Q24 26 60 26 Q96 26 96 56" fill="none" stroke="#0B0F0D" stroke-width="5" stroke-linecap="round"/>
-        <rect x="16" y="52" width="12" height="20" rx="6" fill="#0B0F0D"/>
-        <rect x="92" y="52" width="12" height="20" rx="6" fill="#0B0F0D"/>
-        <circle cx="46" cy="62" r="5.5" fill="#0B0F0D"/>
-        <circle cx="74" cy="62" r="5.5" fill="#0B0F0D"/>
-        <path d="M44 80 Q60 94 76 80" fill="#0B0F0D"/>
-        <circle cx="34" cy="74" r="4" fill="#C8F169" opacity=".85"/>
-        <circle cx="86" cy="74" r="4" fill="#C8F169" opacity=".85"/>
-      </symbol>
-      <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#fff"/>
-        <stop offset=".55" stop-color="#fff" stop-opacity="0"/>
-      </linearGradient>
-    </defs>
-  </svg>
+<!-- ════════════════════════════════════════════════════════════
+     SPRITE · PERSONAS MASCARADAS (arte vetorial original)
+     Cada agente é um humano com um visor iridescente — a máscara
+     é o superpoder. 200 × 250 cada busto.
+═════════════════════════════════════════════════════════════ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- gradientes de visor -->
+    <linearGradient id="vis-sofia" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b15bff"/><stop offset=".5" stop-color="#6f7bff"/><stop offset="1" stop-color="#3fc6ff"/>
+    </linearGradient>
+    <linearGradient id="vis-rafael" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb02e"/><stop offset=".55" stop-color="#ff7a59"/><stop offset="1" stop-color="#ff3dd8"/>
+    </linearGradient>
+    <linearGradient id="vis-luna" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#35d6ff"/><stop offset=".55" stop-color="#46f7a7"/><stop offset="1" stop-color="#8a5cff"/>
+    </linearGradient>
+    <linearGradient id="vis-iris" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd23d"/><stop offset=".5" stop-color="#ff9a3d"/><stop offset="1" stop-color="#ff5c8a"/>
+    </linearGradient>
+    <linearGradient id="vis-vera" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff3dd8"/><stop offset=".55" stop-color="#b15bff"/><stop offset="1" stop-color="#5b6cff"/>
+    </linearGradient>
+    <linearGradient id="vis-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="neon-line" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#46f7a7"/><stop offset=".5" stop-color="#35d6ff"/><stop offset="1" stop-color="#8a5cff"/>
+    </linearGradient>
 
-  <!-- ============ BARRA DE ANÚNCIO ============ -->
-  <div class="announce">
-    <p><span class="announce__tag">Tese 2026</span> Serviços são o novo software — por que vendemos o trabalho de R&S, não só a ferramenta <a href="#entrega">Conheça os 3 modelos de entrega →</a></p>
+    <!-- ░░ molde de visor (reusado por todas as personas) ░░ -->
+    <g id="visor-detail">
+      <rect x="42" y="96" width="116" height="36" rx="18" fill="url(#vis-shine)" opacity=".5"/>
+      <circle cx="70" cy="114" r="9" fill="#0e0d13" opacity=".28"/>
+      <circle cx="130" cy="114" r="9" fill="#0e0d13" opacity=".28"/>
+      <circle cx="70" cy="114" r="3.2" fill="#fff" opacity=".9"/>
+      <circle cx="130" cy="114" r="3.2" fill="#fff" opacity=".9"/>
+      <circle cx="98" cy="104" r="1.6" fill="#fff" opacity=".8"/>
+      <circle cx="104" cy="108" r="1.2" fill="#fff" opacity=".6"/>
+      <circle cx="110" cy="103" r="1.4" fill="#fff" opacity=".7"/>
+    </g>
+
+    <!-- ░░ SOFIA · Triagem · pele clara, bob escuro com franja ░░ -->
+    <symbol id="p-sofia" viewBox="0 0 200 250">
+      <path d="M28 250 C28 208 58 188 100 188 C142 188 172 208 172 250 Z" fill="#3c3170"/>
+      <path d="M100 188 C142 188 172 208 172 250 L128 250 C128 216 116 198 100 188 Z" fill="#322a5e"/>
+      <rect x="85" y="156" width="30" height="38" rx="12" fill="#f2c19b"/>
+      <path d="M85 162 q15 12 30 0 l0 10 q-15 10 -30 0 Z" fill="#dfa87e"/>
+      <circle cx="51" cy="118" r="11" fill="#f2c19b"/><circle cx="149" cy="118" r="11" fill="#f2c19b"/>
+      <path d="M56 122 C52 70 76 48 100 48 C124 48 148 70 144 122 C142 152 124 170 100 170 C76 170 58 152 56 122 Z" fill="#f2c19b"/>
+      <path d="M52 116 C46 64 74 38 100 38 C126 38 154 64 148 116 L146 96 C140 76 128 66 100 66 C72 66 60 76 54 96 Z" fill="#241f3d"/>
+      <path d="M54 96 C60 70 76 60 100 60 C124 60 140 70 146 96 C132 88 120 84 100 84 C80 84 68 88 54 96 Z" fill="#241f3d"/>
+      <path d="M50 110 C46 140 50 156 60 166 L62 120 Z" fill="#241f3d"/>
+      <path d="M150 110 C154 140 150 156 140 166 L138 120 Z" fill="#241f3d"/>
+      <rect x="40" y="94" width="120" height="40" rx="20" fill="url(#vis-sofia)"/>
+      <use href="#visor-detail"/>
+      <path d="M100 138 q-4 9 2 11" fill="none" stroke="#dfa87e" stroke-width="3" stroke-linecap="round"/>
+      <path d="M88 158 q12 8 24 0" fill="none" stroke="#b97f57" stroke-width="3.4" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- ░░ RAFAEL · Sourcing · pele escura, fade curto ░░ -->
+    <symbol id="p-rafael" viewBox="0 0 200 250">
+      <path d="M28 250 C28 208 58 188 100 188 C142 188 172 208 172 250 Z" fill="#14532d"/>
+      <path d="M100 188 C142 188 172 208 172 250 L128 250 C128 216 116 198 100 188 Z" fill="#0f4527"/>
+      <path d="M68 196 L100 188 L132 196 L100 214 Z" fill="#f6f5fa"/>
+      <rect x="85" y="156" width="30" height="38" rx="12" fill="#8c5a3c"/>
+      <path d="M85 162 q15 12 30 0 l0 10 q-15 10 -30 0 Z" fill="#74482e"/>
+      <circle cx="51" cy="118" r="11" fill="#8c5a3c"/><circle cx="149" cy="118" r="11" fill="#8c5a3c"/>
+      <path d="M56 122 C52 70 76 48 100 48 C124 48 148 70 144 122 C142 152 124 170 100 170 C76 170 58 152 56 122 Z" fill="#8c5a3c"/>
+      <path d="M54 100 C56 60 76 42 100 42 C124 42 144 60 146 100 C146 88 142 78 134 72 C122 62 78 62 66 72 C58 78 54 88 54 100 Z" fill="#17120e"/>
+      <circle cx="64" cy="64" r="5" fill="#17120e"/><circle cx="78" cy="54" r="6" fill="#17120e"/>
+      <circle cx="96" cy="50" r="6" fill="#17120e"/><circle cx="114" cy="52" r="6" fill="#17120e"/>
+      <circle cx="130" cy="60" r="5" fill="#17120e"/>
+      <rect x="40" y="94" width="120" height="40" rx="20" fill="url(#vis-rafael)"/>
+      <use href="#visor-detail"/>
+      <path d="M100 138 q-4 9 2 11" fill="none" stroke="#74482e" stroke-width="3" stroke-linecap="round"/>
+      <path d="M86 156 q14 12 28 0" fill="none" stroke="#3d2417" stroke-width="3.6" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- ░░ LUNA · Monitoring · pele média, cabelo longo com mecha ░░ -->
+    <symbol id="p-luna" viewBox="0 0 200 250">
+      <path d="M40 250 C36 150 52 92 100 92 C148 92 164 150 160 250 Z" fill="#101726"/>
+      <path d="M28 250 C28 208 58 188 100 188 C142 188 172 208 172 250 Z" fill="#1d4ed8"/>
+      <path d="M100 188 C142 188 172 208 172 250 L128 250 C128 216 116 198 100 188 Z" fill="#173db0"/>
+      <rect x="85" y="156" width="30" height="38" rx="12" fill="#c68b66"/>
+      <path d="M85 162 q15 12 30 0 l0 10 q-15 10 -30 0 Z" fill="#aa7050"/>
+      <circle cx="51" cy="118" r="11" fill="#c68b66"/><circle cx="149" cy="118" r="11" fill="#c68b66"/>
+      <path d="M56 122 C52 70 76 48 100 48 C124 48 148 70 144 122 C142 152 124 170 100 170 C76 170 58 152 56 122 Z" fill="#c68b66"/>
+      <path d="M56 110 C50 60 74 40 100 40 C126 40 150 60 144 110 L140 86 C134 68 122 60 100 60 C78 60 66 68 60 86 Z" fill="#101726"/>
+      <path d="M100 40 C112 40 124 46 132 56 L118 64 C112 58 106 56 100 56 Z" fill="#35d6ff"/>
+      <rect x="40" y="94" width="120" height="40" rx="20" fill="url(#vis-luna)"/>
+      <use href="#visor-detail"/>
+      <path d="M100 138 q-4 9 2 11" fill="none" stroke="#aa7050" stroke-width="3" stroke-linecap="round"/>
+      <path d="M90 158 q10 6 20 0" fill="none" stroke="#7c4a2e" stroke-width="3.4" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- ░░ IRIS · Analytics · pele clara-média, coque alto ░░ -->
+    <symbol id="p-iris" viewBox="0 0 200 250">
+      <path d="M28 250 C28 208 58 188 100 188 C142 188 172 208 172 250 Z" fill="#7a3f12"/>
+      <path d="M100 188 C142 188 172 208 172 250 L128 250 C128 216 116 198 100 188 Z" fill="#653409"/>
+      <rect x="85" y="156" width="30" height="38" rx="12" fill="#e8ac7e"/>
+      <path d="M85 162 q15 12 30 0 l0 10 q-15 10 -30 0 Z" fill="#d29263"/>
+      <circle cx="100" cy="34" r="20" fill="#2b1a10"/>
+      <circle cx="51" cy="118" r="11" fill="#e8ac7e"/><circle cx="149" cy="118" r="11" fill="#e8ac7e"/>
+      <path d="M56 122 C52 70 76 48 100 48 C124 48 148 70 144 122 C142 152 124 170 100 170 C76 170 58 152 56 122 Z" fill="#e8ac7e"/>
+      <path d="M54 104 C54 62 76 44 100 44 C124 44 146 62 146 104 C140 78 126 64 100 64 C74 64 60 78 54 104 Z" fill="#2b1a10"/>
+      <rect x="40" y="94" width="120" height="40" rx="20" fill="url(#vis-iris)"/>
+      <use href="#visor-detail"/>
+      <circle cx="156" cy="142" r="4" fill="#ffd23d"/>
+      <path d="M100 138 q-4 9 2 11" fill="none" stroke="#d29263" stroke-width="3" stroke-linecap="round"/>
+      <path d="M88 157 q12 9 24 0" fill="none" stroke="#9c6038" stroke-width="3.4" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- ░░ VERA · Comunicação · pele escura-média, cachos volumosos ░░ -->
+    <symbol id="p-vera" viewBox="0 0 200 250">
+      <path d="M28 250 C28 208 58 188 100 188 C142 188 172 208 172 250 Z" fill="#86134e"/>
+      <path d="M100 188 C142 188 172 208 172 250 L128 250 C128 216 116 198 100 188 Z" fill="#700f41"/>
+      <rect x="85" y="156" width="30" height="38" rx="12" fill="#a06441"/>
+      <path d="M85 162 q15 12 30 0 l0 10 q-15 10 -30 0 Z" fill="#875231"/>
+      <circle cx="58" cy="64" r="18" fill="#1f1410"/><circle cx="84" cy="48" r="20" fill="#1f1410"/>
+      <circle cx="114" cy="46" r="20" fill="#1f1410"/><circle cx="142" cy="62" r="18" fill="#1f1410"/>
+      <circle cx="48" cy="96" r="16" fill="#1f1410"/><circle cx="152" cy="96" r="16" fill="#1f1410"/>
+      <circle cx="46" cy="128" r="14" fill="#1f1410"/><circle cx="154" cy="128" r="14" fill="#1f1410"/>
+      <circle cx="51" cy="118" r="11" fill="#a06441"/><circle cx="149" cy="118" r="11" fill="#a06441"/>
+      <path d="M56 122 C52 70 76 48 100 48 C124 48 148 70 144 122 C142 152 124 170 100 170 C76 170 58 152 56 122 Z" fill="#a06441"/>
+      <path d="M56 104 C58 66 76 50 100 50 C124 50 142 66 144 104 C136 80 122 70 100 70 C78 70 64 80 56 104 Z" fill="#1f1410"/>
+      <rect x="40" y="94" width="120" height="40" rx="20" fill="url(#vis-vera)"/>
+      <use href="#visor-detail"/>
+      <circle cx="44" cy="142" r="4.5" fill="#ffd23d"/><circle cx="156" cy="142" r="4.5" fill="#ffd23d"/>
+      <path d="M100 138 q-4 9 2 11" fill="none" stroke="#875231" stroke-width="3" stroke-linecap="round"/>
+      <path d="M84 155 q16 14 32 0" fill="none" stroke="#4a2a18" stroke-width="3.8" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- ░░ figura raio-x para a seção Superpoderes ░░ -->
+    <symbol id="p-xray" viewBox="0 0 200 250">
+      <path d="M28 250 C28 208 58 188 100 188 C142 188 172 208 172 250 Z" fill="#0c0c14" stroke="url(#neon-line)" stroke-width="1.6"/>
+      <rect x="85" y="156" width="30" height="38" rx="12" fill="#0c0c14" stroke="url(#neon-line)" stroke-width="1.6"/>
+      <path d="M56 122 C52 70 76 48 100 48 C124 48 148 70 144 122 C142 152 124 170 100 170 C76 170 58 152 56 122 Z" fill="#0c0c14" stroke="url(#neon-line)" stroke-width="1.6"/>
+      <rect x="40" y="94" width="120" height="40" rx="20" fill="none" stroke="url(#neon-line)" stroke-width="1.6" stroke-dasharray="5 6"/>
+      <path d="M64 70 C74 60 86 56 100 56 M100 188 C120 188 138 194 152 206 M48 226 C60 212 78 204 100 204" fill="none" stroke="#35d6ff" stroke-width="1" stroke-dasharray="2 6" opacity=".7"/>
+      <circle cx="100" cy="78" r="3" fill="#46f7a7"/><circle cx="100" cy="114" r="3" fill="#35d6ff"/>
+      <circle cx="100" cy="176" r="3" fill="#8a5cff"/><circle cx="64" cy="206" r="3" fill="#ff3dd8"/>
+      <circle cx="136" cy="206" r="3" fill="#ffb02e"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ════════════════ ANÚNCIO ════════════════ -->
+<div class="announce">
+  <p><span class="announce__new">novo</span> A tese “Serviços: o Novo Software”, aplicada a R&S — conheça o modelo Autopilot <a href="#tecnologia">explorar →</a></p>
+</div>
+
+<!-- ════════════════ HEADER ════════════════ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#" class="logo" aria-label="Harpiö — início">
+      <span class="logo__mark">H</span><span class="logo__word">harpiö</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#agentes">Agentes</a>
+      <a href="#produto">Produto</a>
+      <a href="#superpoderes">Superpoderes</a>
+      <a href="#tecnologia">Tecnologia</a>
+      <a href="#seguranca">Segurança</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header__cta">
+      <a href="#" class="btn btn--ghost">Entrar</a>
+      <a href="#cta-final" class="btn btn--grad">Testar Super Agentes</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
+</header>
 
-  <!-- ============ HEADER ============ -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="#" class="logo" aria-label="Harpiö — início">
-        <span class="logo__mark">H</span>
-        <span class="logo__word">harpiö<span class="logo__dot">.</span></span>
-      </a>
-      <nav class="nav" id="nav" aria-label="Navegação principal">
-        <a href="#agentes">Agentes</a>
-        <a href="#superinteligencia">Superinteligência</a>
-        <a href="#tecnologia">Tecnologia</a>
-        <a href="#entrega">Modelos de entrega</a>
-        <a href="#seguranca">Segurança</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <div class="header__cta">
-        <a href="#" class="btn btn--ghost">Entrar</a>
-        <a href="#cta-final" class="btn btn--primary">Ver agentes ao vivo</a>
-      </div>
-      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+<main>
+
+<!-- ════════════════ HERO ════════════════ -->
+<section class="hero">
+  <div class="hero__aura" aria-hidden="true"></div>
+  <span class="hero__ghost" aria-hidden="true">Super<br/>Agentes</span>
+  <div class="container hero__inner">
+    <div class="hero__persona reveal" id="hero-persona" aria-hidden="true">
+      <div class="hero__halo"></div>
+      <svg class="hero__bust"><use href="#p-sofia"/></svg>
+      <span class="hero__chipfloat hf-1">✓ 240 CVs triados · 17h42</span>
+      <span class="hero__chipfloat hf-2">⚡ shortlist com evidência</span>
+      <span class="hero__chipfloat hf-3">24/7 · modo Tutelado</span>
     </div>
-  </header>
-
-  <main>
-
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero__glow hero__glow--1"></div>
-      <div class="hero__glow hero__glow--2"></div>
-      <div class="hero__grid-bg"></div>
-
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <span class="chip chip--lime reveal">
-            <span class="chip__pulse"></span> Harpiö Mind · Super Agentes de R&S
-          </span>
-          <h1 class="reveal d1">Contrate o seu primeiro<br/><span class="grad-text">time digital de R&S.</span></h1>
-          <p class="hero__sub reveal d2">
-            Sofia, Rafael, Luna, Iris e Vera — cinco colegas de IA com memória, autonomia
-            e mais de 500 habilidades, trabalhando 24/7 dentro do seu funil de contratação.
-            <strong>Você decide até onde a máquina vai.</strong>
-          </p>
-          <div class="hero__actions reveal d3">
-            <a href="#cta-final" class="btn btn--lime btn--lg">Ver os 5 agentes em uma vaga sua</a>
-            <a href="#agentes" class="btn btn--outline btn--lg">Conhecer o time ↓</a>
-          </div>
-          <ul class="hero__stats reveal d4">
-            <li><strong>340%</strong><span>ROI médio em 12 meses</span></li>
-            <li><strong>−67%</strong><span>time-to-hire</span></li>
-            <li><strong>48.000h</strong><span>economizadas / ano</span></li>
-            <li><strong>&lt;3m</strong><span>payback médio</span></li>
-          </ul>
-        </div>
-
-        <!-- Mockup: chat de atribuição de tarefa ao agente -->
-        <div class="hero__demo reveal d2" aria-hidden="true">
-          <div class="chatcard">
-            <div class="chatcard__bar">
-              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
-              <span class="chatcard__title">Harpiö Flow · Vaga: Analista de Crédito Pleno</span>
-            </div>
-            <div class="chatcard__body" id="chat-demo">
-              <div class="msg msg--user">
-                <div class="msg__bubble"><span id="typed-cmd"></span><span class="caret"></span></div>
-                <span class="msg__who">Você · Recrutador(a)</span>
-              </div>
-              <div class="msg msg--agent" id="agent-reply">
-                <div class="msg__avatar"><svg><use href="#av-sofia"/></svg></div>
-                <div>
-                  <div class="msg__bubble msg__bubble--agent">
-                    <strong>Pode deixar.</strong> 240 currículos recebidos — triagem em lote iniciada.
-                    <div class="progress"><div class="progress__fill" id="progress-fill"></div></div>
-                    <span class="progress__label" id="progress-label">0 de 240 analisados</span>
-                  </div>
-                  <span class="msg__who">Sofia · Agente de Triagem · <em>modo Tutelado</em></span>
-                </div>
-              </div>
-              <div class="msg msg--agent msg--result" id="agent-result">
-                <div class="msg__avatar"><svg><use href="#av-sofia"/></svg></div>
-                <div>
-                  <div class="msg__bubble msg__bubble--agent">
-                    ✦ <strong>Shortlist pronta às 17h42.</strong> Top 20 com nota por critério,
-                    evidência do CV linha a linha e 3 red flags sinalizadas — sem drama.
-                    <div class="minilist">
-                      <span><b>92</b> M. Tavares — hard skills 38/40 · sênior ✓</span>
-                      <span><b>88</b> J. Okamoto — regulação de sinistros ✓</span>
-                      <span><b>85</b> R. Ferraz — gap 2023 <i>(contexto pedido à Vera)</i></span>
-                    </div>
-                  </div>
-                  <span class="msg__who">Revisão humana pendente · você é o juiz</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- avatares flutuantes -->
-          <div class="float float--rafael"><svg><use href="#av-rafael"/></svg><span>Rafael · Sourcing</span></div>
-          <div class="float float--luna"><svg><use href="#av-luna"/></svg><span>Luna · Monitoring</span></div>
-          <div class="float float--iris"><svg><use href="#av-iris"/></svg><span>Iris · Analytics</span></div>
-          <div class="float float--vera"><svg><use href="#av-vera"/></svg><span>Vera · Comunicação</span></div>
-        </div>
-      </div>
-
-      <!-- Faixa de confiança -->
-      <div class="trust">
-        <div class="container">
-          <p class="trust__label">Aprovado por líderes de RH de</p>
-          <div class="trust__marquee">
-            <div class="trust__track">
-              <span>Ambev</span><span>·</span><span>Nubank</span><span>·</span><span>iFood</span><span>·</span>
-              <span>Mercado Livre</span><span>·</span><span>Stone</span><span>·</span><span>XP Inc.</span><span>·</span>
-              <span>Ambev</span><span>·</span><span>Nubank</span><span>·</span><span>iFood</span><span>·</span>
-              <span>Mercado Livre</span><span>·</span><span>Stone</span><span>·</span><span>XP Inc.</span><span>·</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ NÃO É CHATBOT ============ -->
-    <section class="section section--cream" id="diferenca">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="eyebrow">Isto não é um chatbot</span>
-          <h2>Chatbot responde. Automação repete.<br/><span class="grad-text-warm">Super agente trabalha.</span></h2>
-          <p>Três coisas que o mercado embaralha — e que mudam completamente o que você recebe no fim do dia.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card card--flat reveal">
-            <div class="card__icon">💬</div>
-            <h3>Chatbot</h3>
-            <p>Reativo. Responde quando perguntado. Não decide, não age fora da janela de chat. Você continua fazendo o trabalho.</p>
-            <span class="tag tag--muted">o que o mercado vende</span>
-          </article>
-          <article class="card card--flat reveal d1">
-            <div class="card__icon">⚙️</div>
-            <h3>Automatizador</h3>
-            <p>Determinístico. Faz “se A, então B”. Não entende contexto novo — segue regras rígidas até quebrarem em silêncio.</p>
-            <span class="tag tag--muted">o que o legado chama de IA</span>
-          </article>
-          <article class="card card--dark reveal d2">
-            <div class="card__icon">⚡</div>
-            <h3>Super Agente</h3>
-            <p>Autônomo. Tem memória, decide sozinho, executa em sistemas externos, aprende com feedback — e trabalha quando ninguém está olhando.</p>
-            <span class="tag tag--lime">o que a Harpiö construiu</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CAMADA 1 · PODERES HUMANOS ============ -->
-    <section class="section" id="poderes">
-      <div class="container split">
-        <div class="split__copy">
-          <span class="eyebrow reveal">Camada 1 · Poderes humanos</span>
-          <h2 class="reveal d1">Trate o agente como<br/>um colega de time.</h2>
-          <p class="lead reveal d2">Um(a) recrutador(a) júnior que já entendeu a vaga e está pronto para receber tarefas — no mesmo canal em que você já trabalha.</p>
-          <ul class="featlist">
-            <li class="reveal"><span class="featlist__ico">＠</span><div><h4>Atribua tarefas</h4><p>“Sofia, tria os 240 CVs do Analista de Crédito e devolve o top 20 até as 18h.” Pronto — ela conhece o perfil fechado com o gestor.</p></div></li>
-            <li class="reveal d1"><span class="featlist__ico">💬</span><div><h4>Converse</h4><p>“Rafael, como está o pool de DevOps?” — ele responde com números, links e pode até propor o próximo passo.</p></div></li>
-            <li class="reveal d2"><span class="featlist__ico">✏️</span><div><h4>Mencione em qualquer lugar</h4><p>“@Vera, escreve um e-mail respeitoso pedindo contexto sobre o gap de 2022–23.” Ela já sabe quem é o candidato e qual é o tom da casa.</p></div></li>
-            <li class="reveal d3"><span class="featlist__ico">🧰</span><div><h4>500+ habilidades humanas</h4><p>Enviar e-mail, agendar entrevista, mover etapa, redigir proposta, montar relatório — tudo que um colega faria, ele faz.</p></div></li>
-          </ul>
-        </div>
-        <div class="split__visual reveal d2">
-          <div class="panel panel--mention">
-            <div class="panel__row"><span class="panel__chip">Pipeline · Engenheiro DevOps Sr</span></div>
-            <div class="panel__candidate">
-              <div class="panel__avatar">DC</div>
-              <div><strong>Diego C.</strong><span>Etapa: Teste técnico · 9 dias parado</span></div>
-              <span class="panel__flag">⚠ atenção</span>
-            </div>
-            <div class="panel__mention">
-              <span class="panel__at">@Luna</span> esse candidato está parado há quanto tempo? Vale lembrete?
-            </div>
-            <div class="panel__answer">
-              <div class="msg__avatar msg__avatar--sm"><svg><use href="#av-luna"/></svg></div>
-              <p><strong>9 dias — 3 acima da média da casa.</strong> Sugiro lembrete gentil hoje. Quer que a Vera escreva? Rascunho pronto em 20s.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CAMADA 2 · SUPERPODERES ============ -->
-    <section class="section section--dark" id="superpoderes">
-      <div class="container">
-        <div class="section__head section__head--light reveal">
-          <span class="eyebrow eyebrow--lime">Camada 2 · Superpoderes</span>
-          <h2>O que nenhum humano<br/>faria sozinho.</h2>
-          <p>Porque o humano dorme, tira férias e tem oito horas de jornada. O super agente, não.</p>
-        </div>
-        <div class="grid-4">
-          <article class="card card--glass reveal">
-            <div class="card__icon card__icon--lime">🌙</div>
-            <h3>24 / 7</h3>
-            <p>Segunda, 8h: os 47 currículos que chegaram no domingo já estão triados, com nota e shortlist sugerida. Você só revisa.</p>
-          </article>
-          <article class="card card--glass reveal d1">
-            <div class="card__icon card__icon--lime">📡</div>
-            <h3>Ambient</h3>
-            <p>Trabalha em silêncio no fundo. Candidato parado, vaga em risco, talento que voltou ao mercado — você só ouve o que importa.</p>
-          </article>
-          <article class="card card--glass reveal d2">
-            <div class="card__icon card__icon--lime">🔁</div>
-            <h3>Configure e esqueça</h3>
-            <p>“Todo candidato da vaga X recebe teste em 2h; acima de 70, cultural fit na minha agenda.” Vale por 6 meses e 200 candidatos.</p>
-          </article>
-          <article class="card card--glass reveal d3">
-            <div class="card__icon card__icon--lime">📈</div>
-            <h3>Self-learning</h3>
-            <p>Cada calibragem sua vira critério. Em 30 dias, a Sofia “pensa como você” para aquela vaga — sem retreinar modelo nenhum.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CAMADA 3 · SUPERINTELIGÊNCIA · TABS ============ -->
-    <section class="section" id="superinteligencia">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="eyebrow">Camada 3 · Superinteligência</span>
-          <h2>Os 7 pilares que separam<br/>um agente de uma macro.</h2>
-          <p>Cada pilar tem implementação proprietária — e um efeito direto no seu dia de trabalho.</p>
-        </div>
-
-        <div class="tabs reveal d1">
-          <div class="tabs__nav" role="tablist" aria-label="Pilares da superinteligência">
-            <button class="tabs__btn is-active" role="tab" aria-selected="true" data-tab="memoria">01 · Memória</button>
-            <button class="tabs__btn" role="tab" aria-selected="false" data-tab="conhecimento">02 · Conhecimento</button>
-            <button class="tabs__btn" role="tab" aria-selected="false" data-tab="colaboracao">03 · Colaboração</button>
-            <button class="tabs__btn" role="tab" aria-selected="false" data-tab="habilidades">04 · Habilidades</button>
-            <button class="tabs__btn" role="tab" aria-selected="false" data-tab="autonomia">05 · Autonomia</button>
-            <button class="tabs__btn" role="tab" aria-selected="false" data-tab="ambiente">06 · Ambiente</button>
-            <button class="tabs__btn" role="tab" aria-selected="false" data-tab="reflexao">07 · Reflexão</button>
-          </div>
-
-          <div class="tabs__panel is-active" id="tab-memoria" role="tabpanel">
-            <div class="tabs__grid">
-              <div>
-                <h3>Um agente sem memória é um colega que se apresenta toda manhã.</h3>
-                <p>O agente lembra que você definiu o perfil de DevOps com o Roberto da TI em outubro. Lembra que o gestor de Vendas detesta candidato que não pesquisou a empresa. Lembra que a Maria do RH prefere shortlist em CSV. <strong>Você não conta a história da empresa toda vez. Ele já sabe.</strong></p>
-                <ul class="ticks">
-                  <li>Memória de curto prazo — o thread aberto agora</li>
-                  <li>Memória de trabalho — a vaga em que ele está mexendo</li>
-                  <li>Memória de longo prazo — “o jeito da casa”</li>
-                  <li>Memória episódica — “da última vez que abrimos essa vaga…”</li>
-                </ul>
-              </div>
-              <div class="tabs__art">
-                <div class="memocard">
-                  <span class="memocard__k">memória recuperada</span>
-                  <p>“Roberto (TI) <em>prefere</em> background em SRE” <b>conf. 0,94</b></p>
-                  <p>“Gestor Vendas <em>reprova</em> candidato sem pesquisa” <b>conf. 0,91</b></p>
-                  <p>“Maria (RH) <em>prefere</em> shortlist em CSV” <b>conf. 0,89</b></p>
-                  <span class="memocard__note">confiança decai com o tempo — como na cabeça de um recrutador</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tabs__panel" id="tab-conhecimento" role="tabpanel" hidden>
-            <div class="tabs__grid">
-              <div>
-                <h3>Três rolodex ligados ao mesmo tempo.</h3>
-                <p>Como uma headhunter sênior: ela não decora cada telefone — sabe onde procurar e em segundos tem o histórico completo.</p>
-                <ul class="ticks">
-                  <li><strong>Rolodex interno</strong> — vagas, candidatos, feedbacks, decisões de hire/no-hire</li>
-                  <li><strong>Rolodex conectado</strong> — Gmail, Drive, LinkedIn, ATS legado</li>
-                  <li><strong>Rolodex do mundo</strong> — salário de mercado, notícias, perfis públicos em tempo real</li>
-                </ul>
-                <p class="footnote">Busca híbrida (keyword + semântica) com reranking: ~18% mais relevante que qualquer método isolado.</p>
-              </div>
-              <div class="tabs__art">
-                <div class="memocard">
-                  <span class="memocard__k">retrieval permission-aware</span>
-                  <p>O agente nunca vê mais do que <em>o usuário que o invocou</em> pode ver.</p>
-                  <p>Permissão aplicada no nível da linha do banco — não no prompt.</p>
-                  <span class="memocard__note">RLS · BM25 + vetorial · reciprocal rank fusion</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tabs__panel" id="tab-colaboracao" role="tabpanel" hidden>
-            <div class="tabs__grid">
-              <div>
-                <h3>Nenhum agente trabalha sozinho.</h3>
-                <p>A Sofia tria, passa para a Vera comunicar, que passa para a Iris medir o ciclo — sem você orquestrar manualmente. E o humano segue como decisor final, sempre.</p>
-                <ul class="ticks">
-                  <li>Com humanos — você revisa, aprova, calibra</li>
-                  <li>Com agentes — hand-off contextual entre Sofia, Rafael, Luna, Iris e Vera</li>
-                  <li>Com sistemas — ATS, e-mail, agenda, LinkedIn, cada um com sua permissão</li>
-                </ul>
-              </div>
-              <div class="tabs__art">
-                <div class="handoff">
-                  <div class="handoff__node"><svg><use href="#av-sofia"/></svg><span>triou 240</span></div>
-                  <span class="handoff__arrow">→</span>
-                  <div class="handoff__node"><svg><use href="#av-vera"/></svg><span>comunica 20</span></div>
-                  <span class="handoff__arrow">→</span>
-                  <div class="handoff__node"><svg><use href="#av-iris"/></svg><span>mede o ciclo</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tabs__panel" id="tab-habilidades" role="tabpanel" hidden>
-            <div class="tabs__grid">
-              <div>
-                <h3>Habilidade é a competência. Skill é a ação atômica.</h3>
-                <p>Um recrutador sênior tem a habilidade de “fechar vaga executiva” — e a exerce combinando dezenas de micro-ações. Cada agente Harpiö funciona igual: uma especialidade, dezenas de skills tipadas.</p>
-                <p class="footnote">Toda skill tem schema de entrada e saída, permissões e custo declarados. Saída fora do schema é erro — não aviso amarelo.</p>
-              </div>
-              <div class="tabs__art">
-                <div class="memocard memocard--mono">
-                  <span class="memocard__k">skill · score_resume</span>
-                  <p>input: candidato + vaga + pesos</p>
-                  <p>output: score 0–100 · evidência por critério · red flags</p>
-                  <p>permissões: candidate:read · job:read</p>
-                  <span class="memocard__note">custo: baixo · safety: informational</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tabs__panel" id="tab-autonomia" role="tabpanel" hidden>
-            <div class="tabs__grid">
-              <div>
-                <h3>Autonomia não é “fazer o que quiser”.</h3>
-                <p>É saber o que pode fazer sozinho, o que precisa avisar e o que espera a sua aprovação. Quatro níveis, configurados por você — e por skill, não por agente.</p>
-                <ul class="ticks">
-                  <li><strong>Sombra</strong> — observa e sugere; não age</li>
-                  <li><strong>Copiloto</strong> — rascunha; você revisa tudo</li>
-                  <li><strong>Tutelado</strong> — age no reversível; pede aprovação no visível</li>
-                  <li><strong>Autônomo Total</strong> — age no escopo; você revisa o resultado</li>
-                </ul>
-              </div>
-              <div class="tabs__art">
-                <div class="memocard">
-                  <span class="memocard__k">decisão do run-loop</span>
-                  <p>mover etapa → <b class="ok">executa</b></p>
-                  <p>enviar e-mail ao candidato → <b class="warn">pede aprovação</b></p>
-                  <p>enviar proposta formal → <b class="block">sempre humano</b></p>
-                  <span class="memocard__note">níveis de segurança por skill: informational · reversible · external · irreversible</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tabs__panel" id="tab-ambiente" role="tabpanel" hidden>
-            <div class="tabs__grid">
-              <div>
-                <h3>O agente que trabalha sem você abrir o sistema.</h3>
-                <p>É a Luna: detecta candidato parado além da média, vaga que vai estourar SLA, calibragem vencendo na mesa do gestor — e o talento que vocês perderam em março e acabou de voltar ao mercado.</p>
-                <p><strong>E só interrompe quando vale a pena.</strong> Se você dispensa cinco alertas do mesmo tipo, ela sobe a própria régua.</p>
-              </div>
-              <div class="tabs__art">
-                <div class="memocard">
-                  <span class="memocard__k">sinal ambient · score 87</span>
-                  <p>“Diego C. — perdido para concorrência em março — mudou o perfil para <em>open to work</em>.”</p>
-                  <p class="memocard__cta">Reabrir contato? <b>Sim</b> · Agora não</p>
-                  <span class="memocard__note">threshold adaptativo por usuário</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tabs__panel" id="tab-reflexao" role="tabpanel" hidden>
-            <div class="tabs__grid">
-              <div>
-                <h3>Macro repete. Agente se pergunta: “ficou bom?”</h3>
-                <p>A Sofia tria 100 currículos, percebe que muita gente caiu na mesma faixa de 60–70 pontos e se questiona: “meu critério está misturando senioridade com fit técnico?” — e refaz antes de te entregar.</p>
-                <p class="footnote">Crítico interno obrigatório em triagem final, mensagem a candidato e recomendação de contratação. Reduz erro de aprovação em ~3×.</p>
-              </div>
-              <div class="tabs__art">
-                <div class="memocard">
-                  <span class="memocard__k">reflection loop</span>
-                  <p>rascunho → crítico interno → reparo → <b class="ok">aprovado p/ revisão humana</b></p>
-                  <p>máx. 3 iterações; sem convergência → vira tarefa para humano</p>
-                  <span class="memocard__note">aplicado onde custa caro errar</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ A FAMÍLIA · 5 AGENTES ============ -->
-    <section class="section section--cream" id="agentes">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="eyebrow">Harpiö Mind · A família</span>
-          <h2>Cinco especialistas.<br/><span class="grad-text-warm">Um ciclo completo de R&S.</span></h2>
-          <p>Cada um com persona, voz, nível de autonomia e memória própria. Eles conversam entre si — e com você — como uma equipe.</p>
-        </div>
-
-        <div class="agents">
-          <!-- SOFIA -->
-          <article class="agent agent--sofia reveal">
-            <header class="agent__head">
-              <div class="agent__avatar"><svg><use href="#av-sofia"/></svg></div>
-              <div>
-                <h3>Sofia</h3>
-                <span class="agent__role">Agente de Triagem</span>
-              </div>
-              <span class="agent__badge">lê 500 CVs antes do café</span>
-            </header>
-            <p class="agent__voice">“Direta, organizada, sem floreio. Soa como uma analista sênior que respeita o seu tempo.”</p>
-            <ul class="agent__skills">
-              <li>Avaliação multicritério ponderada — nota com evidência do CV, linha a linha</li>
-              <li>Triagem em lote: 240 currículos em ~12 minutos, com progresso ao vivo</li>
-              <li>Calibragem com gestor em casos-âncora — e ajuste do próprio critério</li>
-              <li>Red flags sem drama: gaps, job hopping, divergência de senioridade</li>
-              <li>Auditoria de viés embutida — pool inicial vs. top ranqueado</li>
-            </ul>
-            <div class="agent__sample">
-              <span class="agent__sample-q">Você: “Sofia, e os 240 da vaga de Crédito?”</span>
-              <span class="agent__sample-a">“Top 20 no ar. Nota por critério, evidência e 3 red flags. Ela não decide quem entra — <b>prepara a sua decisão</b>.”</span>
-            </div>
-          </article>
-
-          <!-- RAFAEL -->
-          <article class="agent agent--rafael reveal d1">
-            <header class="agent__head">
-              <div class="agent__avatar"><svg><use href="#av-rafael"/></svg></div>
-              <div>
-                <h3>Rafael</h3>
-                <span class="agent__role">Agente de Sourcing</span>
-              </div>
-              <span class="agent__badge">acha quem não se candidatou</span>
-            </header>
-            <p class="agent__voice">“Curioso, simpático, profissional. Faz perguntas inteligentes sem soar invasivo.”</p>
-            <ul class="agent__skills">
-              <li>Boolean search de SDR sênior, com sinônimos em PT/EN</li>
-              <li>Sourcing em LinkedIn e outras fontes — sempre respeitando os termos de uso</li>
-              <li>Abordagem personalizada por perfil; mede resposta e ajusta</li>
-              <li>Aprende qual canal funciona por tipo de vaga</li>
-              <li>32 perfis pré-ranqueados em &lt;48h para vaga executiva</li>
-            </ul>
-            <div class="agent__sample">
-              <span class="agent__sample-q">Você: “Rafael, o pool de DevOps tá fraco.”</span>
-              <span class="agent__sample-a">“Abri sourcing em 4 fontes. 32 perfis pré-ranqueados e 5 InMails rascunhados — <b>aguardando sua aprovação</b>.”</span>
-            </div>
-          </article>
-
-          <!-- LUNA -->
-          <article class="agent agent--luna reveal">
-            <header class="agent__head">
-              <div class="agent__avatar"><svg><use href="#av-luna"/></svg></div>
-              <div>
-                <h3>Luna</h3>
-                <span class="agent__role">Agente de Monitoring</span>
-              </div>
-              <span class="agent__badge">vigia o funil 24/7</span>
-            </header>
-            <p class="agent__voice">“Telegráfica e útil. Aparece em silêncio com um aviso preciso — ou não aparece.”</p>
-            <ul class="agent__skills">
-              <li>Detecta candidato parado, vaga em risco, gestor sem resposta</li>
-              <li>Cruza o banco interno com vagas novas — “esse candidato serve aqui”</li>
-              <li>Diagnostica o gargalo: pool, agendamento, oferta</li>
-              <li>Antecipa SLA antes de o problema virar oficial</li>
-              <li>Threshold que aprende: interrompe só quando vale a pena</li>
-            </ul>
-            <div class="agent__sample">
-              <span class="agent__sample-q">Você: (nada — a sala está vazia)</span>
-              <span class="agent__sample-a">“Lembra do Diego, perdido pra concorrência? <b>O perfil dele acabou de mudar.</b> Reabro contato?”</span>
-            </div>
-          </article>
-
-          <!-- IRIS -->
-          <article class="agent agent--iris reveal d1">
-            <header class="agent__head">
-              <div class="agent__avatar"><svg><use href="#av-iris"/></svg></div>
-              <div>
-                <h3>Iris</h3>
-                <span class="agent__role">Agente de Analytics</span>
-              </div>
-              <span class="agent__badge">do caos do funil à decisão</span>
-            </header>
-            <p class="agent__voice">“Executiva, didática. Explica o gráfico antes de mostrá-lo.”</p>
-            <ul class="agent__skills">
-              <li>Dashboard sob demanda a partir de um pedido em português</li>
-              <li>Diagnóstico de funil com causa raiz — não só o sintoma</li>
-              <li>Briefing semanal de R&S para CHRO e CEO, em narrativa</li>
-              <li>Distingue correlação de causa; antecipa a pergunta do C-level</li>
-              <li>Alerta de tendência: “o pool dessa família de vaga caiu 30%”</li>
-            </ul>
-            <div class="agent__sample">
-              <span class="agent__sample-q">Você: “Iris, o board quer o trimestre em 1 página.”</span>
-              <span class="agent__sample-a">“Pronto: time-to-hire −41%; gargalo agora é revisão de shortlist — <b>3,2 dias na mesa do gestor</b>.”</span>
-            </div>
-          </article>
-
-          <!-- VERA -->
-          <article class="agent agent--vera agent--wide reveal">
-            <header class="agent__head">
-              <div class="agent__avatar"><svg><use href="#av-vera"/></svg></div>
-              <div>
-                <h3>Vera</h3>
-                <span class="agent__role">Agente de Comunicação</span>
-              </div>
-              <span class="agent__badge">nenhum candidato sem resposta</span>
-            </header>
-            <div class="agent__cols">
-              <div>
-                <p class="agent__voice">“Calorosa, gentil, profissional. Soa como uma recrutadora sênior que se importa de verdade.”</p>
-                <ul class="agent__skills">
-                  <li>A voz da empresa para cada candidato — humana, sem soar IA</li>
-                  <li>Multicanal nativo: e-mail, WhatsApp, LinkedIn, SMS — o melhor para o momento</li>
-                  <li>Devolutiva estruturada em 3 blocos — sem genérica, sem omissão</li>
-                  <li>Cadência de follow-up configurável; pré-onboarding até o 1º dia</li>
-                  <li>Crítico de empatia revisa cada mensagem antes de sair</li>
-                </ul>
-              </div>
-              <div class="agent__quotebox">
-                <p>“Recusar bem é diferencial competitivo. Candidato bem recusado vira embaixador — e às vezes vira, no mês seguinte, o cliente.”</p>
-                <span>— Manifesto Harpiö</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ GERENCIADOS POR HUMANOS ============ -->
-    <section class="section">
-      <div class="container org reveal">
-        <div class="org__copy">
-          <span class="eyebrow">Quem manda aqui é você</span>
-          <h2>Agentes têm gestor.<br/>O gestor é humano.</h2>
-          <p class="lead">Nenhum agente Harpiö decide contratação, envia proposta ou fecha oferta sozinho. Inteligência é da máquina; <strong>julgamento é seu</strong> — e a plataforma foi desenhada para manter essa fronteira visível.</p>
-        </div>
-        <div class="org__chart" aria-hidden="true">
-          <div class="org__boss">
-            <div class="org__human">🧑‍💼</div>
-            <span>Você · Recrutador(a)</span>
-            <em>decisor final</em>
-          </div>
-          <div class="org__lines"></div>
-          <div class="org__team">
-            <div class="org__member"><svg><use href="#av-sofia"/></svg></div>
-            <div class="org__member"><svg><use href="#av-rafael"/></svg></div>
-            <div class="org__member"><svg><use href="#av-luna"/></svg></div>
-            <div class="org__member"><svg><use href="#av-iris"/></svg></div>
-            <div class="org__member"><svg><use href="#av-vera"/></svg></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTADOR ============ -->
-    <section class="section section--dark counter-sec">
-      <div class="container reveal">
-        <p class="counter-sec__label">Horas operacionais devolvidas aos recrutadores, por ano</p>
-        <div class="counter-sec__num"><span id="big-counter" data-target="48000">0</span><span class="counter-sec__plus">+</span></div>
-        <p class="counter-sec__note">≈ 24 profissionais de RH realocados de leitura de currículo para trabalho estratégico</p>
-        <div class="counter-sec__avs" aria-hidden="true">
-          <svg><use href="#av-sofia"/></svg>
-          <svg><use href="#av-rafael"/></svg>
-          <svg><use href="#av-luna"/></svg>
-          <svg><use href="#av-iris"/></svg>
-          <svg><use href="#av-vera"/></svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ MARQUEE DE SKILLS ============ -->
-    <section class="section skills-sec" id="skills">
-      <div class="container section__head reveal">
-        <span class="eyebrow">9 famílias · 60+ skills de R&S</span>
-        <h2>Skills tipadas, auditáveis,<br/>combináveis como peças.</h2>
-        <p>Cada skill declara entrada, saída, permissão e custo. Nada de “texto livre fazendo qualquer coisa”.</p>
-      </div>
-      <div class="marquee marquee--a" aria-hidden="true"><div class="marquee__track">
-        <span class="skillchip s-analise">score_resume</span><span class="skillchip s-analise">match_jd</span><span class="skillchip s-analise">detect_red_flags</span><span class="skillchip s-analise">bias_audit</span><span class="skillchip s-pesquisa">deep_research</span><span class="skillchip s-pesquisa">salary_benchmark</span><span class="skillchip s-pesquisa">market_intelligence</span><span class="skillchip s-analise">parse_resume</span><span class="skillchip s-analise">evidence_pull</span><span class="skillchip s-pesquisa">web_search</span><span class="skillchip s-analise">screen_video</span><span class="skillchip s-analise">parse_assessment</span>
-        <span class="skillchip s-analise">score_resume</span><span class="skillchip s-analise">match_jd</span><span class="skillchip s-analise">detect_red_flags</span><span class="skillchip s-analise">bias_audit</span><span class="skillchip s-pesquisa">deep_research</span><span class="skillchip s-pesquisa">salary_benchmark</span><span class="skillchip s-pesquisa">market_intelligence</span><span class="skillchip s-analise">parse_resume</span><span class="skillchip s-analise">evidence_pull</span><span class="skillchip s-pesquisa">web_search</span><span class="skillchip s-analise">screen_video</span><span class="skillchip s-analise">parse_assessment</span>
-      </div></div>
-      <div class="marquee marquee--b" aria-hidden="true"><div class="marquee__track">
-        <span class="skillchip s-com">send_email</span><span class="skillchip s-com">send_whatsapp</span><span class="skillchip s-com">send_linkedin_inmail</span><span class="skillchip s-agenda">schedule_event</span><span class="skillchip s-agenda">find_slot</span><span class="skillchip s-agenda">reschedule</span><span class="skillchip s-com">draft_message</span><span class="skillchip s-agenda">send_reminder</span><span class="skillchip s-doc">generate_offer_letter</span><span class="skillchip s-doc">fill_template</span><span class="skillchip s-doc">create_doc</span><span class="skillchip s-com">send_sms</span>
-        <span class="skillchip s-com">send_email</span><span class="skillchip s-com">send_whatsapp</span><span class="skillchip s-com">send_linkedin_inmail</span><span class="skillchip s-agenda">schedule_event</span><span class="skillchip s-agenda">find_slot</span><span class="skillchip s-agenda">reschedule</span><span class="skillchip s-com">draft_message</span><span class="skillchip s-agenda">send_reminder</span><span class="skillchip s-doc">generate_offer_letter</span><span class="skillchip s-doc">fill_template</span><span class="skillchip s-doc">create_doc</span><span class="skillchip s-com">send_sms</span>
-      </div></div>
-      <div class="marquee marquee--c" aria-hidden="true"><div class="marquee__track">
-        <span class="skillchip s-pipe">move_stage</span><span class="skillchip s-pipe">tag_candidate</span><span class="skillchip s-pipe">request_approval</span><span class="skillchip s-dados">build_dashboard</span><span class="skillchip s-dados">run_report</span><span class="skillchip s-midia">transcribe_audio</span><span class="skillchip s-midia">summarize_meeting</span><span class="skillchip s-sys">sync_ats</span><span class="skillchip s-sys">push_to_hris</span><span class="skillchip s-sys">post_to_slack</span><span class="skillchip s-dados">export_csv</span><span class="skillchip s-pipe">trigger_workflow</span>
-        <span class="skillchip s-pipe">move_stage</span><span class="skillchip s-pipe">tag_candidate</span><span class="skillchip s-pipe">request_approval</span><span class="skillchip s-dados">build_dashboard</span><span class="skillchip s-dados">run_report</span><span class="skillchip s-midia">transcribe_audio</span><span class="skillchip s-midia">summarize_meeting</span><span class="skillchip s-sys">sync_ats</span><span class="skillchip s-sys">push_to_hris</span><span class="skillchip s-sys">post_to_slack</span><span class="skillchip s-dados">export_csv</span><span class="skillchip s-pipe">trigger_workflow</span>
-      </div></div>
-      <div class="container skills-sec__legend reveal">
-        <span><i class="s-pesquisa"></i>Pesquisa</span><span><i class="s-analise"></i>Análise</span><span><i class="s-com"></i>Comunicação</span><span><i class="s-agenda"></i>Agenda</span><span><i class="s-doc"></i>Documentos</span><span><i class="s-pipe"></i>Pipeline</span><span><i class="s-dados"></i>Dados</span><span><i class="s-midia"></i>Mídia</span><span><i class="s-sys"></i>Sistemas</span>
-      </div>
-    </section>
-
-    <!-- ============ ESCADA DE AUTONOMIA ============ -->
-    <section class="section section--cream" id="autonomia">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="eyebrow">A escada de autonomia</span>
-          <h2>Confiança se ganha por execução.<br/>Não por configuração.</h2>
-          <p>Nenhum agente Harpiö sai do modo Sombra direto para o Autônomo Total. Você sobe degrau por degrau — com critério objetivo para cada passo.</p>
-        </div>
-        <ol class="ladder">
-          <li class="ladder__step reveal">
-            <span class="ladder__num">1</span>
-            <div>
-              <h3>Sombra</h3>
-              <p>O agente apenas sugere. Não executa nada. O time marca onde concorda ou discorda.</p>
-              <span class="ladder__gate">sobe quando: concordância &gt; 80% por 2 semanas</span>
-            </div>
-          </li>
-          <li class="ladder__step reveal d1">
-            <span class="ladder__num">2</span>
-            <div>
-              <h3>Copiloto</h3>
-              <p>Consultas rodam direto; qualquer ação externa passa pela sua aprovação.</p>
-              <span class="ladder__gate">sobe quando: aprovações &gt; 95% por 30 dias</span>
-            </div>
-          </li>
-          <li class="ladder__step reveal d2">
-            <span class="ladder__num">3</span>
-            <div>
-              <h3>Tutelado</h3>
-              <p>Ações reversíveis rodam direto. O que o candidato vê ainda pede aprovação.</p>
-              <span class="ladder__gate">sobe quando: aprovações &gt; 97% por 30 dias</span>
-            </div>
-          </li>
-          <li class="ladder__step ladder__step--top reveal d3">
-            <span class="ladder__num">4</span>
-            <div>
-              <h3>Autônomo Total</h3>
-              <p>Tudo roda direto — exceto o irreversível: proposta e oferta formal são sempre humanas.</p>
-              <span class="ladder__gate">só para skills com histórico maduro e calibragem intensa</span>
-            </div>
-          </li>
-        </ol>
-        <p class="ladder__principle reveal">⚙ <strong>O princípio:</strong> a escada é por skill, não por agente. A Sofia pode estar em Autônomo Total para <code>score_resume</code> e em Tutelado para <code>move_stage</code>.</p>
-      </div>
-    </section>
-
-    <!-- ============ TECNOLOGIA ============ -->
-    <section class="section section--dark" id="tecnologia">
-      <div class="container">
-        <div class="section__head section__head--light reveal">
-          <span class="eyebrow eyebrow--lime">Tecnologia proprietária Agentic</span>
-          <h2>AI-native não é marketing.<br/>É arquitetura.</h2>
-          <p>Tire a IA de um ATS legado e ele segue funcionando como antes. Tire a IA da Harpiö e a Harpiö desliga. Sete sistemas sustentam essa diferença.</p>
-        </div>
-        <div class="tech">
-          <article class="tech__card reveal"><h3>Agent Analytics</h3><p>Métrica de uso, ROI e adoção por agente — o “Strava” do seu time de R&S.</p>
-            <div class="tech__mock">
-              <div class="bar"><span style="--w:92%">Sofia · 1.284 runs</span></div>
-              <div class="bar"><span style="--w:74%">Vera · 1.011 envios</span></div>
-              <div class="bar"><span style="--w:58%">Rafael · 312 sourcing</span></div>
-            </div>
-          </article>
-          <article class="tech__card reveal d1"><h3>Ambient Awareness</h3><p>Barramento de eventos: cada mudança no funil vira um sinal que os agentes escutam em 1–3s.</p>
-            <div class="tech__stat"><b>21,3 mil</b><span>sinais processados / mês</span></div>
-          </article>
-          <article class="tech__card reveal d2"><h3>Live Intelligence</h3><p>Knowledge graph corporativo: pessoas, vagas, decisões e conexões — atualizado a cada decisão.</p>
-            <div class="tech__chips"><span>Decisão</span><span>Pessoa</span><span>Insight</span><span>Conexão</span></div>
-          </article>
-          <article class="tech__card reveal"><h3>Infinite Knowledge</h3><p>RAG híbrido com permissão aplicada no nível do retrieval. O agente nunca vê o que você não vê.</p>
-            <div class="tech__chips"><span>RLS</span><span>BM25 + vetorial</span><span>reranking</span></div>
-          </article>
-          <article class="tech__card reveal d1"><h3>MindCore</h3><p>O run-loop dos agentes: planejamento, tool calling, memória, retry e circuit breakers por custo.</p>
-            <div class="tech__chips"><span>plan</span><span>act</span><span>observe</span><span>retry</span></div>
-          </article>
-          <article class="tech__card reveal d2"><h3>Agentic Security</h3><p>Cada skill classificada por nível de segurança — do informativo ao irreversível.</p>
-            <div class="tech__chips"><span class="ok">informational</span><span>reversible</span><span class="warn">external</span><span class="block">irreversible</span></div>
-          </article>
-          <article class="tech__card tech__card--wide reveal"><h3>Reflection</h3><p>Crítico interno que revisa o output antes de sair — obrigatório em tudo que toca o candidato. Reduz erro de aprovação em ~3×.</p>
-            <div class="tech__flow"><span>rascunho</span>→<span>crítico</span>→<span>reparo</span>→<span class="ok">aprovado</span></div>
-          </article>
-        </div>
-
-        <div class="models reveal">
-          <p class="models__label">Stack de modelos sem amarra — a plataforma escolhe o melhor para cada tarefa</p>
-          <div class="models__row">
-            <span class="modelchip">Claude Opus · raciocínio profundo</span>
-            <span class="modelchip">Claude Haiku · roteamento rápido</span>
-            <span class="modelchip">Gemini Pro · janelas longas</span>
-            <span class="modelchip modelchip--lime">Harpiö AI · orquestração</span>
-          </div>
-        </div>
-
-        <div class="integr reveal">
-          <p class="models__label">50+ integrações nativas — entramos no seu ecossistema, não o contrário</p>
-          <div class="integr__grid">
-            <span>LinkedIn</span><span>Gupy</span><span>SAP SuccessFactors</span><span>Workday</span>
-            <span>Greenhouse</span><span>Slack</span><span>WhatsApp</span><span>Microsoft Teams</span>
-            <span>Gmail</span><span>Google Calendar</span><span>Outlook</span><span class="integr__more">+38 plataformas</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ BUILDER ============ -->
-    <section class="section" id="builder">
-      <div class="container split split--rev">
-        <div class="split__copy">
-          <span class="eyebrow reveal">Builder Harpiö</span>
-          <h2 class="reveal d1">Monte o seu próprio agente.<br/>Sem escrever código.</h2>
-          <p class="lead reveal d2">Escolha as skills no marketplace, defina persona, tom de voz e nível de autonomia — e coloque o seu agente custom para trabalhar em Sombra no mesmo dia.</p>
-          <ul class="featlist">
-            <li class="reveal"><span class="featlist__ico">🧩</span><div><h4>Marketplace de skills</h4><p>60+ skills atômicas prontas, organizadas em 9 famílias — arraste e componha.</p></div></li>
-            <li class="reveal d1"><span class="featlist__ico">🎭</span><div><h4>Persona e voz</h4><p>Nome, avatar, tom — do telegráfico ao caloroso. O agente fala como a sua casa fala.</p></div></li>
-            <li class="reveal d2"><span class="featlist__ico">🪜</span><div><h4>Sombra por padrão</h4><p>Todo agente novo nasce observando. Autonomia se conquista com execução.</p></div></li>
-          </ul>
-        </div>
-        <div class="split__visual reveal d2">
-          <div class="builder-mock" aria-hidden="true">
-            <div class="builder-mock__head">novo agente · <b>“Caio · Pré-onboarding”</b></div>
-            <div class="builder-mock__zone">
-              <span class="skillchip s-com">send_whatsapp</span>
-              <span class="skillchip s-doc">fill_template</span>
-              <span class="skillchip s-agenda">send_reminder</span>
-              <span class="skillchip s-pipe">move_stage</span>
-              <span class="builder-mock__drop">+ arraste uma skill</span>
-            </div>
-            <div class="builder-mock__row"><span>Autonomia</span><b>Sombra</b></div>
-            <div class="builder-mock__row"><span>Tom de voz</span><b>Caloroso</b></div>
-            <div class="builder-mock__row"><span>Aprovação humana</span><b>Sempre em ações externas</b></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ MODELOS DE ENTREGA ============ -->
-    <section class="section section--cream" id="entrega">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="eyebrow">Software · Copilot · Autopilot</span>
-          <h2>Você escolhe até onde<br/>a máquina vai.</h2>
-          <p>A única plataforma de R&S do Brasil que entrega os três modelos — com migração fluida entre eles. Modelo de entrega é atributo do produto, não contrato separado.</p>
-        </div>
-        <div class="plans">
-          <article class="plan reveal">
-            <span class="plan__tag">Modelo 1</span>
-            <h3>Software</h3>
-            <p class="plan__pitch">A plataforma e os 5 agentes, operados pelo seu time.</p>
-            <ul>
-              <li>ATS AI-native completo (Harpiö Flow)</li>
-              <li>5 super agentes + Builder</li>
-              <li>Onboarding, treinamento e suporte</li>
-              <li>Escada de autonomia sob seu controle</li>
-            </ul>
-            <p class="plan__fit">Para times de TA maduros que querem autonomia total.</p>
-            <a href="#cta-final" class="btn btn--outline-dark">Conhecer o SaaS</a>
-          </article>
-          <article class="plan plan--hot reveal d1">
-            <span class="plan__tag plan__tag--lime">Modelo 2 · mais adotado</span>
-            <h3>Copilot</h3>
-            <p class="plan__pitch">Agentes + seu RH + hunters especialistas Harpiö, juntos.</p>
-            <ul>
-              <li>Tudo do Software</li>
-              <li>Hunters sêniores por vertical (tech, finance, seguros…)</li>
-              <li>Calibragem difícil e entrevista crítica com a gente</li>
-              <li>Cada hora de hunter multiplicada pelos 5 agentes</li>
-            </ul>
-            <p class="plan__fit">Para times enxutos, picos sazonais e vagas difíceis.</p>
-            <a href="#cta-final" class="btn btn--primary">Falar com especialista</a>
-          </article>
-          <article class="plan plan--dark reveal d2">
-            <span class="plan__tag plan__tag--ghost">Modelo 3 · a tese</span>
-            <h3>Autopilot</h3>
-            <p class="plan__pitch">Você compra o resultado: shortlist pronta, entrevista agendada, vaga fechada.</p>
-            <ul>
-              <li>Agentes fazem o ciclo; humanos só onde é indispensável</li>
-              <li>Cobrança por contratação ou por desbloqueio</li>
-              <li>Encerra na contratação — não na licença</li>
-              <li>R&S de boutique a custo de plataforma</li>
-            </ul>
-            <p class="plan__fit">Para quem não tem time de TA — ou prefere terceirizar o ciclo.</p>
-            <a href="#cta-final" class="btn btn--lime">Contratar resultado</a>
-          </article>
-        </div>
-        <p class="plans__note reveal">↔ Comece em Autopilot e migre para Copilot quando estruturar o time. Suba para Software quando quiser o controle todo. <strong>Sem fricção contratual.</strong></p>
-      </div>
-    </section>
-
-    <!-- ============ SEGURANÇA ============ -->
-    <section class="section" id="seguranca">
-      <div class="container split">
-        <div class="split__copy">
-          <span class="eyebrow reveal">Privacidade como fundação</span>
-          <h2 class="reveal d1">Dados de candidato<br/>não são combustível.</h2>
-          <p class="lead reveal d2">Zero retenção da IA sobre dados do cliente — aqui não se treina modelo com base de candidato. E cada acesso a dado pessoal gera log auditável.</p>
-          <ul class="ticks ticks--lg">
-            <li class="reveal">Permissão aplicada no nível da linha do banco — o agente nunca vê o que você não pode ver</li>
-            <li class="reveal d1">Dados sensíveis em coluna criptografada, coletados só com consentimento explícito</li>
-            <li class="reveal d2">Auditoria de viés roda sem expor a informação individual</li>
-            <li class="reveal d3">Toda ação de agente vira trilha de auditoria com input e output capturados</li>
-          </ul>
-          <div class="badges reveal d3">
-            <span>LGPD</span><span>SOC 2 Type II</span><span>ISO 27001</span><span>GDPR</span><span>AES-256</span><span>SLA 99,9%</span>
-          </div>
-        </div>
-        <div class="split__visual reveal d2">
-          <div class="audit" aria-hidden="true">
-            <div class="audit__head">Trilha de auditoria · hoje</div>
-            <div class="audit__row"><span class="audit__time">09:12</span><span class="audit__who">Sofia</span><span>score_resume · 240 itens</span><b class="ok">✓</b></div>
-            <div class="audit__row"><span class="audit__time">09:31</span><span class="audit__who">Vera</span><span>draft_message · 20 rascunhos</span><b class="ok">✓</b></div>
-            <div class="audit__row"><span class="audit__time">10:04</span><span class="audit__who">Vera</span><span>send_email · aguardando aprovação</span><b class="warn">⏸</b></div>
-            <div class="audit__row"><span class="audit__time">10:05</span><span class="audit__who">Você</span><span>aprovou envio · 18 de 20</span><b class="ok">✓</b></div>
-            <div class="audit__row"><span class="audit__time">11:40</span><span class="audit__who">Rafael</span><span>send_linkedin_inmail · negado</span><b class="block">✕</b></div>
-            <div class="audit__row audit__row--pii"><span class="audit__time">12:02</span><span class="audit__who">Iris</span><span>query_db · pii:read · log gerado</span><b class="ok">✓</b></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ DEPOIMENTOS ============ -->
-    <section class="section section--cream" id="depoimentos">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="eyebrow">Quem já trabalha com o time</span>
-          <h2>Recrutadores outra vez.<br/>Não leitores de currículo.</h2>
-        </div>
-        <div class="quotes">
-          <figure class="quote reveal">
-            <blockquote>“A Harpiö reduziu nosso time-to-hire de 45 para 12 dias. A triagem com IA é absurdamente precisa — aprovamos 95% dos candidatos selecionados pela plataforma.”</blockquote>
-            <figcaption><b>Camila Ferreira</b><span>CHRO · iFood</span></figcaption>
-          </figure>
-          <figure class="quote reveal d1">
-            <blockquote>“Os agentes do Mind são impressionantes. Cada um configurado para a nossa realidade — não para um template genérico. Isso faz toda a diferença.”</blockquote>
-            <figcaption><b>Ricardo Lemos</b><span>Head de TA · Nubank</span></figcaption>
-          </figure>
-          <figure class="quote reveal d2">
-            <blockquote>“O Sense transformou como meu time vê IA. Não é mais medo — é superpoder. A trilha de aprendizado é prática e relevante para o dia a dia.”</blockquote>
-            <figcaption><b>Amanda Pires</b><span>Diretora de RH · Ambev</span></figcaption>
-          </figure>
-          <figure class="quote reveal d3">
-            <blockquote>“Eliminamos 4 ferramentas com a Harpiö. Pipeline, triagem, comunicação e analytics em uma plataforma. ROI foi imediato.”</blockquote>
-            <figcaption><b>Thiago Santos</b><span>VP de People · Stone</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ BILLING JUSTO ============ -->
-    <section class="section billing">
-      <div class="container billing__box reveal">
-        <span class="eyebrow">Política de cobrança justa</span>
-        <h2>Cobramos pelo trabalho feito.<br/>Não pelo software instalado.</h2>
-        <p>Runs de agente, desbloqueio de candidato, contratação fechada — a conta segue o valor entregue. E quando o custo dos modelos cai, <strong>o seu preço cai junto</strong>.</p>
-      </div>
-    </section>
-
-    <!-- ============ FAQ ============ -->
-    <section class="section" id="faq">
-      <div class="container container--narrow">
-        <div class="section__head reveal">
-          <span class="eyebrow">Perguntas frequentes</span>
-          <h2>O que todo head de TA<br/>nos pergunta primeiro.</h2>
-        </div>
-        <div class="faq">
-          <details class="faq__item reveal">
-            <summary>Os agentes substituem o meu time de R&S?<span class="faq__x">+</span></summary>
-            <p>Não — multiplicam. Os agentes assumem o trabalho de inteligência (triagem, sourcing, agendamento, comunicação operacional, analytics). O trabalho de julgamento — fit cultural, fechamento de oferta, decisão final — segue sendo humano, e deve seguir. O melhor agente é o que devolve ao recrutador o trabalho de recrutador.</p>
-          </details>
-          <details class="faq__item reveal d1">
-            <summary>Como funciona a autonomia? Tenho medo de a IA “sair fazendo”.<span class="faq__x">+</span></summary>
-            <p>Todo agente nasce em modo Sombra: só observa e sugere. Ele sobe a escada (Copiloto → Tutelado → Autônomo Total) com critérios objetivos de concordância com o seu time — e a escada é por skill, não por agente. Ações irreversíveis, como enviar proposta formal, pedem aprovação humana sempre, em qualquer nível.</p>
-          </details>
-          <details class="faq__item reveal d2">
-            <summary>Meus dados e os dos candidatos treinam a IA de vocês?<span class="faq__x">+</span></summary>
-            <p>Não. Zero retenção da IA sobre dados do cliente — não treinamos modelos com base de candidato. Criptografia AES-256, conformidade LGPD, SOC 2 Type II, ISO 27001 e GDPR. Todo acesso a dado pessoal é marcado e gera log de auditoria.</p>
-          </details>
-          <details class="faq__item reveal d3">
-            <summary>Quais modelos de IA vocês usam?<span class="faq__x">+</span></summary>
-            <p>Os melhores disponíveis, selecionados automaticamente por tarefa: modelos de raciocínio profundo para triagem e devolutiva, modelos rápidos para roteamento e classificação, janelas longas para pesquisa de mercado. Você não escolhe modelo — a plataforma escolhe por custo, latência e adequação.</p>
-          </details>
-          <details class="faq__item reveal d4">
-            <summary>Preciso trocar as ferramentas que já uso?<span class="faq__x">+</span></summary>
-            <p>Não. São 50+ integrações nativas — LinkedIn, Gupy, SAP SuccessFactors, Workday, Greenhouse, Slack, WhatsApp, Teams, Gmail, Google Calendar, Outlook e mais. Os agentes operam por dentro do seu ecossistema, não exigem que você o abandone.</p>
-          </details>
-          <details class="faq__item reveal d5">
-            <summary>Como vocês cobram?<span class="faq__x">+</span></summary>
-            <p>Depende do modelo de entrega: no Software, licença + volume de runs; no Copilot, assinatura + horas de hunter especialista; no Autopilot, por contratação fechada ou desbloqueio de candidato. Em todos, a régua é o trabalho entregue — e o payback médio dos nossos clientes é inferior a 3 meses.</p>
-          </details>
-          <details class="faq__item reveal d5">
-            <summary>Em quanto tempo vejo o primeiro resultado?<span class="faq__x">+</span></summary>
-            <p>Na primeira semana a Sofia já roda em Sombra numa vaga real, e você compara a triagem dela com a do seu time. A maioria dos clientes sobe para Tutelado entre a 3ª e a 4ª semana — e o investimento se paga, em média, em menos de um trimestre.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CTA FINAL ============ -->
-    <section class="cta-final" id="cta-final">
-      <div class="cta-final__glow"></div>
-      <div class="container reveal">
-        <div class="cta-final__avs" aria-hidden="true">
-          <svg class="bob"><use href="#av-rafael"/></svg>
-          <svg class="bob b2"><use href="#av-luna"/></svg>
-          <svg class="bob b3 cta-final__center"><use href="#av-sofia"/></svg>
-          <svg class="bob b4"><use href="#av-iris"/></svg>
-          <svg class="bob b5"><use href="#av-vera"/></svg>
-        </div>
-        <h2>Veja os cinco ao vivo.<br/><span class="grad-text">Em uma vaga sua.</span></h2>
-        <p>60 minutos, sem deck, sem slide. Os agentes operando uma vaga real, com calibragem real. É a forma mais rápida de entender o que está sendo construído aqui.</p>
-        <div class="cta-final__actions">
-          <a href="mailto:contato@harpio.com.br" class="btn btn--lime btn--lg">Agendar demonstração ao vivo</a>
-          <a href="#agentes" class="btn btn--outline btn--lg">Rever o time</a>
-        </div>
-        <span class="cta-final__hint">contato@harpio.com.br · São Paulo, Brasil</span>
-      </div>
-    </section>
-  </main>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <a href="#" class="logo logo--footer"><span class="logo__mark">H</span><span class="logo__word">harpiö<span class="logo__dot">.</span></span></a>
-        <p>A primeira HRtech AI-native do Brasil. Software, copiloto ou piloto automático — você escolhe até onde a máquina vai.</p>
-        <div class="badges badges--footer"><span>LGPD</span><span>SOC 2</span><span>ISO 27001</span><span>GDPR</span></div>
-      </div>
-      <nav class="footer__col" aria-label="Plataforma">
-        <h4>Plataforma</h4>
-        <a href="#agentes">Harpiö Mind</a>
-        <a href="#tecnologia">Harpiö Flow</a>
-        <a href="#faq">Harpiö Sense</a>
-        <a href="#builder">Builder de agentes</a>
-      </nav>
-      <nav class="footer__col" aria-label="Agentes">
-        <h4>Agentes</h4>
-        <a href="#agentes">Sofia · Triagem</a>
-        <a href="#agentes">Rafael · Sourcing</a>
-        <a href="#agentes">Luna · Monitoring</a>
-        <a href="#agentes">Iris · Analytics</a>
-        <a href="#agentes">Vera · Comunicação</a>
-      </nav>
-      <nav class="footer__col" aria-label="Empresa">
-        <h4>Empresa</h4>
-        <a href="#entrega">Modelos de entrega</a>
-        <a href="#seguranca">Segurança</a>
-        <a href="#depoimentos">Clientes</a>
-        <a href="mailto:contato@harpio.com.br">Contato</a>
-      </nav>
+    <h1 class="reveal d1">A nova era dos humanos<br/>de R&S. <span class="grad-text">Com Super Agentes.</span></h1>
+    <p class="hero__sub reveal d2">Cinco colegas de IA — Sofia, Rafael, Luna, Iris e Vera — com memória, autonomia e 500+ habilidades, operando o seu funil 24/7. Você segue como decisor. Eles fazem o resto.</p>
+    <div class="hero__actions reveal d3">
+      <a href="#cta-final" class="btn btn--grad btn--lg">Testar Super Agentes</a>
+      <a href="#produto" class="btn btn--line btn--lg">Ver em ação</a>
     </div>
-    <div class="container footer__base">
-      <span>© 2026 Harpiö · São Paulo, Brasil · www.harpio.com.br</span>
-      <span>Inteligência de talentos para recrutadores ocupados.</span>
-    </div>
-  </footer>
+    <ul class="hero__stats reveal d4">
+      <li><strong>340%</strong><span>ROI em 12 meses</span></li>
+      <li><strong>−67%</strong><span>time-to-hire</span></li>
+      <li><strong>48 mil h</strong><span>devolvidas / ano</span></li>
+      <li><strong>&lt; 3 meses</strong><span>payback</span></li>
+    </ul>
+  </div>
+</section>
 
-  <script src="assets/js/main.js"></script>
+<!-- ════════════════ AGENTES PARA TUDO ════════════════ -->
+<section class="section" id="agentes">
+  <div class="container">
+    <div class="rowhead reveal">
+      <div>
+        <span class="eyebrow">Especialistas, não genéricos</span>
+        <h2>Agentes para o<br/>ciclo inteiro.</h2>
+      </div>
+      <p class="rowhead__p">Sem prompts. Sem setup interminável. Cada super agente chega calibrado por anos de operação real de hunting — e começa a trabalhar em modo Sombra hoje.</p>
+    </div>
+
+    <div class="agtabs reveal d1" role="tablist" aria-label="Tipos de agente">
+      <button class="agtab is-active" data-agent="sofia"><i class="agtab__ico i-sofia">⬡</i> Triagem</button>
+      <button class="agtab" data-agent="rafael"><i class="agtab__ico i-rafael">◎</i> Sourcing</button>
+      <button class="agtab" data-agent="luna"><i class="agtab__ico i-luna">☾</i> Monitoring</button>
+      <button class="agtab" data-agent="iris"><i class="agtab__ico i-iris">▥</i> Analytics</button>
+      <button class="agtab" data-agent="vera"><i class="agtab__ico i-vera">✉</i> Comunicação</button>
+    </div>
+
+    <div class="personas" id="personas">
+      <article class="persona persona--sofia is-active reveal" data-agent="sofia" tabindex="0">
+        <div class="persona__bg"></div>
+        <span class="persona__ghost">S</span>
+        <svg class="persona__bust"><use href="#p-sofia"/></svg>
+        <div class="persona__meta">
+          <h3>Sofia</h3><span>Agente de Triagem</span>
+          <p>Lê 500 currículos antes do café e devolve um top 20 com nota, evidência e red flags — sem drama.</p>
+          <b class="persona__stat">240 CVs → 12 min</b>
+        </div>
+      </article>
+      <article class="persona persona--rafael reveal d1" data-agent="rafael" tabindex="0">
+        <div class="persona__bg"></div>
+        <span class="persona__ghost">R</span>
+        <svg class="persona__bust"><use href="#p-rafael"/></svg>
+        <div class="persona__meta">
+          <h3>Rafael</h3><span>Agente de Sourcing</span>
+          <p>Caça quem não se candidatou: boolean de SDR sênior, abordagem personalizada, canal certo por vaga.</p>
+          <b class="persona__stat">32 perfis → 48h</b>
+        </div>
+      </article>
+      <article class="persona persona--luna reveal d2" data-agent="luna" tabindex="0">
+        <div class="persona__bg"></div>
+        <span class="persona__ghost">L</span>
+        <svg class="persona__bust"><use href="#p-luna"/></svg>
+        <div class="persona__meta">
+          <h3>Luna</h3><span>Agente de Monitoring</span>
+          <p>Vigia o pipeline enquanto a sala está vazia. Só interrompe quando vale — e aprende o seu limiar.</p>
+          <b class="persona__stat">sinais em 1–3s</b>
+        </div>
+      </article>
+      <article class="persona persona--iris reveal d3" data-agent="iris" tabindex="0">
+        <div class="persona__bg"></div>
+        <span class="persona__ghost">I</span>
+        <svg class="persona__bust"><use href="#p-iris"/></svg>
+        <div class="persona__meta">
+          <h3>Iris</h3><span>Agente de Analytics</span>
+          <p>Transforma funil em decisão executiva: dashboards por pedido em português e briefing pro board.</p>
+          <b class="persona__stat">board-ready · 30 min</b>
+        </div>
+      </article>
+      <article class="persona persona--vera reveal d4" data-agent="vera" tabindex="0">
+        <div class="persona__bg"></div>
+        <span class="persona__ghost">V</span>
+        <svg class="persona__bust"><use href="#p-vera"/></svg>
+        <div class="persona__meta">
+          <h3>Vera</h3><span>Agente de Comunicação</span>
+          <p>A voz da empresa para cada candidato — multicanal, com crítico de empatia antes de cada envio.</p>
+          <b class="persona__stat">0 candidatos sem resposta</b>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ BANNER BUILDER ════════════════ -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="bannergrad reveal">
+      <div class="bannergrad__copy">
+        <h2>Construa o agente exato<br/>que a sua vaga precisa.</h2>
+        <p>60+ skills tipadas em 9 famílias. Persona, tom de voz e autonomia configuráveis — sem escrever código. Todo agente novo nasce em modo Sombra.</p>
+        <a href="#cta-final" class="btn btn--white">Abrir o Builder</a>
+      </div>
+      <svg class="bannergrad__bust" aria-hidden="true"><use href="#p-vera"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ STEPPER · UM BRIEFING SOBE UM TIME ════════════════ -->
+<section class="section" id="produto">
+  <div class="container stepwrap">
+    <div class="stepcard gborder reveal">
+      <ol class="steps" id="steps">
+        <li class="step" data-step="0">
+          <span class="step__dot"></span>
+          <div><b>Você dá o briefing</b><p>“Vaga de Analista de Sinistros, 2 posições, urgente.” Em conversa — a Iris transforma em JD + scorecard.</p></div>
+        </li>
+        <li class="step" data-step="1">
+          <span class="step__dot"></span>
+          <div><b>Rafael abre o sourcing</b><p>Boolean, fontes, abordagem — pool ativo em horas, não semanas.</p></div>
+        </li>
+        <li class="step" data-step="2">
+          <span class="step__dot"></span>
+          <div><b>Sofia tria e ranqueia</b><p>Nota por critério com evidência do CV. Shortlist sugerida no top 20%.</p></div>
+        </li>
+        <li class="step" data-step="3">
+          <span class="step__dot"></span>
+          <div><b>Vera agenda e comunica</b><p>Entrevistas marcadas, follow-ups no ar, devolutiva para todos.</p></div>
+        </li>
+        <li class="step" data-step="4">
+          <span class="step__dot step__dot--end"></span>
+          <div><b>Você entrevista e decide</b><p>O julgamento continua humano. Sempre.</p></div>
+        </li>
+      </ol>
+    </div>
+    <div class="stepside reveal d2">
+      <span class="eyebrow">Orquestração nativa</span>
+      <h2>Um briefing sobe<br/>um time inteiro.</h2>
+      <p class="lead">Os agentes fazem hand-off entre si com contexto completo — você não orquestra nada. Cada passo fica registrado, auditável e reversível.</p>
+      <div class="stepside__minis">
+        <svg><use href="#p-iris"/></svg><svg><use href="#p-rafael"/></svg><svg><use href="#p-sofia"/></svg><svg><use href="#p-vera"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ MAIS QUE HUMANAMENTE POSSÍVEL ════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">Poderes humanos + superpoderes</span>
+      <h2>Mais do que<br/>humanamente possível.</h2>
+    </div>
+    <div class="duo">
+      <div class="duo__list gborder reveal">
+        <h3>Os únicos agentes que trabalham como colegas</h3>
+        <ul class="ticks">
+          <li><b>@atribua</b> tarefas como atribuiria a um humano</li>
+          <li><b>converse</b> no mesmo chat do seu time</li>
+          <li><b>@mencione</b> em qualquer candidato, vaga ou etapa</li>
+          <li><b>500+ habilidades</b>: e-mail, agenda, pipeline, docs</li>
+          <li class="tick--super"><b>24/7</b> — trabalham enquanto você dorme</li>
+          <li class="tick--super"><b>ambient</b> — agem no fundo, sem você abrir a tela</li>
+          <li class="tick--super"><b>self-learning</b> — cada calibragem vira critério</li>
+        </ul>
+      </div>
+      <div class="duo__chat reveal d2">
+        <div class="chatui gborder">
+          <div class="chatui__bar"><svg class="chatui__face"><use href="#p-vera"/></svg><div><b>Vera</b><span>Comunicação · modo Tutelado</span></div><i class="chatui__on">● online</i></div>
+          <div class="chatui__body">
+            <div class="bubble bubble--user"><span id="typed-cmd"></span><span class="caret"></span></div>
+            <div class="bubble bubble--agent" id="agent-reply">
+              <b>Deixa comigo.</b> Escrevendo as 18 devolutivas — tom caloroso, 3 blocos de feedback real.
+              <div class="progress"><div class="progress__fill" id="progress-fill"></div></div>
+              <span class="progress__label" id="progress-label">0 de 18 rascunhos</span>
+            </div>
+            <div class="bubble bubble--agent bubble--result" id="agent-result">
+              ✦ <b>Prontas para sua revisão.</b> “Olá, Marina — obrigada por chegar até a final. O que pesou: profundidade em regulação de sinistros…”
+              <div class="chatui__actions"><button class="btn btn--grad btn--xs">Aprovar 18</button><button class="btn btn--line-dark btn--xs">Editar</button></div>
+              <span class="chatui__note">crítico de empatia ✓ · aguardando aprovação humana</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="duocards">
+      <div class="duocard gborder reveal"><h4>Colaboram como humanos</h4><p>Threads, menções, aprovações — dentro do Harpiö Flow, do Slack e do e-mail que você já usa.</p></div>
+      <div class="duocard gborder reveal d1"><h4>Gerenciados por humanos</h4><p>Todo agente tem um gestor com nome e sobrenome: você. Escada de autonomia em 4 níveis, por skill.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CONTADOR ════════════════ -->
+<section class="section section--tight">
+  <div class="container bigcount reveal">
+    <svg class="bigcount__bust" aria-hidden="true"><use href="#p-rafael"/></svg>
+    <div class="bigcount__num gborder"><span id="big-counter" data-target="4218067">0</span></div>
+    <p class="bigcount__label">tarefas de R&S executadas por Super Agentes Harpiö</p>
+    <a href="#cta-final" class="btn btn--grad">Quero os meus</a>
+  </div>
+</section>
+
+<!-- ════════════════ NUVEM DE SKILLS ════════════════ -->
+<section class="section cloud">
+  <div class="container section__head reveal">
+    <span class="eyebrow">500+ habilidades</span>
+    <h2>Torne-se sobre-humano.</h2>
+  </div>
+  <div class="cloud__stage reveal d1">
+    <div class="cloud__rows" aria-hidden="true">
+      <div class="cloud__row r-a"><span>triagem em lote</span><span class="hl">boolean search</span><span>agendar entrevista</span><span>scorecard da vaga</span><span>parse de currículo</span><span class="hl">devolutiva empática</span><span>follow-up multicanal</span><span>análise salarial</span><span>triagem em lote</span><span class="hl">boolean search</span><span>agendar entrevista</span><span>scorecard da vaga</span><span>parse de currículo</span><span class="hl">devolutiva empática</span><span>follow-up multicanal</span><span>análise salarial</span></div>
+      <div class="cloud__row r-b"><span class="hl">auditoria de viés</span><span>matching semântico</span><span>red flags</span><span class="hl">hunting 24/7</span><span>briefing de vaga</span><span>carta de proposta</span><span>pré-onboarding</span><span>pipeline kanban</span><span class="hl">auditoria de viés</span><span>matching semântico</span><span>red flags</span><span class="hl">hunting 24/7</span><span>briefing de vaga</span><span>carta de proposta</span><span>pré-onboarding</span><span>pipeline kanban</span></div>
+      <div class="cloud__row r-c"><span>dashboard por voz</span><span class="hl">calibragem com gestor</span><span>InMail personalizado</span><span>transcrição de entrevista</span><span class="hl">benchmark de mercado</span><span>nurturing de talentos</span><span>SLA de vaga</span><span>diversidade do funil</span><span>dashboard por voz</span><span class="hl">calibragem com gestor</span><span>InMail personalizado</span><span>transcrição de entrevista</span><span class="hl">benchmark de mercado</span><span>nurturing de talentos</span><span>SLA de vaga</span><span>diversidade do funil</span></div>
+      <div class="cloud__row r-d"><span class="hl">whatsapp nativo</span><span>mover etapa</span><span>resumo de reunião</span><span class="hl">deep research</span><span>oferta & aceite</span><span>candidate NPS</span><span>watchlist de talentos</span><span>relatório pro board</span><span class="hl">whatsapp nativo</span><span>mover etapa</span><span>resumo de reunião</span><span class="hl">deep research</span><span>oferta & aceite</span><span>candidate NPS</span><span>watchlist de talentos</span><span>relatório pro board</span></div>
+    </div>
+    <svg class="cloud__bust" aria-hidden="true"><use href="#p-luna"/></svg>
+  </div>
+</section>
+
+<!-- ════════════════ TRANSIÇÃO AURORA → METADE ESCURA ════════════════ -->
+<div class="aurora" aria-hidden="true"></div>
+
+<!-- ════════════════ SUPERPODERES · ANATOMIA (scroll story) ════════════════ -->
+<section class="dark anatomy" id="superpoderes">
+  <div class="container">
+    <div class="section__head section__head--dark reveal">
+      <span class="eyebrow eyebrow--neon">Por dentro de um super agente</span>
+      <h2>Superpoderes.</h2>
+      <p>Sete pilares separam um agente de uma macro. Role para fazer o raio-x.</p>
+    </div>
+    <div class="anatomy__wrap">
+      <div class="anatomy__sticky">
+        <div class="anatomy__fig" id="anatomy-fig">
+          <svg class="anatomy__bust"><use href="#p-xray"/></svg>
+          <span class="anode" data-i="0" style="--x:50%;--y:24%">01</span>
+          <span class="anode" data-i="1" style="--x:50%;--y:44%">02</span>
+          <span class="anode" data-i="2" style="--x:18%;--y:80%">03</span>
+          <span class="anode" data-i="3" style="--x:82%;--y:80%">04</span>
+          <span class="anode" data-i="4" style="--x:50%;--y:66%">05</span>
+          <span class="anode" data-i="5" style="--x:18%;--y:38%">06</span>
+          <span class="anode" data-i="6" style="--x:82%;--y:38%">07</span>
+          <div class="anatomy__pulse"></div>
+        </div>
+      </div>
+      <div class="anatomy__list" id="anatomy-list">
+        <article class="apillar" data-i="0"><span class="apillar__n">01</span><h3>Memória</h3><p>Quatro camadas — curto prazo, trabalho, longo prazo e episódica. O agente lembra que o gestor de Vendas detesta candidato sem pesquisa. Você nunca recomeça do zero.</p></article>
+        <article class="apillar" data-i="1"><span class="apillar__n">02</span><h3>Conhecimento</h3><p>Três rolodex simultâneos: o workspace, suas ferramentas conectadas e a web em tempo real — com permissão aplicada no nível do retrieval.</p></article>
+        <article class="apillar" data-i="2"><span class="apillar__n">03</span><h3>Colaboração</h3><p>Com humanos, com outros agentes e com sistemas. A Sofia tria → a Vera comunica → a Iris mede. Hand-off com contexto, sem você orquestrar.</p></article>
+        <article class="apillar" data-i="3"><span class="apillar__n">04</span><h3>Habilidades</h3><p>500+ skills tipadas: schema de entrada e saída, permissões e custo declarados. Saída fora do schema é erro de execução — não aviso amarelo.</p></article>
+        <article class="apillar" data-i="4"><span class="apillar__n">05</span><h3>Autonomia</h3><p>Sombra → Copiloto → Tutelado → Autônomo Total. Por skill, não por agente. O irreversível — proposta, oferta — é sempre humano.</p></article>
+        <article class="apillar" data-i="5"><span class="apillar__n">06</span><h3>Ambiente</h3><p>Agentes ambient escutam eventos do funil e agem em segundo plano. A Luna te acorda só quando vale — e aprende o seu limiar de interrupção.</p></article>
+        <article class="apillar" data-i="6"><span class="apillar__n">07</span><h3>Reflexão</h3><p>Um crítico interno revisa triagem final, mensagens a candidatos e recomendações antes de saírem. Erro de aprovação cai ~3×.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ TECNOLOGIA (dark, dashboards neon) ════════════════ -->
+<section class="dark tech" id="tecnologia">
+  <div class="container">
+    <div class="rowhead rowhead--dark reveal">
+      <div>
+        <span class="eyebrow eyebrow--neon">Sete sistemas, um moat</span>
+        <h2>Tecnologia Agentic<br/>proprietária.</h2>
+      </div>
+      <p class="rowhead__p">Tire a IA de um ATS legado e ele segue igual. Tire a IA da Harpiö e a Harpiö desliga. Essa é a diferença entre bolt-on e AI-native.</p>
+    </div>
+
+    <div class="tgrid">
+      <!-- Agent Analytics -->
+      <article class="tcard tcard--tall gborder-dark reveal">
+        <header><h3>Agent Analytics</h3><p>ROI, uso e adoção por agente — o raio-x da operação.</p></header>
+        <div class="tviz">
+          <div class="tviz__big"><b>+340%</b><span>ROI médio · 12 meses</span></div>
+          <div class="eq" aria-hidden="true">
+            <i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:66%"></i><i style="--h:58%"></i><i style="--h:74%"></i><i style="--h:62%"></i><i style="--h:84%"></i><i style="--h:70%"></i><i style="--h:92%"></i><i style="--h:78%"></i><i style="--h:97%"></i>
+          </div>
+          <ul class="lboard">
+            <li><svg><use href="#p-sofia"/></svg><span>Sofia</span><i>1.284 runs</i><b>98,2</b></li>
+            <li><svg><use href="#p-vera"/></svg><span>Vera</span><i>1.011 envios</i><b>97,4</b></li>
+            <li><svg><use href="#p-rafael"/></svg><span>Rafael</span><i>312 sourcings</i><b>96,1</b></li>
+            <li><svg><use href="#p-iris"/></svg><span>Iris</span><i>208 briefings</i><b>95,8</b></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Ambient Awareness -->
+      <article class="tcard gborder-dark reveal d1">
+        <header><h3>Ambient Awareness</h3><p>Cada mudança do funil vira sinal em 1–3 segundos.</p></header>
+        <div class="tviz">
+          <div class="tviz__big"><b>21,3 mil</b><span>sinais / mês · <em class="neon">22 agentes online</em></span></div>
+          <div class="dots" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+      </article>
+
+      <!-- Live Intelligence -->
+      <article class="tcard gborder-dark reveal d2">
+        <header><h3>Live Intelligence</h3><p>Knowledge graph: pessoas, vagas, decisões, conexões.</p></header>
+        <div class="tviz tviz--center">
+          <div class="radar" aria-hidden="true">
+            <i class="radar__ring r1"></i><i class="radar__ring r2"></i><i class="radar__ring r3"></i>
+            <i class="radar__sweep"></i>
+            <b class="radar__node n1"></b><b class="radar__node n2"></b><b class="radar__node n3"></b><b class="radar__node n4"></b>
+          </div>
+          <div class="tchips"><span>Decisão</span><span>Pessoa</span><span>Insight</span></div>
+        </div>
+      </article>
+
+      <!-- Infinite Knowledge -->
+      <article class="tcard gborder-dark reveal">
+        <header><h3>Infinite Knowledge</h3><p>RAG híbrido permission-aware — o agente nunca vê o que você não vê.</p></header>
+        <div class="tviz tviz--center">
+          <div class="gauges" aria-hidden="true">
+            <div class="gauge"><svg viewBox="0 0 80 48"><path d="M8 44 A36 36 0 0 1 72 44" fill="none" stroke="#1c1c28" stroke-width="7" stroke-linecap="round"/><path class="gauge__arc" d="M8 44 A36 36 0 0 1 72 44" fill="none" stroke="url(#neon-line)" stroke-width="7" stroke-linecap="round"/></svg><span>+18% relevância</span></div>
+            <div class="gauge"><svg viewBox="0 0 80 48"><path d="M8 44 A36 36 0 0 1 72 44" fill="none" stroke="#1c1c28" stroke-width="7" stroke-linecap="round"/><path class="gauge__arc g2" d="M8 44 A36 36 0 0 1 72 44" fill="none" stroke="url(#neon-line)" stroke-width="7" stroke-linecap="round"/></svg><span>&lt;5s embedding</span></div>
+          </div>
+          <div class="tchips"><span>RLS</span><span>BM25 + vetorial</span><span>reranking RRF</span></div>
+        </div>
+      </article>
+
+      <!-- MindCore -->
+      <article class="tcard gborder-dark reveal d1">
+        <header><h3>MindCore</h3><p>O run-loop: plano, ferramenta, memória, retry — com circuit breakers por custo.</p></header>
+        <div class="tviz"><div class="floww"><span>plan</span>→<span>act</span>→<span>observe</span>→<span class="neon">approve</span></div>
+          <div class="tchips"><span>decision matrix</span><span>cost guard</span><span>retries</span></div>
+        </div>
+      </article>
+
+      <!-- 3 minis -->
+      <article class="tcard tcard--mini gborder-dark reveal d2"><h3>Agentic Security</h3><p>Skills classificadas: informational · reversible · external · irreversible.</p></article>
+      <article class="tcard tcard--mini gborder-dark reveal d3"><h3>Reflection</h3><p>Crítico interno obrigatório no que toca candidato. Erro ↓ 3×.</p></article>
+      <article class="tcard tcard--mini gborder-dark reveal d4"><h3>Self-learning</h3><p>Feedback vira few-shot. A Sofia pensa como você em 30 dias.</p></article>
+    </div>
+
+    <div class="modelsline reveal">
+      <span>Os melhores modelos, escolhidos por tarefa:</span>
+      <div><b>Claude Opus</b><b>Claude Haiku</b><b>Gemini Pro</b><b class="neon-chip">Harpiö AI</b></div>
+    </div>
+    <div class="integline reveal d1">
+      <span>50+ integrações nativas:</span>
+      <div><i>LinkedIn</i><i>Gupy</i><i>Workday</i><i>SAP SF</i><i>Greenhouse</i><i>Slack</i><i>WhatsApp</i><i>Teams</i><i>Gmail</i><i>Calendar</i><i>Outlook</i><i class="neon">+38</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ SEGURANÇA (dark) ════════════════ -->
+<section class="dark secsec" id="seguranca">
+  <div class="container">
+    <div class="section__head section__head--dark reveal">
+      <span class="eyebrow eyebrow--neon">Agentic User Security</span>
+      <h2>Acesso implícito & explícito,<br/>com permissões sob medida.</h2>
+      <p>O agente herda as permissões de quem o invocou — aplicadas no banco, não no prompt.</p>
+    </div>
+    <div class="splitface reveal d1">
+      <div class="splitface__chips splitface__chips--l">
+        <span>workspace ✓</span><span>vagas da sua célula ✓</span><span>pipeline ✓</span><span>salários <b>✕</b></span>
+      </div>
+      <div class="splitface__fig" aria-hidden="true">
+        <svg><use href="#p-sofia"/></svg>
+        <i class="splitface__line"></i>
+        <em class="splitface__tagl">você vê</em><em class="splitface__tagr">o agente vê</em>
+      </div>
+      <div class="splitface__chips splitface__chips--r">
+        <span>pii:read · com log ✓</span><span>send_email · aprovação ⏸</span><span>move_stage ✓</span><span>oferta formal <b>✕ humano</b></span>
+      </div>
+    </div>
+    <div class="sec3">
+      <div class="seccard gborder-dark reveal"><h3>Audite tudo</h3><p>Cada run, cada skill, cada acesso a dado pessoal vira trilha imutável — input e output capturados.</p><div class="seccard__log"><span>09:12 · Sofia · score_resume ✓</span><span>10:04 · Vera · send_email ⏸ aprovação</span><span>12:02 · Iris · pii:read · log ✓</span></div></div>
+      <div class="seccard gborder-dark reveal d1"><h3>Zero retenção. Zero treino.</h3><p>Seus dados não treinam modelo nenhum. LGPD, SOC 2 Type II, ISO 27001, GDPR, AES-256.</p><div class="seccard__badges"><span>LGPD</span><span>SOC 2</span><span>ISO 27001</span><span>GDPR</span><span>AES-256</span></div></div>
+      <div class="seccard gborder-dark reveal d2"><h3>Reflexão antes do envio</h3><p>Tudo que chega a um candidato passa por um crítico de tom e evidência. Recusar bem é diferencial.</p><div class="seccard__ring" aria-hidden="true"><i></i><b>3×</b><span>menos erros</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ BILLING (dark) ════════════════ -->
+<section class="dark billing">
+  <div class="container billing__grid">
+    <div class="billing__copy reveal">
+      <span class="eyebrow eyebrow--neon">Cobrança super justa</span>
+      <h2>Quando a gente otimiza,<br/>você economiza.</h2>
+      <p>Prompt caching, modelos rápidos no roteamento, batch onde dá: cada queda no nosso custo de execução é repassada ao seu preço por run. Pague pelo trabalho feito — não pelo software instalado.</p>
+    </div>
+    <div class="bcard gborder-dark reveal d2" aria-hidden="true">
+      <div class="bcard__top"><span class="bcard__chip"></span><b>harpiö · fair billing</b></div>
+      <div class="bcard__num">R$ 0,003<span>/ run de skill</span></div>
+      <div class="bcard__foot"><span>custo otimizado em cascata</span><i>▼ repasse automático</i></div>
+      <i class="bcard__sheen"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FAQ (light) ════════════════ -->
+<section class="section" id="faq">
+  <div class="container container--narrow">
+    <div class="section__head reveal"><h2>Perguntas frequentes</h2></div>
+    <div class="faq">
+      <details class="faq__item reveal"><summary>Os agentes substituem o meu time de R&S?<span class="faq__x">+</span></summary><p>Não — multiplicam. Os agentes assumem o trabalho de inteligência (triagem, sourcing, agendamento, comunicação, analytics). O julgamento — fit cultural, oferta, decisão final — segue humano, e deve seguir.</p></details>
+      <details class="faq__item reveal d1"><summary>E se o agente “sair fazendo” coisas sozinho?<span class="faq__x">+</span></summary><p>Impossível por desenho: todo agente nasce em modo Sombra e sobe a escada (Copiloto → Tutelado → Autônomo Total) com critérios objetivos de concordância. Ações irreversíveis pedem aprovação humana sempre, em qualquer nível.</p></details>
+      <details class="faq__item reveal d2"><summary>Meus dados treinam a IA de vocês?<span class="faq__x">+</span></summary><p>Não. Zero retenção, zero treino com a sua base. Criptografia AES-256, LGPD, SOC 2 Type II, ISO 27001 e GDPR — e todo acesso a dado pessoal gera log de auditoria.</p></details>
+      <details class="faq__item reveal d3"><summary>Quais modelos de IA vocês usam?<span class="faq__x">+</span></summary><p>Os melhores disponíveis, escolhidos automaticamente por tarefa: raciocínio profundo para triagem e devolutiva, modelos rápidos para roteamento, janelas longas para pesquisa de mercado. Você não gerencia modelo — a plataforma gerencia.</p></details>
+      <details class="faq__item reveal d4"><summary>Preciso trocar minhas ferramentas?<span class="faq__x">+</span></summary><p>Não. 50+ integrações nativas: LinkedIn, Gupy, SAP SuccessFactors, Workday, Greenhouse, Slack, WhatsApp, Teams, Gmail, Calendar, Outlook e mais. Os agentes operam por dentro do seu ecossistema.</p></details>
+      <details class="faq__item reveal d5"><summary>Como vocês cobram?<span class="faq__x">+</span></summary><p>Pelo trabalho: runs no modelo Software, assinatura + horas de hunter no Copilot, por contratação ou desbloqueio no Autopilot. Payback médio inferior a 3 meses — e a otimização de custo é repassada.</p></details>
+      <details class="faq__item reveal d5"><summary>Em quanto tempo vejo resultado?<span class="faq__x">+</span></summary><p>Semana 1: Sofia em Sombra numa vaga real, comparando a triagem dela com a do seu time. Semanas 3–4: subida para Tutelado. Em menos de um trimestre, o investimento se paga.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CTA FINAL ════════════════ -->
+<section class="ctafinal" id="cta-final">
+  <div class="container ctafinal__box reveal">
+    <h2>Experimente os Super Agentes<br/>de R&S hoje.</h2>
+    <p>60 minutos, sem deck. Os cinco agentes operando uma vaga sua, com calibragem real.</p>
+    <div class="ctafinal__actions">
+      <a href="mailto:contato@harpio.com.br" class="btn btn--white btn--lg">Agendar demo ao vivo</a>
+      <a href="#agentes" class="btn btn--glass btn--lg">Rever o time</a>
+    </div>
+    <div class="ctafinal__busts" aria-hidden="true">
+      <svg><use href="#p-rafael"/></svg><svg><use href="#p-luna"/></svg><svg class="big"><use href="#p-sofia"/></svg><svg><use href="#p-iris"/></svg><svg><use href="#p-vera"/></svg>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#" class="logo logo--footer"><span class="logo__mark">H</span><span class="logo__word">harpiö</span></a>
+      <p>A primeira HRtech AI-native do Brasil. Inteligência de talentos para recrutadores ocupados.</p>
+    </div>
+    <nav class="footer__col" aria-label="Plataforma"><h4>Plataforma</h4><a href="#agentes">Harpiö Mind</a><a href="#produto">Harpiö Flow</a><a href="#faq">Harpiö Sense</a><a href="#tecnologia">Tecnologia</a></nav>
+    <nav class="footer__col" aria-label="Agentes"><h4>Agentes</h4><a href="#agentes">Sofia · Triagem</a><a href="#agentes">Rafael · Sourcing</a><a href="#agentes">Luna · Monitoring</a><a href="#agentes">Iris · Analytics</a><a href="#agentes">Vera · Comunicação</a></nav>
+    <nav class="footer__col" aria-label="Empresa"><h4>Empresa</h4><a href="#seguranca">Segurança</a><a href="#faq">FAQ</a><a href="mailto:contato@harpio.com.br">Contato</a></nav>
+  </div>
+  <div class="container footer__base">
+    <span>© 2026 Harpiö · São Paulo, Brasil · www.harpio.com.br</span>
+    <span>LGPD · SOC 2 · ISO 27001 · GDPR</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

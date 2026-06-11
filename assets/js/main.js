@@ -1,18 +1,19 @@
-/* ============================================================
-   HARPIÖ MIND · interações da landing
-   ============================================================ */
+/* ════════════════════════════════════════════════════════════
+   HARPIÖ MIND v2 · interações
+═════════════════════════════════════════════════════════════ */
 (function () {
   "use strict";
 
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const touch = window.matchMedia("(hover: none)").matches;
 
-  /* ---------- header: estado de scroll ---------- */
+  /* ───── header ───── */
   const header = document.getElementById("header");
   const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- menu mobile ---------- */
+  /* ───── menu mobile ───── */
   const burger = document.getElementById("burger");
   const nav = document.getElementById("nav");
   if (burger && nav) {
@@ -30,18 +31,13 @@
     );
   }
 
-  /* ---------- reveal on scroll ---------- */
+  /* ───── reveal ───── */
   const revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && !prefersReducedMotion) {
+  if ("IntersectionObserver" in window && !reduced) {
     const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("is-in");
-            io.unobserve(e.target);
-          }
-        });
-      },
+      (es) => es.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
+      }),
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
     revealEls.forEach((el) => io.observe(el));
@@ -49,61 +45,100 @@
     revealEls.forEach((el) => el.classList.add("is-in"));
   }
 
-  /* ---------- tabs · 7 pilares ---------- */
-  const tabButtons = document.querySelectorAll(".tabs__btn");
-  tabButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      tabButtons.forEach((b) => {
-        b.classList.remove("is-active");
-        b.setAttribute("aria-selected", "false");
-      });
-      btn.classList.add("is-active");
-      btn.setAttribute("aria-selected", "true");
-      document.querySelectorAll(".tabs__panel").forEach((p) => {
-        p.hidden = true;
-        p.classList.remove("is-active");
-      });
-      const panel = document.getElementById("tab-" + btn.dataset.tab);
-      if (panel) {
-        panel.hidden = false;
-        panel.classList.add("is-active");
-      }
-    });
+  /* ───── tabs de agentes + personas ───── */
+  const tabs = [...document.querySelectorAll(".agtab")];
+  const personasWrap = document.getElementById("personas");
+  const personas = [...document.querySelectorAll(".persona")];
+  let userPicked = false;
+
+  function activate(agent) {
+    tabs.forEach((t) => t.classList.toggle("is-active", t.dataset.agent === agent));
+    personas.forEach((p) => p.classList.toggle("is-active", p.dataset.agent === agent));
+    if (personasWrap) personasWrap.classList.add("has-active");
+  }
+  tabs.forEach((t) =>
+    t.addEventListener("click", () => { userPicked = true; activate(t.dataset.agent); })
+  );
+  personas.forEach((p) => {
+    p.addEventListener("click", () => { userPicked = true; activate(p.dataset.agent); });
+    p.addEventListener("focus", () => activate(p.dataset.agent));
   });
 
-  /* ---------- contador grande ---------- */
+  // rotação automática até o usuário interagir
+  if (!reduced && tabs.length) {
+    const order = tabs.map((t) => t.dataset.agent);
+    let i = 0;
+    const spin = setInterval(() => {
+      if (userPicked) { clearInterval(spin); return; }
+      i = (i + 1) % order.length;
+      activate(order[i]);
+    }, 3200);
+  }
+
+  /* ───── tilt 3D nos cards de persona ───── */
+  if (!reduced && !touch) {
+    personas.forEach((card) => {
+      card.addEventListener("mousemove", (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `translateY(-10px) rotateX(${(-py * 7).toFixed(2)}deg) rotateY(${(px * 9).toFixed(2)}deg)`;
+      });
+      card.addEventListener("mouseleave", () => { card.style.transform = ""; });
+    });
+  }
+
+  /* ───── contador grande ───── */
   const counter = document.getElementById("big-counter");
   if (counter) {
     const target = parseInt(counter.dataset.target, 10) || 0;
     const fmt = new Intl.NumberFormat("pt-BR");
+    counter.textContent = fmt.format(0);
     const animate = () => {
-      if (prefersReducedMotion) {
-        counter.textContent = fmt.format(target);
-        return;
-      }
-      const dur = 2200;
-      const t0 = performance.now();
+      if (reduced) { counter.textContent = fmt.format(target); return; }
+      const dur = 2400, t0 = performance.now();
       const tick = (now) => {
         const p = Math.min((now - t0) / dur, 1);
-        const eased = 1 - Math.pow(1 - p, 4); // ease-out-quart
-        counter.textContent = fmt.format(Math.round(target * eased));
+        counter.textContent = fmt.format(Math.round(target * (1 - Math.pow(1 - p, 4))));
         if (p < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
     };
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          animate();
-          io.disconnect();
-        }
-      },
-      { threshold: 0.45 }
-    );
-    io.observe(counter);
+    new IntersectionObserver((es, io) => {
+      if (es[0].isIntersecting) { animate(); io.disconnect(); }
+    }, { threshold: 0.5 }).observe(counter);
   }
 
-  /* ---------- hero: simulação de atribuição de tarefa ---------- */
+  /* ───── stepper progressivo ───── */
+  const steps = [...document.querySelectorAll(".step")];
+  if (steps.length) {
+    const list = document.getElementById("steps");
+    new IntersectionObserver((es, io) => {
+      if (!es[0].isIntersecting) return;
+      io.disconnect();
+      steps.forEach((s, i) => setTimeout(() => s.classList.add("is-done"), reduced ? 0 : 450 * i + 300));
+    }, { threshold: 0.35 }).observe(list);
+  }
+
+  /* ───── anatomia · scrollspy ───── */
+  const pillars = [...document.querySelectorAll(".apillar")];
+  const nodes = [...document.querySelectorAll(".anode")];
+  if (pillars.length && nodes.length) {
+    const setActive = (i) => {
+      pillars.forEach((p) => p.classList.toggle("is-active", +p.dataset.i === i));
+      nodes.forEach((n) => n.classList.toggle("is-active", +n.dataset.i === i));
+    };
+    setActive(0);
+    const spy = new IntersectionObserver(
+      (es) => {
+        es.forEach((e) => { if (e.isIntersecting) setActive(+e.target.dataset.i); });
+      },
+      { rootMargin: "-42% 0px -42% 0px", threshold: 0 }
+    );
+    pillars.forEach((p) => spy.observe(p));
+  }
+
+  /* ───── chat demo · Vera escreve devolutivas ───── */
   const typedEl = document.getElementById("typed-cmd");
   const replyEl = document.getElementById("agent-reply");
   const resultEl = document.getElementById("agent-result");
@@ -111,91 +146,66 @@
   const labelEl = document.getElementById("progress-label");
 
   if (typedEl && replyEl && resultEl && fillEl && labelEl) {
-    const COMMAND =
-      "@Sofia tria os 240 currículos do Analista de Crédito Pleno e me devolve o top 20 até as 18h";
-    const TOTAL = 240;
-    const fmtLabel = (n) => `${n} de ${TOTAL} analisados`;
+    const CMD = "@Vera, devolutiva para os 18 reprovados da final — tom caloroso, feedback real.";
+    const TOTAL = 18;
     let timers = [];
     const later = (fn, ms) => timers.push(setTimeout(fn, ms));
-    const clearTimers = () => {
-      timers.forEach(clearTimeout);
-      timers = [];
-    };
+    const clearAll = () => { timers.forEach(clearTimeout); timers = []; };
+    const label = (n) => `${n} de ${TOTAL} rascunhos`;
 
     function reset() {
       typedEl.textContent = "";
       replyEl.style.opacity = "0.25";
       resultEl.classList.remove("is-on");
       fillEl.style.width = "0%";
-      labelEl.textContent = fmtLabel(0);
+      labelEl.textContent = label(0);
     }
-
-    function typeCommand(done) {
+    function type(done) {
       let i = 0;
       const step = () => {
-        typedEl.textContent = COMMAND.slice(0, i);
-        i += 1;
-        if (i <= COMMAND.length) {
-          timers.push(setTimeout(step, 26 + Math.random() * 34));
-        } else {
-          done();
-        }
+        typedEl.textContent = CMD.slice(0, i++);
+        if (i <= CMD.length) timers.push(setTimeout(step, 24 + Math.random() * 30));
+        else done();
       };
       step();
     }
-
-    function runProgress(done) {
+    function progress(done) {
       replyEl.style.opacity = "1";
       replyEl.style.transition = "opacity .4s";
-      const steps = [0.16, 0.34, 0.52, 0.71, 0.88, 1];
-      steps.forEach((p, idx) => {
+      [0.22, 0.45, 0.67, 0.85, 1].forEach((p, idx, arr) => {
         later(() => {
           fillEl.style.width = `${Math.round(p * 100)}%`;
-          labelEl.textContent = fmtLabel(Math.round(p * TOTAL));
-          if (idx === steps.length - 1) later(done, 600);
-        }, 520 * (idx + 1));
+          labelEl.textContent = label(Math.round(p * TOTAL));
+          if (idx === arr.length - 1) later(done, 550);
+        }, 540 * (idx + 1));
       });
     }
-
-    function showResult(done) {
-      resultEl.classList.add("is-on");
-      later(done, 5200);
-    }
-
     function loop() {
-      clearTimers();
+      clearAll();
       reset();
-      if (prefersReducedMotion) {
-        typedEl.textContent = COMMAND;
+      if (reduced) {
+        typedEl.textContent = CMD;
         replyEl.style.opacity = "1";
         fillEl.style.width = "100%";
-        labelEl.textContent = fmtLabel(TOTAL);
+        labelEl.textContent = label(TOTAL);
         resultEl.classList.add("is-on");
         return;
       }
-      later(() => typeCommand(() => runProgress(() => showResult(loop))), 600);
+      later(() => type(() => progress(() => {
+        resultEl.classList.add("is-on");
+        later(loop, 5600);
+      })), 500);
     }
-
-    // só roda quando o hero está visível
-    const heroIO = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          loop();
-          heroIO.disconnect();
-        }
-      },
-      { threshold: 0.25 }
-    );
-    heroIO.observe(typedEl.closest(".chatcard"));
+    new IntersectionObserver((es, io) => {
+      if (es[0].isIntersecting) { loop(); io.disconnect(); }
+    }, { threshold: 0.3 }).observe(typedEl.closest(".chatui"));
   }
 
-  /* ---------- FAQ: fecha os irmãos ao abrir um ---------- */
+  /* ───── FAQ exclusivo ───── */
   document.querySelectorAll(".faq__item").forEach((item) => {
     item.addEventListener("toggle", () => {
       if (item.open) {
-        document.querySelectorAll(".faq__item[open]").forEach((other) => {
-          if (other !== item) other.open = false;
-        });
+        document.querySelectorAll(".faq__item[open]").forEach((o) => { if (o !== item) o.open = false; });
       }
     });
   });
