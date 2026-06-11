@@ -1,33 +1,39 @@
-# Harpiö Mind · Super Agentes de R&S
+# Harpiö · Site institucional — HRtech AI-native de R&S
 
-Landing page da **Harpiö** — a primeira HRtech AI-native do Brasil — apresentando os cinco
-super agentes especialistas em Recrutamento & Seleção: **Sofia** (Triagem), **Rafael** (Sourcing),
+Site multi-página da **Harpiö**, a primeira HRtech AI-native do Brasil, com os cinco
+super agentes de Recrutamento & Seleção: **Sofia** (Triagem), **Rafael** (Sourcing),
 **Luna** (Monitoring), **Iris** (Analytics) e **Vera** (Comunicação).
 
-## Estrutura da página
+## Mapa do site
 
-| Seção | Conteúdo |
+| Página | Conteúdo |
 | --- | --- |
-| Hero | Aura quente + texto fantasma gigante + persona mascarada flutuante + métricas |
-| Agentes | Tabs interativas (rotação automática) + 5 cards de persona com tilt 3D |
-| Banner Builder | Painel gradiente animado — "construa o agente exato" |
-| Produto | Stepper progressivo "um briefing sobe um time inteiro" |
-| Humanamente possível | Checklist de poderes + chat demo da Vera (typing + aprovação) |
-| Contador | 4,2M tarefas executadas (count-up) |
-| Nuvem de skills | 4 fileiras de habilidades em marquee com persona central |
-| Aurora | Transição clara → escura |
-| Superpoderes | Anatomia raio-x com scrollspy dos 7 pilares |
-| Tecnologia | Dashboards neon: equalizer, matriz de pontos, radar, gauges, leaderboard |
-| Segurança | Split-face "você vê / o agente vê" + 3 cards (auditoria, zero retenção, reflexão) |
-| Billing | Cartão "fair billing" com sheen animado |
-| FAQ · CTA final | Accordion + painel gradiente com os 5 agentes |
+| `index.html` | Home: hero com **agentes operando o Flow ao vivo** (cursores multiplayer, kanban, console de skills), dores, 3 pilares, time, widgets de funções, tese, modelos, escada gamificada, resultados + piloto, depoimentos, FAQ |
+| `agentes/index.html` | Hub do time: coleção gamificada (X/5 conhecidos) + diagrama de hand-off |
+| `agentes/sofia.html` … `vera.html` | Subpágina por agente: retrato, voz, 5 habilidades, **demo animada da tela** (triagem, boolean, sinais, gráfico+briefing, composer com crítico de empatia), skills atômicas, navegação próximo/anterior |
+| `plataforma.html` | Mind (3 camadas) · Flow (ATS legado vs Flow + integrações) · Sense (capacitação) |
+| `modelos.html` | Software · Copilot · Autopilot detalhados, tabela comparada, tese 1:6, billing justo |
+| `tecnologia.html` | Bolt-on vs AI-native, os 7 sistemas proprietários, níveis de segurança por skill, LGPD |
+| `empresa.html` | Jornada em 4 atos, manifesto, piloto do setor de seguros, roadmap 18 meses, convite |
+
+## Gamificação
+
+- Barra de progresso de leitura + trilha lateral com checkpoints (home)
+- **Conquistas** (toasts, uma única vez via localStorage)
+- **Coleção do time**: visitar cada agente marca ✓ nos cards (X/5; conquista ao completar)
+- Escada de autonomia com níveis que se **destravam** em sequência (cadeado → XP)
+
+## Motions de produto
+
+- Cena em loop na home: Sofia pontua e move card no kanban, Vera agenda, Luna alerta, Iris atualiza KPI — com **cursores nomeados** e console de chamadas de função (`sofia.score_resume() → 92 ✓`)
+- Widgets vivos: funil, agenda preenchendo, inbox, gauge NPS, sinais, sparkline
+- Demos por agente: tabela de triagem pontuando, boolean digitando + resultados, feed de sinais, gráfico se desenhando + briefing digitado, composer com checklist de empatia
 
 ## Stack
 
-HTML + CSS + JavaScript puros, sem build. Fontes via Google Fonts
-(Space Grotesk, Inter, JetBrains Mono). Toda a arte — os bustos humanos com
-visores iridescentes, a figura raio-x e as visualizações de dados — é SVG/CSS
-original feito à mão.
+HTML/CSS/JS puros, sem build. Retratos corporativos dos agentes em **SVG vetorial
+original** (`assets/img/personas.svg`) — slots prontos para troca por fotografia/3D.
+Fontes: Space Grotesk, Inter, JetBrains Mono.
 
 ## Como rodar
 
@@ -36,13 +42,12 @@ python3 -m http.server 8000
 # abra http://localhost:8000
 ```
 
-Ou simplesmente abra `index.html` no navegador.
+> Sirva via HTTP (não `file://`) — os retratos usam `<use href="…svg#id">` externo.
 
 ## Design system
 
-- **Base clara:** branco `#ffffff` · cinza `#f6f5fa` · tinta `#0e0d13`
-- **Gradiente da marca:** rosa `#ff3dd8` → violeta `#8a5cff` → azul `#3fa9ff` (+ âmbar `#ffb02e`)
-- **Metade escura:** preto `#060609` com neon verde `#46f7a7` e ciano `#35d6ff`
-- **Bordas animadas:** `@property --ga` + `conic-gradient` com máscara
-- **Motions:** scrollspy (anatomia), tilt 3D, count-up, marquees, typing, sheen, aurora
-- Acessibilidade: `prefers-reduced-motion` respeitado em todas as animações
+- Base profissional: branco `#ffffff` · cinza `#f4f4f8` · tinta `#101019`
+- Acento: violeta `#6e3aff`; gradiente rosa→violeta→azul reservado a destaques
+- Seções escuras: `#0b0b13` com verde `#3ddc97`
+- Agentes: Sofia violeta · Rafael verde · Luna azul · Iris âmbar · Vera rosa
+- `prefers-reduced-motion` respeitado em todas as animações

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sofia · Agente de Triagem — Harpiö Mind</title>
+  <meta name="description" content="Sofia lê 500 currículos antes do café e devolve um top 20 com nota, evidência e red flags. Conheça a agente de triagem da Harpiö." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='15' fill='%23101019'/><text x='32' y='44' font-size='34' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%236e3aff'>H</text></svg>" />
+</head>
+<body data-page="agent" data-agent="sofia" data-sprite="../assets/img/personas.svg" style="--ac: var(--c-sofia)">
+
+<div class="pbar" id="pbar" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"><span class="toast__medal">🏅</span><div><b class="toast__title"></b><span class="toast__sub"></span></div></div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="../index.html" class="logo" aria-label="Harpiö"><span class="logo__mark"></span><span>harpiö</span></a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <div class="menu">
+        <button aria-haspopup="true">Plataforma <i class="caretico">▾</i></button>
+        <div class="menu__panel">
+          <a href="../plataforma.html#mind"><span class="menu__dot" style="background:var(--violet)">◆</span><span><b>Harpiö Mind</b><span>5 super agentes · 500+ skills</span></span></a>
+          <a href="../plataforma.html#flow"><span class="menu__dot" style="background:var(--blue)">▦</span><span><b>Harpiö Flow</b><span>o ATS nativo de agentes</span></span></a>
+          <a href="../plataforma.html#sense"><span class="menu__dot" style="background:var(--amber)">✦</span><span><b>Harpiö Sense</b><span>capacitação AI-firsting</span></span></a>
+        </div>
+      </div>
+      <div class="menu">
+        <button aria-haspopup="true">Agentes <i class="caretico">▾</i></button>
+        <div class="menu__panel">
+          <a href="index.html"><span class="menu__dot" style="background:var(--ink)">★</span><span><b>Conhecer o time</b><span>o esquadrão completo</span></span></a>
+          <a href="sofia.html"><span class="menu__face"><svg><use href="../assets/img/personas.svg#ps-sofia"/></svg></span><span><b>Sofia</b><span>Triagem</span></span></a>
+          <a href="rafael.html"><span class="menu__face"><svg><use href="../assets/img/personas.svg#ps-rafael"/></svg></span><span><b>Rafael</b><span>Sourcing</span></span></a>
+          <a href="luna.html"><span class="menu__face"><svg><use href="../assets/img/personas.svg#ps-luna"/></svg></span><span><b>Luna</b><span>Monitoring</span></span></a>
+          <a href="iris.html"><span class="menu__face"><svg><use href="../assets/img/personas.svg#ps-iris"/></svg></span><span><b>Iris</b><span>Analytics</span></span></a>
+          <a href="vera.html"><span class="menu__face"><svg><use href="../assets/img/personas.svg#ps-vera"/></svg></span><span><b>Vera</b><span>Comunicação</span></span></a>
+        </div>
+      </div>
+      <a href="../modelos.html">Modelos de entrega</a>
+      <a href="../tecnologia.html">Tecnologia</a>
+      <a href="../empresa.html">Empresa</a>
+    </nav>
+    <div class="header__cta">
+      <a href="#" class="btn btn--ghost">Entrar</a>
+      <a href="../index.html#cta" class="btn btn--violet">Ver demo ao vivo</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="ahero">
+  <div class="container ahero__grid">
+    <div>
+      <nav class="ahero__crumb reveal"><a href="../index.html">Início</a> / <a href="index.html">Agentes</a> / <b>Sofia</b></nav>
+      <span class="ahero__role reveal">Agente de Triagem · Harpiö Mind</span>
+      <h1 class="reveal d1">Sofia</h1>
+      <p class="lead reveal d1">Lê 500 currículos antes do café e devolve um top 20 com justificativa. <strong>Ela não decide quem entra — prepara a sua decisão.</strong></p>
+      <blockquote class="ahero__voice reveal d2">“Direta, organizada, sem floreio. Soa como uma analista sênior que respeita o seu tempo.”</blockquote>
+      <div class="ahero__meta reveal d3">
+        <span>autonomia padrão: <b>Sombra → Tutelado</b></span>
+        <span>skills: <b>12 tipadas</b></span>
+        <span>reflection: <b>obrigatório na triagem final</b></span>
+      </div>
+      <div class="ahero__actions reveal d3">
+        <a href="#demo-sofia" class="btn btn--violet">Ver Sofia trabalhando ↓</a>
+        <a href="../index.html#cta" class="btn btn--line">Testar numa vaga minha</a>
+      </div>
+    </div>
+    <div class="ahero__figure reveal d2">
+      <i class="ahero__ring" aria-hidden="true"></i>
+      <div class="ahero__disc"><svg><use href="../assets/img/personas.svg#ps-sofia"/></svg></div>
+      <span class="afloat af-1"><b>score_resume()</b> → 92 ✓</span>
+      <span class="afloat af-2"><b>bias_audit()</b> pool ✓</span>
+      <span class="afloat af-3">240 CVs → <b>12 min</b></span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="rowhead reveal">
+      <div><span class="eyebrow">As 5 habilidades da Sofia</span><h2>O fim do recrutador<br/>leitor de currículo.</h2></div>
+      <p>Cada habilidade é uma área de competência — exercida por skills atômicas, tipadas e auditáveis. Nada de “texto livre fazendo qualquer coisa”.</p>
+    </div>
+    <div class="habil" style="grid-template-columns:repeat(3,1fr)">
+      <article class="hab reveal"><span class="hab__n">01</span><h3>Avaliação multicritério ponderada</h3><p>Hard skills, experiência, cultural e formação — cada critério com peso, nota e evidência literal do CV. Não é nota chutada.</p><div class="hab__skills"><code>score_resume</code><code>match_jd</code><code>evidence_pull</code></div></article>
+      <article class="hab reveal d1"><span class="hab__n">02</span><h3>Triagem em lote</h3><p>240 CVs processados em paralelo, ~12 minutos, com progresso ao vivo e shortlist sugerida no top 20%.</p><div class="hab__skills"><code>parse_resume</code><code>batch_screen</code></div></article>
+      <article class="hab reveal d2"><span class="hab__n">03</span><h3>Calibragem com gestor</h3><p>Poucos casos-âncora (“2 sim, 2 talvez, 1 não — justifica”) e ela internaliza o critério da casa. Em 30 dias, pensa como você.</p><div class="hab__skills"><code>calibrate</code><code>few_shot_memory</code></div></article>
+      <article class="hab reveal"><span class="hab__n">04</span><h3>Red flags sem drama</h3><p>Gaps de carreira, job hopping, divergência de senioridade — sinalizados com evidência, nunca com sentença.</p><div class="hab__skills"><code>detect_red_flags</code></div></article>
+      <article class="hab reveal d1"><span class="hab__n">05</span><h3>Auditoria de viés embutida</h3><p>Compara a distribuição do pool inicial com a do top ranqueado e reporta desvios — sem expor dados individuais.</p><div class="hab__skills"><code>bias_audit</code></div></article>
+      <article class="hab reveal d2" style="background:var(--violet-soft);border-color:#e2d5ff"><span class="hab__n">∞</span><h3>E ela aprende com cada decisão sua</h3><p>Aprovou? Rejeitou? Corrigiu? Vira few-shot na próxima triagem de vaga similar. Sem retreinar modelo nenhum.</p><div class="hab__skills"><code>agent_feedback</code></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="demo-sofia">
+  <div class="container">
+    <div class="section__head reveal"><span class="eyebrow">Demo · triagem ao vivo</span><h2>Sofia operando o Flow.</h2><p>Vaga real do piloto de seguros: Analista de Sinistros. Veja a fila sendo pontuada — com nota, barra e red flag quando existe.</p></div>
+    <div class="demo reveal d1">
+      <div class="window demo__window">
+        <div class="window__bar"><span class="wdots"><i></i><i></i><i></i></span><span class="window__url">flow.harpio.com.br/vagas/analista-de-sinistros/triagem</span><span class="window__presence"><span class="presence"><svg><use href="../assets/img/personas.svg#ps-sofia"/></svg><i></i></span></span></div>
+        <div class="screen">
+          <div class="screen__head"><h5>Fila de triagem · Analista de Sinistros Sr</h5><span class="screen__prog" id="sofia-prog"><b>0</b> de 240 analisados</span></div>
+          <div class="screen__list"></div>
+          <div class="console" id="sofia-console" style="min-height:84px"><span class="console__title">runtime · sofia</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal"><span class="eyebrow">Skills atômicas</span><h2>O arsenal da Sofia.</h2></div>
+    <div class="skillsrow reveal d1">
+      <code>score_resume</code><code>match_jd</code><code>parse_resume</code><code>detect_red_flags</code><code>evidence_pull</code><code>bias_audit</code><code>batch_screen</code><code>calibrate</code><code>screen_video</code><code>parse_assessment</code><code>move_stage</code><code>request_approval</code>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container agentnav">
+    <a class="agentnav__link" href="index.html"><span class="agentnav__face"><svg><use href="../assets/img/personas.svg#ps-vera"/></svg></span><div><span>← voltar</span><b>O time completo</b></div></a>
+    <div class="agentnav__count">Equipe: <b><span data-teamcount>1</span>/5</b> conhecidos</div>
+    <a class="agentnav__link agentnav__link--next" href="rafael.html"><div><span>próximo agente →</span><b>Rafael · Sourcing</b></div><span class="agentnav__face"><svg><use href="../assets/img/personas.svg#ps-rafael"/></svg></span></a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand"><a href="../index.html" class="logo"><span class="logo__mark"></span><span>harpiö</span></a><p>A primeira HRtech AI-native do Brasil.</p></div>
+    <nav class="footer__col" aria-label="Plataforma"><h4>Plataforma</h4><a href="../plataforma.html#mind">Harpiö Mind</a><a href="../plataforma.html#flow">Harpiö Flow</a><a href="../plataforma.html#sense">Harpiö Sense</a><a href="../tecnologia.html">Tecnologia</a></nav>
+    <nav class="footer__col" aria-label="Agentes"><h4>Agentes</h4><a href="sofia.html">Sofia · Triagem</a><a href="rafael.html">Rafael · Sourcing</a><a href="luna.html">Luna · Monitoring</a><a href="iris.html">Iris · Analytics</a><a href="vera.html">Vera · Comunicação</a></nav>
+    <nav class="footer__col" aria-label="Negócio"><h4>Negócio</h4><a href="../modelos.html">Modelos de entrega</a><a href="../empresa.html#jornada">Nossa jornada</a><a href="../empresa.html#piloto">Piloto · Seguros</a></nav>
+    <nav class="footer__col" aria-label="Contato"><h4>Contato</h4><a href="mailto:contato@harpio.com.br">contato@harpio.com.br</a><a href="#">www.harpio.com.br</a></nav>
+  </div>
+  <div class="container footer__base"><span>© 2026 Harpiö · São Paulo, Brasil</span><span>LGPD · SOC 2 · ISO 27001 · GDPR</span></div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

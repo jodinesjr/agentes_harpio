@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iris · Agente de Analytics — Harpiö Mind</title>
+  <meta name="description" content="Iris transforma o caos do funil em decisão executiva: dashboards por pedido em português e briefing semanal para o board. Conheça a agente de analytics da Harpiö." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='15' fill='%23101019'/><text x='32' y='44' font-size='34' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%236e3aff'>H</text></svg>" />
+</head>
+<body data-page="agent" data-agent="iris" data-sprite="../assets/img/personas.svg" style="--ac: var(--c-iris)">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="gradline" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#eb4d8b"/><stop offset=".52" stop-color="#6e3aff"/><stop offset="1" stop-color="#2d9cdb"/></linearGradient>
+</defs></svg>
+
+<div class="pbar" id="pbar" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"><span class="toast__medal">🏅</span><div><b class="toast__title"></b><span class="toast__sub"></span></div></div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="../index.html" class="logo" aria-label="Harpiö"><span class="logo__mark"></span><span>harpiö</span></a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <div class="menu">
+        <button aria-haspopup="true">Plataforma <i class="caretico">▾</i></button>
+        <div class="menu__panel">
+          <a href="../plataforma.html#mind"><span class="menu__dot" style="background:var(--violet)">◆</span><span><b>Harpiö Mind</b><span>5 super agentes · 500+ skills</span></span></a>
+          <a href="../plataforma.html#flow"><span class="menu__dot" style="background:var(--blue)">▦</span><span><b>Harpiö Flow</b><span>o ATS nativo de agentes</span></span></a>
+          <a href="../plataforma.html#sense"><span class="menu__dot" style="background:var(--amber)">✦</span><span><b>Harpiö Sense</b><span>capacitação AI-firsting</span></span></a>
+        </div>
+      </div>
+      <div class="menu">
+        <button aria-haspopup="true">Agentes <i class="caretico">▾</i></button>
+        <div class="menu__panel">
+          <a href="index.html"><span class="menu__dot" style="background:var(--ink)">★</span><span><b>Conhecer o time</b><span>o esquadrão completo</span></span></a>
+          <a href="sofia.html"><span class="menu__face"><svg><use href="../assets/img/personas.svg#ps-sofia"/></svg></span><span><b>Sofia</b><span>Triagem</span></span></a>
+          <a href="rafael.html"><span class="menu__face"><svg><use href="../assets/img/personas.svg#ps-rafael"/></svg></span><span><b>Rafael</b><span>Sourcing</span></span></a>
+          <a href="luna.html"><span class="menu__face"><svg><use href="../assets/img/personas.svg#ps-luna"/></svg></span><span><b>Luna</b><span>Monitoring</span></span></a>
+          <a href="iris.html"><span class="menu__face"><svg><use href="../assets/img/personas.svg#ps-iris"/></svg></span><span><b>Iris</b><span>Analytics</span></span></a>
+          <a href="vera.html"><span class="menu__face"><svg><use href="../assets/img/personas.svg#ps-vera"/></svg></span><span><b>Vera</b><span>Comunicação</span></span></a>
+        </div>
+      </div>
+      <a href="../modelos.html">Modelos de entrega</a>
+      <a href="../tecnologia.html">Tecnologia</a>
+      <a href="../empresa.html">Empresa</a>
+    </nav>
+    <div class="header__cta">
+      <a href="#" class="btn btn--ghost">Entrar</a>
+      <a href="../index.html#cta" class="btn btn--violet">Ver demo ao vivo</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="ahero">
+  <div class="container ahero__grid">
+    <div>
+      <nav class="ahero__crumb reveal"><a href="../index.html">Início</a> / <a href="index.html">Agentes</a> / <b>Iris</b></nav>
+      <span class="ahero__role reveal">Agente de Analytics · Harpiö Mind</span>
+      <h1 class="reveal d1">Iris</h1>
+      <p class="lead reveal d1">A tradutora entre o pipeline operacional e a leitura estratégica do negócio. <strong>Do caos do funil à decisão executiva</strong> — a partir de um pedido em português.</p>
+      <blockquote class="ahero__voice reveal d2">“Executiva, didática. Soa como uma analista de BI sênior — explica o gráfico antes de mostrá-lo.”</blockquote>
+      <div class="ahero__meta reveal d3">
+        <span>autonomia padrão: <b>Tutelado p/ briefings</b></span>
+        <span>entrada: <b>linguagem natural PT-BR</b></span>
+        <span>saída: <b>narrativa, não gráfico cru</b></span>
+      </div>
+      <div class="ahero__actions reveal d3">
+        <a href="#demo-iris" class="btn btn--violet">Ver a Iris analisando ↓</a>
+        <a href="../index.html#cta" class="btn btn--line">Pedir um diagnóstico</a>
+      </div>
+    </div>
+    <div class="ahero__figure reveal d2">
+      <i class="ahero__ring" aria-hidden="true"></i>
+      <div class="ahero__disc"><svg><use href="../assets/img/personas.svg#ps-iris"/></svg></div>
+      <span class="afloat af-1"><b>build_dashboard()</b> em PT</span>
+      <span class="afloat af-2">briefing pro board: <b>30 min</b></span>
+      <span class="afloat af-3"><b>diagnose_funnel()</b> causa raiz</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="rowhead reveal">
+      <div><span class="eyebrow">As 5 habilidades da Iris</span><h2>O fim da decisão<br/>sem dados.</h2></div>
+      <p>A maioria dos líderes de RH admite decidir sem dados concretos. A Iris existe para que essa frase não se aplique à sua operação.</p>
+    </div>
+    <div class="habil" style="grid-template-columns:repeat(3,1fr)">
+      <article class="hab reveal"><span class="hab__n">01</span><h3>Dashboard por pedido em português</h3><p>“Iris, funil de seguros por etapa, últimas 8 semanas.” Pronto — sem fila de BI, sem SQL, sem espera.</p><div class="hab__skills"><code>build_dashboard</code><code>query_db</code></div></article>
+      <article class="hab reveal d1"><span class="hab__n">02</span><h3>Diagnóstico com causa raiz</h3><p>“Ciclo longo porque o gestor não revisa shortlist” — ela aponta o porquê, não só o número.</p><div class="hab__skills"><code>diagnose_funnel</code></div></article>
+      <article class="hab reveal d2"><span class="hab__n">03</span><h3>Briefing semanal de R&S</h3><p>Para CHRO e CEO, em narrativa: o que mudou, por quê, e o que fazer. O gestor revisa em 30 minutos — antes eram 3–4 horas.</p><div class="hab__skills"><code>weekly_brief</code><code>run_report</code></div></article>
+      <article class="hab reveal"><span class="hab__n">04</span><h3>Correlação ≠ causa</h3><p>Distingue coincidência de causa e antecipa a pergunta do C-level — antes de o C-level fazer.</p><div class="hab__skills"><code>causal_check</code></div></article>
+      <article class="hab reveal d1"><span class="hab__n">05</span><h3>Alerta de tendência</h3><p>“O pool dessa família de vaga caiu 30% no trimestre — e aqui está o porquê.” Antes de virar crise de contratação.</p><div class="hab__skills"><code>trend_alert</code><code>market_intelligence</code></div></article>
+      <article class="hab reveal d2" style="background:#fdf1e4;border-color:#f5dcbd"><span class="hab__n">∞</span><h3>Métricas que o board entende</h3><p>Time-to-hire, cost-per-hire, quality-of-hire 90/180 dias, aceite de oferta, candidate NPS, diversidade do funil.</p><div class="hab__skills"><code>kpis nativos do Flow</code></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="demo-iris">
+  <div class="container">
+    <div class="section__head reveal"><span class="eyebrow">Demo · análise ao vivo</span><h2>Iris desenhando o trimestre.</h2><p>O gráfico se desenha, e o briefing se escreve — como ela entrega toda segunda às 8h.</p></div>
+    <div class="demo reveal d1">
+      <div class="window demo__window">
+        <div class="window__bar"><span class="wdots"><i></i><i></i><i></i></span><span class="window__url">flow.harpio.com.br/relatorios/briefing-semanal</span><span class="window__presence"><span class="presence"><svg><use href="../assets/img/personas.svg#ps-iris"/></svg><i></i></span></span></div>
+        <div class="screen">
+          <div class="screen__head"><h5>Time-to-hire · últimas 12 semanas</h5><span class="screen__prog">pedido: <b>“o board quer o tri em 1 página”</b></span></div>
+          <div class="chart">
+            <svg viewBox="0 0 480 150">
+              <line x1="0" y1="130" x2="480" y2="130" stroke="#ececf2" stroke-width="1"/>
+              <line x1="0" y1="90" x2="480" y2="90" stroke="#ececf2" stroke-width="1"/>
+              <line x1="0" y1="50" x2="480" y2="50" stroke="#ececf2" stroke-width="1"/>
+              <polyline class="chart__line" points="10,28 55,34 100,30 145,44 190,52 235,64 280,72 325,86 370,96 415,108 460,118"/>
+              <circle class="chart__dot" cx="460" cy="118" r="5"/>
+              <text x="430" y="105" font-size="11" font-family="JetBrains Mono" fill="#0e9f6e" font-weight="700">11,8d</text>
+              <text x="12" y="20" font-size="11" font-family="JetBrains Mono" fill="#8e8ea3">30+d</text>
+            </svg>
+          </div>
+          <div class="brief"><b>iris.weekly_brief():</b> <span id="iris-brief"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal"><span class="eyebrow">Skills atômicas</span><h2>O arsenal da Iris.</h2></div>
+    <div class="skillsrow reveal d1">
+      <code>build_dashboard</code><code>run_report</code><code>weekly_brief</code><code>diagnose_funnel</code><code>trend_alert</code><code>causal_check</code><code>query_db</code><code>export_csv</code><code>market_intelligence</code><code>salary_benchmark</code><code>deep_research</code>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container agentnav">
+    <a class="agentnav__link" href="luna.html"><span class="agentnav__face"><svg><use href="../assets/img/personas.svg#ps-luna"/></svg></span><div><span>← anterior</span><b>Luna · Monitoring</b></div></a>
+    <div class="agentnav__count">Equipe: <b><span data-teamcount>1</span>/5</b> conhecidos</div>
+    <a class="agentnav__link agentnav__link--next" href="vera.html"><div><span>próximo agente →</span><b>Vera · Comunicação</b></div><span class="agentnav__face"><svg><use href="../assets/img/personas.svg#ps-vera"/></svg></span></a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand"><a href="../index.html" class="logo"><span class="logo__mark"></span><span>harpiö</span></a><p>A primeira HRtech AI-native do Brasil.</p></div>
+    <nav class="footer__col" aria-label="Plataforma"><h4>Plataforma</h4><a href="../plataforma.html#mind">Harpiö Mind</a><a href="../plataforma.html#flow">Harpiö Flow</a><a href="../plataforma.html#sense">Harpiö Sense</a><a href="../tecnologia.html">Tecnologia</a></nav>
+    <nav class="footer__col" aria-label="Agentes"><h4>Agentes</h4><a href="sofia.html">Sofia · Triagem</a><a href="rafael.html">Rafael · Sourcing</a><a href="luna.html">Luna · Monitoring</a><a href="iris.html">Iris · Analytics</a><a href="vera.html">Vera · Comunicação</a></nav>
+    <nav class="footer__col" aria-label="Negócio"><h4>Negócio</h4><a href="../modelos.html">Modelos de entrega</a><a href="../empresa.html#jornada">Nossa jornada</a><a href="../empresa.html#piloto">Piloto · Seguros</a></nav>
+    <nav class="footer__col" aria-label="Contato"><h4>Contato</h4><a href="mailto:contato@harpio.com.br">contato@harpio.com.br</a><a href="#">www.harpio.com.br</a></nav>
+  </div>
+  <div class="container footer__base"><span>© 2026 Harpiö · São Paulo, Brasil</span><span>LGPD · SOC 2 · ISO 27001 · GDPR</span></div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
