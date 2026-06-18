@@ -3,567 +3,377 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harpiö · A primeira HRtech AI-native do Brasil — Super Agentes de R&S</title>
-  <meta name="description" content="Inteligência de talentos para recrutadores ocupados. Cinco super agentes de IA operam seu funil de R&S 24/7 — software, copiloto ou piloto automático, você escolhe." />
+  <title>Harpiö · Contrate no modo fácil — Software, Agentes de IA e Hunters para R&S</title>
+  <meta name="description" content="Hunters especialistas e agentes de IA sob medida trabalham juntos, dentro de uma só plataforma, para preencher as vagas que mais importam. A infraestrutura de talento do R&S brasileiro." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='15' fill='%23101019'/><text x='32' y='44' font-size='34' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%236e3aff'>H</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='15' fill='%230b0b13'/><text x='32' y='44' font-size='34' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%236e3aff'>H</text></svg>" />
 </head>
-<body data-page="home" data-sprite="assets/img/personas.svg">
+<body data-page="home-v4" data-aud="empresas" data-sprite="assets/img/personas.svg">
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="gradline" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#eb4d8b"/><stop offset=".52" stop-color="#6e3aff"/><stop offset="1" stop-color="#2d9cdb"/>
-    </linearGradient>
-  </defs>
-</svg>
-
-<div class="pbar" id="pbar" aria-hidden="true"></div>
-
-<!-- conquista (toast) -->
-<div class="toast" id="toast" role="status" aria-live="polite">
-  <span class="toast__medal">🏅</span>
-  <div><b class="toast__title"></b><span class="toast__sub"></span></div>
-</div>
-
-<!-- trilha de navegação gamificada -->
-<nav class="rail" id="rail" aria-label="Progresso da página">
-  <a href="#inicio" data-sec class="is-active"><span>Início</span></a>
-  <a href="#problema" data-sec><span>O problema</span></a>
-  <a href="#plataforma" data-sec><span>A plataforma</span></a>
-  <a href="#time" data-sec><span>O time</span></a>
-  <a href="#widgets" data-sec><span>Funções ao vivo</span></a>
-  <a href="#tese" data-sec><span>A tese</span></a>
-  <a href="#modelos" data-sec><span>Modelos</span></a>
-  <a href="#autonomia" data-sec><span>Autonomia</span></a>
-  <a href="#resultados" data-sec><span>Resultados</span></a>
-  <span class="rail__score">0%</span>
-</nav>
-
-<header class="header" id="header">
-  <div class="container header__inner">
-    <a href="index.html" class="logo" aria-label="Harpiö"><span class="logo__mark"></span><span>harpiö</span></a>
-    <nav class="nav" id="nav" aria-label="Principal">
+<!-- ════════ NAV ════════ -->
+<header class="nav4" id="nav4">
+  <div class="wrap nav4__in">
+    <a href="index.html" class="nav4__logo"><span class="dotmark"></span>harpiö</a>
+    <div class="nav4__seg" aria-label="Público">
+      <a href="index.html" data-aud="empresas">Para empresas</a>
+      <a href="recrutadores.html" data-aud="hunters">Para hunters</a>
+    </div>
+    <nav class="nav4__links" id="nav4links" aria-label="Principal">
       <div class="menu">
-        <button aria-haspopup="true">Plataforma <i class="caretico">▾</i></button>
+        <button>Plataforma ▾</button>
         <div class="menu__panel">
-          <a href="plataforma.html#mind"><span class="menu__dot" style="background:var(--violet)">◆</span><span><b>Harpiö Mind</b><span>5 super agentes · 500+ skills</span></span></a>
+          <a href="plataforma.html#mind"><span class="menu__dot" style="background:var(--violet)">◆</span><span><b>Harpiö Mind</b><span>5 agentes de IA · 500+ skills</span></span></a>
           <a href="plataforma.html#flow"><span class="menu__dot" style="background:var(--blue)">▦</span><span><b>Harpiö Flow</b><span>o ATS nativo de agentes</span></span></a>
           <a href="plataforma.html#sense"><span class="menu__dot" style="background:var(--amber)">✦</span><span><b>Harpiö Sense</b><span>capacitação AI-firsting</span></span></a>
         </div>
       </div>
       <div class="menu">
-        <button aria-haspopup="true">Agentes <i class="caretico">▾</i></button>
+        <button>Agentes ▾</button>
         <div class="menu__panel">
-          <a href="agentes/index.html"><span class="menu__dot" style="background:var(--ink)">★</span><span><b>Conhecer o time</b><span>o esquadrão completo</span></span></a>
+          <a href="agentes/index.html"><span class="menu__dot" style="background:var(--ink)">★</span><span><b>O time completo</b><span>conheça os 5</span></span></a>
           <a href="agentes/sofia.html"><span class="menu__face"><svg><use href="assets/img/personas.svg#ps-sofia"/></svg></span><span><b>Sofia</b><span>Triagem</span></span></a>
           <a href="agentes/rafael.html"><span class="menu__face"><svg><use href="assets/img/personas.svg#ps-rafael"/></svg></span><span><b>Rafael</b><span>Sourcing</span></span></a>
-          <a href="agentes/luna.html"><span class="menu__face"><svg><use href="assets/img/personas.svg#ps-luna"/></svg></span><span><b>Luna</b><span>Monitoring</span></span></a>
-          <a href="agentes/iris.html"><span class="menu__face"><svg><use href="assets/img/personas.svg#ps-iris"/></svg></span><span><b>Iris</b><span>Analytics</span></span></a>
           <a href="agentes/vera.html"><span class="menu__face"><svg><use href="assets/img/personas.svg#ps-vera"/></svg></span><span><b>Vera</b><span>Comunicação</span></span></a>
         </div>
       </div>
-      <a href="modelos.html">Modelos de entrega</a>
-      <a href="tecnologia.html">Tecnologia</a>
-      <a href="empresa.html">Empresa</a>
+      <a href="especialidades.html">Especialidades</a>
+      <a href="modelos.html">Modelos</a>
+      <a href="empresa.html">Clientes</a>
+      <div class="nav4__act">
+        <a href="#" class="btn btn--line btn--sm">Entrar</a>
+        <a href="#cta" class="btn btn--violet btn--sm">Agendar demo</a>
+      </div>
     </nav>
-    <div class="header__cta">
-      <a href="#" class="btn btn--ghost">Entrar</a>
-      <a href="#cta" class="btn btn--violet">Ver demo ao vivo</a>
-    </div>
-    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger4" id="burger4" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <main>
 
 <!-- ════════ HERO ════════ -->
-<section class="hero" id="inicio">
-  <div class="container hero__grid">
+<section class="hero4 vstage">
+  <!-- canvas sintético (grafo de talento vivo) — sempre presente -->
+  <canvas class="vcanvas" id="talentgraph" aria-hidden="true"></canvas>
+  <!-- vídeo real opcional: solte assets/video/hero.mp4 e ele assume -->
+  <video class="vlayer" muted loop playsinline preload="none" poster="" aria-hidden="true">
+    <source src="assets/video/hero.mp4" type="video/mp4" />
+  </video>
+  <div class="vscrim vscrim--hero"></div>
+
+  <div class="hero4__in">
     <div>
-      <span class="eyebrow reveal">HRtech AI-native · Recrutamento &amp; Seleção</span>
-      <h1 class="reveal d1">Inteligência de talentos para <span class="grad-text">recrutadores ocupados.</span></h1>
-      <p class="hero__sub reveal d2">Sofia, Rafael, Luna, Iris e Vera — um time digital de R&S que tria, busca, monitora, analisa e comunica <strong>24/7, dentro do seu funil</strong>. Você segue como decisor. Eles devolvem suas horas.</p>
-      <div class="hero__actions reveal d3">
-        <a href="#cta" class="btn btn--violet btn--lg">Ver os agentes em uma vaga sua</a>
-        <a href="agentes/index.html" class="btn btn--line btn--lg">Conhecer o time</a>
+      <span class="hero4__pill up">Software <b>+</b> Agentes de IA <b>+</b> Hunters</span>
+      <h1 class="display balance up u1">Contrate no <span class="tint">modo fácil.</span></h1>
+      <p class="hero4__sub up u2">Hunters especialistas e agentes de IA sob medida trabalham juntos — dentro de uma só plataforma — para preencher as vagas que mais importam ao seu negócio.</p>
+      <div class="hero4__cta up u3">
+        <a href="#cta" class="btn btn--violet btn--xl">Agendar demo</a>
+        <a href="recrutadores.html" class="btn btn--line btn--xl">Sou hunter →</a>
       </div>
-      <ul class="hero__proof reveal d4">
-        <li><strong>340%</strong><span>ROI em 12 meses</span></li>
-        <li><strong>−67%</strong><span>time-to-hire</span></li>
-        <li><strong>48.000h</strong><span>devolvidas / ano</span></li>
-        <li><strong>&lt; 3 meses</strong><span>payback</span></li>
-      </ul>
+      <div class="hero4__trust up u4">
+        <span class="faces">
+          <span><svg><use href="assets/img/personas.svg#ps-sofia"/></svg></span>
+          <span><svg><use href="assets/img/personas.svg#ps-rafael"/></svg></span>
+          <span><svg><use href="assets/img/personas.svg#ps-vera"/></svg></span>
+          <span><svg><use href="assets/img/personas.svg#ps-iris"/></svg></span>
+        </span>
+        Rede de 1.000+ hunters especialistas · aprovada por líderes de RH
+      </div>
     </div>
 
-    <!-- Flow ao vivo: agentes operando a tela -->
-    <div class="reveal d2">
-      <div class="window" id="flow-stage" aria-label="Demonstração: agentes operando o Harpiö Flow">
-        <div class="window__bar">
-          <span class="wdots"><i></i><i></i><i></i></span>
-          <span class="window__url">flow.harpio.com.br/vagas/analista-de-sinistros</span>
-          <span class="window__presence">
-            <span class="presence"><svg><use href="assets/img/personas.svg#ps-sofia"/></svg><i></i></span>
-            <span class="presence"><svg><use href="assets/img/personas.svg#ps-vera"/></svg><i></i></span>
-            <span class="presence"><svg><use href="assets/img/personas.svg#ps-luna"/></svg><i></i></span>
-          </span>
-        </div>
-        <div class="window__body">
-          <aside class="wside">
-            <span class="wside__logo">⬡ harpiö flow</span>
-            <a class="is-on"><i></i> Vagas</a>
-            <a><i></i> Candidatos</a>
-            <a><i></i> Agenda</a>
-            <a><i></i> Relatórios</a>
-            <a><i></i> Agentes</a>
-            <span class="wside__foot">piloto · seguros<br/>tenant: seguradora-br</span>
-          </aside>
-          <div class="wmain">
-            <div class="wkpis">
-              <div class="wkpi"><b>240</b><span>candidatos</span></div>
-              <div class="wkpi"><b id="kpi-tth">12,4d</b><span>time-to-hire <em class="down">▼ 67%</em></span></div>
-              <div class="wkpi"><b>98,2%</b><span>SLA da vaga</span></div>
-            </div>
-            <div class="kanban">
-              <div class="kcol" id="kcol-triagem">
-                <div class="kcol__head">Triagem <b id="count-triagem">240</b></div>
-                <div class="kanban-drop">
-                  <div class="kcard" id="kcard-mover"><b>M. Tavares</b><span>Analista de Sinistros Sr</span><i class="kscore" id="kscore-mover">92</i></div>
-                  <div class="kcard"><b>J. Okamoto</b><span>Regulação · SUSEP ✓</span></div>
-                  <div class="kcard"><b>R. Ferraz</b><span>Analista de Crédito Pl</span></div>
-                </div>
-              </div>
-              <div class="kcol" id="kcol-entrevista">
-                <div class="kcol__head">Entrevista <b id="count-entrevista">12</b></div>
-                <div class="kanban-drop">
-                  <div class="kcard kghost" id="kghost" style="display:none"><b>&nbsp;</b><span>&nbsp;</span></div>
-                  <div class="kcard"><b>L. Souza</b><span>qui · 14h · gestor ✓</span></div>
-                  <div class="kcard"><b>A. Pereira</b><span>aguardando devolutiva</span></div>
-                </div>
-              </div>
-              <div class="kcol">
-                <div class="kcol__head">Oferta <b>3</b></div>
-                <div class="kanban-drop">
-                  <div class="kcard"><b>B. Lima</b><span>proposta · sempre humano</span></div>
-                </div>
-              </div>
-            </div>
+    <!-- painel vivo de produto -->
+    <div class="hero4__panel up u2">
+      <div class="glasscard">
+        <div class="glasscard__bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="glasscard__tab">harpiö flow · vaga: Analista de Sinistros Sr</span><span class="glasscard__live"><i></i>ao vivo</span></div>
+        <div style="padding:16px 16px 18px">
+          <div style="display:flex;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:13px;padding:11px 13px;box-shadow:var(--sh-soft)">
+            <span class="menu__face" style="width:34px;height:40px;border-radius:9px;overflow:hidden;background:var(--surface)"><svg style="width:100%;height:125%"><use href="assets/img/personas.svg#ps-sofia"/></svg></span>
+            <div style="flex:1"><b style="font-size:.82rem">Sofia · triagem</b><div style="font-size:.66rem;color:var(--faint);font-family:var(--fm)">score_resume() · 240 currículos</div></div>
+            <span style="font-family:var(--fd);font-weight:700;color:var(--green)">92</span>
           </div>
-          <aside class="wrail">
-            <span class="wrail__title">Atividade dos agentes</span>
-            <div class="feed" id="flow-feed"></div>
-            <div class="console" id="flow-console"><span class="console__title">runtime · skills</span></div>
-          </aside>
+          <div style="margin-top:9px;display:grid;grid-template-columns:1fr 1fr;gap:9px">
+            <div style="background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 12px"><div style="font-size:.6rem;color:var(--faint);font-family:var(--fm)">TIME-TO-HIRE</div><div style="font-family:var(--fd);font-size:1.3rem">11,8<span style="font-size:.7rem;color:var(--green)"> ▼67%</span></div></div>
+            <div style="background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 12px"><div style="font-size:.6rem;color:var(--faint);font-family:var(--fm)">SHORTLIST</div><div style="font-family:var(--fd);font-size:1.3rem">20<span style="font-size:.7rem;color:var(--faint)"> /240</span></div></div>
+          </div>
+          <div style="margin-top:9px;display:flex;gap:8px;align-items:center;background:var(--ink-grad);border-radius:11px;padding:10px 12px;color:#fff">
+            <span class="menu__face" style="width:26px;height:30px;border-radius:7px;overflow:hidden"><svg style="width:100%;height:125%"><use href="assets/img/personas.svg#ps-vera"/></svg></span>
+            <div style="font-size:.7rem;flex:1"><b>Vera</b> agendou 3 entrevistas e enviou 17 devolutivas</div>
+            <span style="font-family:var(--fm);font-size:.56rem;color:var(--neon)">⏸ aprovação</span>
+          </div>
         </div>
-        <!-- cursores multiplayer dos agentes -->
-        <div class="cursor cursor--sofia" id="cur-sofia"><svg viewBox="0 0 16 16"><path d="M1 1 L15 6.5 L8.5 8.5 L6 15 Z"/></svg><span>Sofia · triagem</span></div>
-        <div class="cursor cursor--vera" id="cur-vera"><svg viewBox="0 0 16 16"><path d="M1 1 L15 6.5 L8.5 8.5 L6 15 Z"/></svg><span>Vera · comunicação</span></div>
-        <div class="cursor cursor--luna" id="cur-luna"><svg viewBox="0 0 16 16"><path d="M1 1 L15 6.5 L8.5 8.5 L6 15 Z"/></svg><span>Luna · monitoring</span></div>
-        <!-- alerta ambient -->
-        <div class="wtoast" id="flow-toast"><i></i><span><b>Luna:</b> shortlist parada na mesa do gestor há 5 dias — escalo?</span></div>
       </div>
     </div>
   </div>
+  <span class="vtag"><i></i>harpiö flow · captura ao vivo</span>
 </section>
 
-<div class="logos">
-  <div class="container logos__inner">
-    <span class="logos__label">Aprovado por líderes de RH de</span>
-    <span>Ambev</span><span>Nubank</span><span>iFood</span><span>Mercado Livre</span><span>Stone</span><span>XP Inc.</span>
-  </div>
-</div>
-
-<!-- ════════ O PROBLEMA ════════ -->
-<section class="section" id="problema">
-  <div class="container">
-    <div class="rowhead reveal">
-      <div>
-        <span class="eyebrow">O que está quebrado em R&S</span>
-        <h2>Profissionais caros fazendo<br/>trabalho operacional.</h2>
-      </div>
-      <p>ATSs legados resolveram a parte fácil: armazenar candidatos e gerar relatórios. A parte difícil continuou manual — hora por hora, e-mail por e-mail.</p>
-    </div>
-    <div class="grid-4">
-      <article class="pain reveal"><span class="pain__num">Dor 01</span><h3>O recrutador virou leitor de currículo</h3><p>Triagem manual, agendamento, follow-up e relatórios consomem a maior parte do dia de quem foi contratado para decidir.</p><span class="pain__stat">+50% do tempo em tarefas automatizáveis · SmartRecruiters 2025</span></article>
-      <article class="pain reveal d1"><span class="pain__num">Dor 02</span><h3>Decisão sem dados</h3><p>Contratação por feeling — e arrependimento meses depois, quando o profissional não entrega ou não se encaixa.</p><span class="pain__stat">maioria dos líderes de RH admite decidir sem dados concretos</span></article>
-      <article class="pain reveal d2"><span class="pain__num">Dor 03</span><h3>Pipeline cego entre etapas</h3><p>Candidatos param dias numa etapa, gestores deixam shortlists sem resposta — e ninguém percebe até virar problema oficial.</p><span class="pain__stat">o gargalo só aparece quando o estrago já foi feito</span></article>
-      <article class="pain reveal d3"><span class="pain__num">Dor 04</span><h3>Candidate experience como passivo</h3><p>Candidato sem resposta, devolutiva genérica. O custo não sai no relatório — sai no NPS de marca e na recusa de oferta.</p><span class="pain__stat">candidato mal recusado nunca volta — nem como cliente</span></article>
-    </div>
+<!-- ════════ STAT LINE ════════ -->
+<section class="wrap">
+  <div class="statline">
+    <div class="s up"><b class="tint"><span data-count="3">0</span>×</b><span>mais rápido para contratar</span></div>
+    <div class="s up u1"><b><span data-count="70">0</span>%</b><span>dos indicados viram entrevista</span></div>
+    <div class="s up u2"><b>−<span data-count="67">0</span>%</b><span>de time-to-hire</span></div>
+    <div class="s up u3"><b><span data-count="98">0</span>%</b><span>de satisfação dos gestores</span></div>
   </div>
 </section>
 
-<!-- ════════ A PLATAFORMA · 3 PILARES ════════ -->
-<section class="section section--alt" id="plataforma">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">A resposta Harpiö</span>
-      <h2>Três pilares. Um ecossistema<br/>de inteligência de talentos.</h2>
-      <p>Não é um ATS com chatbot. É uma plataforma reconstruída do zero para que agentes sejam usuários de primeira classe — com gente treinada para operá-los.</p>
+<!-- ════════ LOGOS ════════ -->
+<section class="logos4 wrap">
+  <p class="logos4__lab">Líderes de RH que constroem times com a Harpiö</p>
+  <div class="logos4__row">
+    <span>Ambev</span><span>Nubank</span><span>iFood</span><span>Mercado&nbsp;Livre</span><span>Stone</span><span>XP&nbsp;Inc.</span>
+  </div>
+</section>
+
+<!-- ════════ TRIO: Software · Agentes · Hunters ════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sechead up">
+      <span class="kicker">Uma só plataforma, três forças</span>
+      <h2 class="display--md">Um parceiro de contratação que entende<br/><span class="tint">exatamente o que você procura.</span></h2>
+      <p class="lead">A Harpiö junta o que o mercado sempre vendeu separado: o software, a inteligência artificial e a mão de obra especialista. Você escolhe quanto de cada um quer — e migra quando quiser.</p>
     </div>
-    <div class="grid-3">
-      <article class="pillar pillar--mind reveal">
-        <span class="pillar__tag">Harpiö Mind</span>
-        <h3>Agentes de IA para R&S</h3>
-        <p>O coração da plataforma: 5 super agentes especialistas com 60+ skills tipadas.</p>
-        <ul>
-          <li>Memória de longo prazo e episódica</li>
-          <li>Autonomia configurável por skill</li>
-          <li>Colaboração agente ↔ humano ↔ agente</li>
-          <li>Reflection antes de tudo que toca candidato</li>
-        </ul>
-        <a href="plataforma.html#mind" class="btn btn--line btn--sm">Explorar o Mind →</a>
-      </article>
-      <article class="pillar pillar--flow reveal d1">
-        <span class="pillar__tag">Harpiö Flow</span>
-        <h3>O ATS nativo de agentes</h3>
-        <p>Cada mudança no funil emite um evento — e os agentes escutam e reagem em 1–3s.</p>
-        <ul>
+    <div class="trio">
+      <article class="tcard4 tcard4--sw up">
+        <span class="tcard4__glow"></span>
+        <span class="tcard4__no">01 — o software</span>
+        <span class="tcard4__ico" style="background:var(--blue)">▦</span>
+        <h3>Harpiö Flow</h3>
+        <p>O ATS reconstruído do zero para agentes serem usuários de primeira classe — não um chatbot colado num sistema legado.</p>
+        <ul class="tcard4__list">
           <li>Pipelines com gatilhos inteligentes</li>
-          <li>Agendamento lendo agenda real</li>
-          <li>Entrevista IA: grava, transcreve, analisa</li>
+          <li>Cada ação é uma skill tipada e auditável</li>
           <li>50+ integrações nativas</li>
         </ul>
-        <a href="plataforma.html#flow" class="btn btn--line btn--sm">Explorar o Flow →</a>
+        <div class="tcard4__foot"><a href="plataforma.html#flow" class="tcard4__link">Conhecer o Flow →</a></div>
       </article>
-      <article class="pillar pillar--sense reveal d2">
-        <span class="pillar__tag">Harpiö Sense</span>
-        <h3>Capacitação AI-firsting</h3>
-        <p>Software AI-native sem time treinado é promessa parada na tela. O Sense resolve o gargalo humano.</p>
-        <ul>
-          <li>Trilhas práticas de R&S com IA</li>
-          <li>Prompts de referência mantidos pela Harpiö</li>
-          <li>Certificação por competência</li>
-          <li>2–3× mais valor extraído no 1º ano</li>
+      <article class="tcard4 tcard4--ag up u1">
+        <span class="tcard4__glow"></span>
+        <span class="tcard4__no">02 — a inteligência</span>
+        <span class="tcard4__ico" style="background:var(--violet)">◆</span>
+        <h3>Harpiö Mind</h3>
+        <p>Cinco agentes de IA especialistas — Sofia, Rafael, Luna, Iris e Vera — que triam, buscam, monitoram, analisam e comunicam 24/7.</p>
+        <ul class="tcard4__list">
+          <li>Memória própria e autonomia por skill</li>
+          <li>Aprendem com cada calibragem sua</li>
+          <li>Reflexão antes de tudo que toca o candidato</li>
         </ul>
-        <a href="plataforma.html#sense" class="btn btn--line btn--sm">Explorar o Sense →</a>
+        <div class="tcard4__foot"><a href="agentes/index.html" class="tcard4__link">Conhecer os agentes →</a></div>
+      </article>
+      <article class="tcard4 tcard4--hu up u2">
+        <span class="tcard4__glow"></span>
+        <span class="tcard4__no">03 — a mão de obra</span>
+        <span class="tcard4__ico" style="background:var(--pink)">◑</span>
+        <h3>Rede de Hunters</h3>
+        <p>Mais de mil recrutadores especialistas por vertical, prontos para entrar onde a máquina não vai: calibragem difícil, entrevista crítica, fechamento.</p>
+        <ul class="tcard4__list">
+          <li>Hunters vetados por setor e senioridade</li>
+          <li>Cada hora multiplicada pelos 5 agentes</li>
+          <li>Trabalho registrado, transferível, auditável</li>
+        </ul>
+        <div class="tcard4__foot"><a href="recrutadores.html" class="tcard4__link">Ver a rede de hunters →</a></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ════════ O TIME ════════ -->
-<section class="section" id="time" data-achieve="team|Time no radar|Você conheceu o esquadrão de super agentes.">
-  <div class="container">
-    <div class="rowhead reveal">
-      <div>
-        <span class="eyebrow">Harpiö Mind · o esquadrão</span>
-        <h2>Cinco especialistas.<br/>O ciclo inteiro de R&S.</h2>
-      </div>
-      <p>Cada agente tem persona, voz, memória própria e nível de autonomia. Clique para conhecer cada um — e complete o time.</p>
-    </div>
-    <div class="team">
-      <a class="tmember tmember--sofia reveal" href="agentes/sofia.html" data-member="sofia">
-        <span class="tmember__check">✓</span>
-        <div class="tmember__photo"><svg><use href="assets/img/personas.svg#ps-sofia"/></svg></div>
-        <div class="tmember__meta"><h3>Sofia</h3><span>Triagem</span><p>Lê 500 CVs antes do café. Nota com evidência, red flags sem drama.</p><b class="tmember__cta">Conhecer →</b></div>
-      </a>
-      <a class="tmember tmember--rafael reveal d1" href="agentes/rafael.html" data-member="rafael">
-        <span class="tmember__check">✓</span>
-        <div class="tmember__photo"><svg><use href="assets/img/personas.svg#ps-rafael"/></svg></div>
-        <div class="tmember__meta"><h3>Rafael</h3><span>Sourcing</span><p>Caça quem não se candidatou — boolean de sênior, abordagem sob medida.</p><b class="tmember__cta">Conhecer →</b></div>
-      </a>
-      <a class="tmember tmember--luna reveal d2" href="agentes/luna.html" data-member="luna">
-        <span class="tmember__check">✓</span>
-        <div class="tmember__photo"><svg><use href="assets/img/personas.svg#ps-luna"/></svg></div>
-        <div class="tmember__meta"><h3>Luna</h3><span>Monitoring</span><p>Vigia o pipeline 24/7 e só interrompe quando vale a pena.</p><b class="tmember__cta">Conhecer →</b></div>
-      </a>
-      <a class="tmember tmember--iris reveal d3" href="agentes/iris.html" data-member="iris">
-        <span class="tmember__check">✓</span>
-        <div class="tmember__photo"><svg><use href="assets/img/personas.svg#ps-iris"/></svg></div>
-        <div class="tmember__meta"><h3>Iris</h3><span>Analytics</span><p>Do caos do funil à decisão executiva — briefing pronto pro board.</p><b class="tmember__cta">Conhecer →</b></div>
-      </a>
-      <a class="tmember tmember--vera reveal d4" href="agentes/vera.html" data-member="vera">
-        <span class="tmember__check">✓</span>
-        <div class="tmember__photo"><svg><use href="assets/img/personas.svg#ps-vera"/></svg></div>
-        <div class="tmember__meta"><h3>Vera</h3><span>Comunicação</span><p>Nenhum candidato sem resposta — com crítico de empatia em cada envio.</p><b class="tmember__cta">Conhecer →</b></div>
-      </a>
-    </div>
-    <div class="teambar reveal">
-      <span>Seu progresso:</span>
-      <div class="teambar__track"><div class="teambar__fill"></div></div>
-      <b><span data-teamcount>0</span>/5 agentes conhecidos</b>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ WIDGETS · FUNÇÕES AO VIVO ════════ -->
-<section class="section section--alt" id="widgets">
-  <div class="container">
-    <div class="rowhead reveal">
-      <div>
-        <span class="eyebrow">Skills em execução</span>
-        <h2>O funil trabalha sozinho —<br/>função por função.</h2>
-      </div>
-      <p>Cada widget abaixo é uma skill real da plataforma, com nome, schema e permissão. É assim que trabalho vira software.</p>
-    </div>
-    <div class="widgets">
-      <article class="widget reveal" id="w-funnel">
-        <div class="widget__head"><h4>Funil vivo</h4><span class="fnchip">build_dashboard()</span></div>
-        <div class="funnel">
-          <div class="funnel__row"><span>Inscritos</span><div class="funnel__bar"><i data-w="100%"></i></div><b>240</b></div>
-          <div class="funnel__row"><span>Shortlist</span><div class="funnel__bar"><i data-w="42%"></i></div><b>48</b></div>
-          <div class="funnel__row"><span>Entrevistas</span><div class="funnel__bar"><i data-w="18%"></i></div><b>12</b></div>
-          <div class="funnel__row"><span>Ofertas</span><div class="funnel__bar"><i data-w="8%"></i></div><b>3</b></div>
+<!-- ════════ COMO FUNCIONA · scroll-scrub ════════ -->
+<section class="steps4" id="como-funciona">
+  <div class="steps4__scrollzone">
+    <div class="steps4__sticky vstage">
+      <canvas class="vcanvas" id="pipecanvas" aria-hidden="true"></canvas>
+      <video class="vlayer" data-scrub muted playsinline preload="none" aria-hidden="true">
+        <source src="assets/video/como-funciona.mp4" type="video/mp4" />
+      </video>
+      <div class="vscrim" style="background:linear-gradient(180deg,rgba(255,255,255,.4),rgba(255,255,255,.85))"></div>
+      <div class="steps4__grid">
+        <div>
+          <span class="kicker">Como funciona</span>
+          <h2 class="display--md" style="margin:14px 0 10px">Da vaga aberta<br/>ao contratado.</h2>
+          <p class="lead" style="max-width:38ch">Role a página e acompanhe um candidato avançar pelo funil — exatamente como acontece dentro do Flow, em tempo real.</p>
         </div>
-        <span class="widget__foot">Iris monta por pedido em português — sem BI na fila.</span>
-      </article>
-      <article class="widget reveal d1">
-        <div class="widget__head"><h4>Agenda inteligente</h4><span class="fnchip">find_slot()</span></div>
-        <div class="cal" id="w-cal">
-          <span>seg</span><span>ter</span><span>qua</span><span>qui</span><span>sex</span>
-          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-        <span class="widget__foot">Lê a agenda real do gestor e confirma com o candidato.</span>
-      </article>
-      <article class="widget reveal d2">
-        <div class="widget__head"><h4>Caixa da Vera</h4><span class="fnchip">send_whatsapp()</span></div>
-        <div class="inbox" id="w-inbox"></div>
-        <span class="widget__foot">Multicanal: e-mail, WhatsApp, LinkedIn, SMS — no tom da casa.</span>
-      </article>
-      <article class="widget reveal" id="w-gauge">
-        <div class="widget__head"><h4>Candidate NPS</h4><span class="fnchip">candidate_nps()</span></div>
-        <div class="gaugewrap">
-          <div class="gauge">
-            <svg viewBox="0 0 100 60"><path class="gauge__bg" d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke-width="9" stroke-linecap="round"/><path class="gauge__val" d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke-width="9" stroke-linecap="round"/></svg>
-            <b data-count="72">0</b>
+        <div class="steps4__rail">
+          <div class="step4" data-i="0">
+            <span class="n">Passo 01</span>
+            <h3>Defina</h3>
+            <p>Conte o que procura. A Iris transforma a conversa em job description e scorecard; nossos especialistas trazem inteligência de mercado desde o dia 1.</p>
           </div>
-          <p>Candidato bem recusado vira embaixador. <b>+18 vs benchmark</b> do setor.</p>
+          <div class="step4" data-i="1">
+            <span class="n">Passo 02</span>
+            <h3>Acesse</h3>
+            <p>Hunters especialistas e agentes de IA fazem aflorar candidatos de fit perfeito — interessados e prontos para entrevistar.</p>
+          </div>
+          <div class="step4" data-i="2">
+            <span class="n">Passo 03</span>
+            <h3>Contrate</h3>
+            <p>Fit cultural, excelência e velocidade incomparável. Você entrevista e decide — o julgamento final é sempre seu.</p>
+          </div>
         </div>
-        <span class="widget__foot">Medido em cada devolutiva enviada pela Vera.</span>
+      </div>
+      <span class="vtag"><i></i>simulação · funil em movimento</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ ESPECIALIDADES ════════ -->
+<section class="sec sec--pad-sm">
+  <div class="wrap">
+    <div class="sechead up">
+      <span class="kicker">Especialização</span>
+      <h2 class="display--md">Levamos especialização<br/>a sério.</h2>
+      <p class="lead">De líderes técnicos a operadores difíceis de achar, a Harpiö traz expertise específica para cada busca — com células verticais nascidas na nossa própria operação de hunting.</p>
+    </div>
+    <div class="spec">
+      <article class="speccard up" style="--ac:#6e3aff"><h4><i></i>Seguros</h4><p>Sinistros, regulação, cobrança, atendimento, subscrição. O vertical do nosso piloto.</p><b>+180 funções</b></article>
+      <article class="speccard up u1" style="--ac:#2d9cdb"><h4><i></i>Tech &amp; Engenharia</h4><p>Back-end, full-stack, dados, ML, DevOps, líderes técnicos.</p><b>+320 funções</b></article>
+      <article class="speccard up u2" style="--ac:#0e9f6e"><h4><i></i>Comercial &amp; GTM</h4><p>Executivo de vendas, SDR, CS, RevOps, head comercial.</p><b>+260 funções</b></article>
+      <article class="speccard up" style="--ac:#f2994a"><h4><i></i>Financeiro</h4><p>Crédito, FP&amp;A, controladoria, risco, contabilidade.</p><b>+140 funções</b></article>
+      <article class="speccard up u1" style="--ac:#eb4d8b"><h4><i></i>Saúde &amp; Varejo</h4><p>Operações clínicas, loja, supply, expansão regional.</p><b>+150 funções</b></article>
+      <article class="speccard up u2" style="--ac:#2a2a38"><h4><i></i>Indústria &amp; Ops</h4><p>Manufatura, logística, chão de fábrica, chief of staff.</p><b>+110 funções</b></article>
+    </div>
+    <div class="up" style="margin-top:26px"><a href="especialidades.html" class="btn btn--line">Ver todas as especialidades →</a></div>
+  </div>
+</section>
+
+<!-- ════════ MARKETPLACE 2 LADOS ════════ -->
+<section class="sec sec--pad-sm">
+  <div class="wrap">
+    <div class="sechead sechead--center up" style="margin-bottom:36px">
+      <span class="kicker" style="justify-content:center">Marketplace de talento</span>
+      <h2 class="display--md">Dos dois lados da mesa.</h2>
+    </div>
+    <div class="mkt">
+      <article class="mside mside--co up">
+        <span class="mside__big">empresas</span>
+        <span class="kicker">Para quem contrata</span>
+        <h3 style="margin-top:10px">Preencha as vagas que<br/>mais importam.</h3>
+        <p>Poste a vaga e receba candidatos de fit perfeito em dias — não em meses. Software, agentes ou hunters: você escolhe até onde a máquina vai.</p>
+        <ul>
+          <li>Garantia de reposição de 90 dias</li>
+          <li>Preço por sucesso, atrelado ao resultado</li>
+          <li>Estrategista de talento dedicado</li>
+        </ul>
+        <a href="#cta" class="btn btn--violet">Agendar demo</a>
       </article>
-      <article class="widget reveal d1">
-        <div class="widget__head"><h4>Sinais da Luna</h4><span class="fnchip">sla_watch()</span></div>
-        <div class="alerts" id="w-alerts"></div>
-        <span class="widget__foot">Threshold adaptativo: dispensou 5 alertas? Ela sobe a régua.</span>
+      <article class="mside mside--hu up u1">
+        <span class="mside__big">hunters</span>
+        <span class="kicker kicker--light">Para quem caça talento</span>
+        <h3 style="margin-top:10px">A forma mais rápida<br/>de fazer mais placements.</h3>
+        <p>Damos aos hunters os melhores clientes, agentes de IA e back-office para turbinar o negócio de vocês. Você foca no que gera receita.</p>
+        <ul>
+          <li>Acesso a clientes engajados e vetados</li>
+          <li>Agentes de IA que fazem o match perfeito</li>
+          <li>Admin no automático: ATS, e-mail, agenda</li>
+        </ul>
+        <a href="recrutadores.html" class="btn btn--neon">Entrar na rede →</a>
       </article>
-      <article class="widget reveal d2">
-        <div class="widget__head"><h4>Time-to-hire</h4><span class="fnchip">diagnose_funnel()</span></div>
-        <div class="tth"><b><span data-count="12">0</span>d</b><span>▼ de 30+ dias</span></div>
-        <div class="spark" id="w-spark">
-          <i style="--h:92%"></i><i style="--h:84%"></i><i style="--h:78%"></i><i style="--h:64%"></i><i style="--h:56%"></i><i style="--h:48%"></i><i style="--h:40%"></i><i style="--h:34%"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ TESE ════════ -->
+<section class="sec sec--ink vstage">
+  <div class="vscrim" style="background:radial-gradient(60% 80% at 80% 10%,rgba(110,58,255,.22),transparent 60%),radial-gradient(50% 60% at 10% 90%,rgba(45,156,219,.16),transparent 60%)"></div>
+  <div class="wrap thesis">
+    <div class="thesis__pre" style="display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center">
+      <div class="up">
+        <span class="kicker kicker--light">A tese</span>
+        <p class="thesis__q" style="margin-top:18px">O futuro do R&amp;S não é o software substituindo o humano. Nem o humano ignorando o software. É <em>os dois juntos</em> — com informação melhor.</p>
+        <p class="thesis__src">Para cada R$ gasto em software, R$ 6 são gastos em serviço. A Harpiö entra nas duas contas — e cobra pelo trabalho feito, não pelo software instalado.</p>
+      </div>
+      <div class="thesis__split up u1">
+        <div class="thesis__col thesis__col--i">
+          <b>Inteligência → máquina</b>
+          <p>Triagem, sourcing, agendamento, monitoramento e analytics: regras complexas, mas regras. Volume, paralelismo, memória perfeita.</p>
         </div>
-        <span class="widget__foot">A queda não vem de “IA decide rápido” — vem de pipeline sem espera.</span>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ A TESE ════════ -->
-<section class="section" id="tese">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">A tese · “Serviços: o Novo Software”</span>
-      <h2>Inteligência é da máquina.<br/>Julgamento é seu.</h2>
-      <p>Toda profissão se divide em trabalho de inteligência (regras complexas, mas regras) e trabalho de julgamento (experiência, instinto, responsabilidade). A Harpiö desenha essa fronteira com precisão.</p>
-    </div>
-    <div class="tese reveal d1">
-      <div class="tese__col tese__col--maq">
-        <span class="tese__tag">Inteligência → agentes</span>
-        <h3>O que a máquina executa melhor</h3>
-        <p>Volume, paralelismo, memória perfeita, zero fadiga.</p>
-        <ul class="tese__list">
-          <li>Triagem e ranqueamento de currículos <b>Sofia</b></li>
-          <li>Sourcing e boolean search <b>Rafael</b></li>
-          <li>Monitoramento do funil e SLAs <b>Luna</b></li>
-          <li>Dashboards e diagnóstico <b>Iris</b></li>
-          <li>Comunicação e agendamento <b>Vera</b></li>
-        </ul>
-      </div>
-      <div class="tese__col tese__col--hum">
-        <span class="tese__tag">Julgamento → humanos</span>
-        <h3>O que segue sendo — e deve seguir — seu</h3>
-        <p>Relação, contexto, gosto e responsabilidade final.</p>
-        <ul class="tese__list">
-          <li>Fit cultural e entrevista final <b>você</b></li>
-          <li>Calibragem do perfil com o gestor <b>você</b></li>
-          <li>Negociação e fechamento de oferta <b>você</b></li>
-          <li>Decisão de contratação <b>sempre você</b></li>
-        </ul>
+        <div class="thesis__col thesis__col--j">
+          <b>Julgamento → humano</b>
+          <p>Fit cultural, calibragem com o gestor, fechamento de oferta e decisão final. Experiência, instinto, responsabilidade — e relação.</p>
+        </div>
       </div>
     </div>
-    <div class="tese__quote reveal d2">
-      <p>“Uma empresa gasta com o ATS uma fração do que gasta com hunting e horas internas. A Harpiö entra na segunda conta: vendemos o resultado do R&S — e cobramos pelo trabalho feito, não pelo software instalado.”</p>
-      <span>Documento estratégico Harpiö · sobre a tese de “Serviços: o Novo Software” (Sequoia, 2026)</span>
+  </div>
+</section>
+
+<!-- ════════ MODELOS DE ENTREGA (rápido) ════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sechead up">
+      <span class="kicker">Modelos de entrega</span>
+      <h2 class="display--md">Você escolhe até onde<br/>a máquina vai.</h2>
+      <p class="lead">A única plataforma de R&S do Brasil que entrega os três modelos na mesma conta — com migração fluida entre eles.</p>
+    </div>
+    <div class="trio">
+      <article class="tcard4 up"><span class="tcard4__no">Modelo 01</span><h3 style="margin-top:8px">Software</h3><p>A plataforma e os 5 agentes, operados pelo seu time. Para quem quer o controle.</p><div class="tcard4__foot"><a href="modelos.html" class="tcard4__link" style="color:var(--violet)">Detalhar →</a></div></article>
+      <article class="tcard4 up u1" style="border-color:color-mix(in srgb,var(--violet) 45%,transparent)"><span class="tcard4__no" style="color:var(--violet)">Modelo 02 · mais adotado</span><h3 style="margin-top:8px">Copilot</h3><p>Agentes + seu RH + hunters Harpiö, juntos. Para times enxutos e vagas difíceis.</p><div class="tcard4__foot"><a href="modelos.html" class="tcard4__link" style="color:var(--violet)">Detalhar →</a></div></article>
+      <article class="tcard4 up u2" style="background:var(--dark);color:#fff;border-color:var(--dark)"><span class="tcard4__no" style="color:var(--neon)">Modelo 03 · a tese</span><h3 style="margin-top:8px;color:#fff">Autopilot</h3><p style="color:var(--dsoft)">Você compra o resultado: shortlist pronta, entrevista agendada, vaga fechada.</p><div class="tcard4__foot"><a href="modelos.html" class="tcard4__link" style="color:var(--neon)">Detalhar →</a></div></article>
     </div>
   </div>
 </section>
 
-<!-- ════════ MODELOS DE ENTREGA ════════ -->
-<section class="section section--alt" id="modelos">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">Software · Copilot · Autopilot</span>
-      <h2>Você escolhe até onde<br/>a máquina vai.</h2>
-      <p>A única plataforma de R&S do Brasil com os três modelos na mesma conta — e migração fluida entre eles.</p>
+<!-- ════════ CUSTOMERS ════════ -->
+<section class="sec sec--pad-sm">
+  <div class="wrap">
+    <div class="sechead up">
+      <span class="kicker">Resultados que falam por si</span>
+      <h2 class="display--md">Os melhores times de R&S<br/>se constroem com a Harpiö.</h2>
     </div>
-    <div class="plans">
-      <article class="plan reveal">
-        <span class="plan__tag">Modelo 1</span>
-        <h3>Software</h3>
-        <p class="plan__pitch">A plataforma e os 5 agentes, operados pelo seu time.</p>
-        <ul><li>Harpiö Flow completo</li><li>5 agentes + Builder</li><li>Onboarding + Sense</li></ul>
-        <div class="plan__meta"><span><b>Quem opera:</b> seu time de TA</span><span><b>Cobrança:</b> licença + volume de runs</span></div>
-        <a href="modelos.html" class="btn btn--line">Detalhar</a>
-      </article>
-      <article class="plan plan--hot reveal d1">
-        <span class="plan__tag">Modelo 2 · mais adotado</span>
-        <h3>Copilot</h3>
-        <p class="plan__pitch">Agentes + seu RH + hunters especialistas Harpiö.</p>
-        <ul><li>Tudo do Software</li><li>Hunters sêniores por vertical</li><li>Calibragem difícil com a gente</li></ul>
-        <div class="plan__meta"><span><b>Quem opera:</b> operação compartilhada</span><span><b>Cobrança:</b> assinatura + horas + outcome</span></div>
-        <a href="modelos.html" class="btn btn--violet">Detalhar</a>
-      </article>
-      <article class="plan plan--dark reveal d2">
-        <span class="plan__tag">Modelo 3 · a tese</span>
-        <h3>Autopilot</h3>
-        <p class="plan__pitch">Você compra o resultado: shortlist pronta, entrevista agendada, vaga fechada.</p>
-        <ul><li>Agentes fazem o ciclo</li><li>Humanos só no indispensável</li><li>Encerra na contratação</li></ul>
-        <div class="plan__meta"><span><b>Quem opera:</b> Harpiö, ponta a ponta</span><span><b>Cobrança:</b> por contratação ou desbloqueio</span></div>
-        <a href="modelos.html" class="btn btn--white">Detalhar</a>
-      </article>
-    </div>
-    <p class="plans__note reveal">↔ Modelo de entrega é atributo do produto, não contrato separado. <a href="modelos.html" style="color:var(--violet);font-weight:600">Comparar os três modelos →</a></p>
-  </div>
-</section>
-
-<!-- ════════ ESCADA DE AUTONOMIA (gamificada) ════════ -->
-<section class="section" id="autonomia" data-achieve="ladder|Escada dominada|Confiança se ganha por execução — nível a nível.">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">A escada de autonomia</span>
-      <h2>Quatro níveis. Destravados<br/>por execução, não por configuração.</h2>
-      <p>Nenhum agente nasce com as chaves. Cada nível se desbloqueia com critério objetivo de concordância com o seu time.</p>
-    </div>
-    <div class="levels">
-      <article class="level is-locked reveal">
-        <span class="level__lock">🔒</span>
-        <span class="level__badge">👁</span>
-        <span class="level__lvl">Nível 1</span>
-        <h3>Sombra</h3>
-        <p>O agente apenas observa e sugere. O time marca onde concorda ou discorda.</p>
-        <div class="level__xp"><i></i><span>desbloqueio: ponto de partida de todo agente</span></div>
-      </article>
-      <article class="level is-locked reveal d1">
-        <span class="level__lock">🔒</span>
-        <span class="level__badge">🤝</span>
-        <span class="level__lvl">Nível 2</span>
-        <h3>Copiloto</h3>
-        <p>Consultas rodam direto; toda ação externa passa pela sua aprovação.</p>
-        <div class="level__xp"><i></i><span>XP: concordância &gt; 80% por 2 semanas</span></div>
-      </article>
-      <article class="level is-locked reveal d2">
-        <span class="level__lock">🔒</span>
-        <span class="level__badge">🛡</span>
-        <span class="level__lvl">Nível 3</span>
-        <h3>Tutelado</h3>
-        <p>Ações reversíveis rodam direto. O que o candidato vê ainda pede aprovação.</p>
-        <div class="level__xp"><i></i><span>XP: aprovações &gt; 95% por 30 dias</span></div>
-      </article>
-      <article class="level is-locked reveal d3">
-        <span class="level__lock">🔒</span>
-        <span class="level__badge">🚀</span>
-        <span class="level__lvl">Nível 4</span>
-        <h3>Autônomo Total</h3>
-        <p>Tudo roda direto — exceto o irreversível: proposta e oferta formal são sempre humanas.</p>
-        <div class="level__xp"><i></i><span>XP: aprovações &gt; 97% por 30 dias + calibragem intensa</span></div>
-      </article>
-    </div>
-    <p class="levels__note reveal">⚙ <strong>O princípio:</strong> a escada é por skill, não por agente. A Sofia pode estar no Nível 4 para <code>score_resume</code> e no Nível 3 para <code>move_stage</code>.</p>
-  </div>
-</section>
-
-<!-- ════════ RESULTADOS + PILOTO ════════ -->
-<section class="section section--dark" id="resultados">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow eyebrow--dark">Impacto medido em campo</span>
-      <h2>Por que isso está funcionando.</h2>
-    </div>
-    <div class="numbers">
-      <div class="number reveal"><b><span data-count="340">0</span>%</b><span>ROI médio em 12 meses</span></div>
-      <div class="number reveal d1"><b>−67%</b><span>time-to-hire: de 30+ para &lt;10 dias</span></div>
-      <div class="number reveal d2"><b><span data-count="48000">0</span>h</b><span>operacionais economizadas / ano</span></div>
-      <div class="number reveal d3"><b>&lt;3m</b><span>payback médio do investimento</span></div>
-    </div>
-    <div class="pilot reveal">
-      <span class="pilot__badge">Piloto · Setor de Seguros</span>
-      <p>Uma das maiores seguradoras do Brasil opera o ciclo completo na Harpiö: <b>Copilot nas vagas executivas, Autopilot nas operacionais</b> (sinistros, cobrança, atendimento). Mês 4 de 6 — Sofia, Rafael e Vera em Tutelado; renovação em discussão estratégica.</p>
-      <a href="empresa.html#piloto" class="btn btn--white btn--sm">Ver o caso</a>
+    <div class="trio" style="margin-top:34px">
+      <figure class="tcard4 up" style="min-height:auto"><blockquote style="font-size:1.02rem;line-height:1.5;color:var(--ink-2)">“A Harpiö reduziu nosso time-to-hire de 45 para 12 dias. A triagem é absurdamente precisa — aprovamos 95% dos candidatos que a plataforma seleciona.”</blockquote><figcaption style="margin-top:16px;font-size:.84rem"><b>Camila Ferreira</b><br/><span style="color:var(--faint)">CHRO · iFood</span></figcaption></figure>
+      <figure class="tcard4 up u1" style="min-height:auto"><blockquote style="font-size:1.02rem;line-height:1.5;color:var(--ink-2)">“Vemos a Harpiö como uma extensão do nosso time de talento. Cada agente configurado para a nossa realidade — não para um template genérico.”</blockquote><figcaption style="margin-top:16px;font-size:.84rem"><b>Ricardo Lemos</b><br/><span style="color:var(--faint)">Head de TA · Nubank</span></figcaption></figure>
+      <figure class="tcard4 up u2" style="min-height:auto"><blockquote style="font-size:1.02rem;line-height:1.5;color:var(--ink-2)">“Nossa consultoria atende 30 clientes com 8 recrutadores. Antes era impossível. Cada hunter agora tem um exército de agentes com ele.”</blockquote><figcaption style="margin-top:16px;font-size:.84rem"><b>Marina Oliveira</b><br/><span style="color:var(--faint)">CEO · TalentBridge RH</span></figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- ════════ DEPOIMENTOS ════════ -->
-<section class="section">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">Quem já devolveu horas ao time</span>
-      <h2>Recrutadores outra vez —<br/>não leitores de currículo.</h2>
+<!-- ════════ ÍNDICE DE DENSIDADE DE TALENTO ════════ -->
+<section class="sec sec--ink">
+  <div class="wrap tdi">
+    <div class="up">
+      <span class="kicker kicker--light">Inteligência proprietária</span>
+      <h2 class="display--md" style="margin-top:16px">Índice Harpiö de<br/>Densidade de Talento.</h2>
+      <p class="lead">O talento virou o recurso mais escasso do mercado. Cruzamos milhões de sinais de contratação para mostrar quais empresas concentram os profissionais que o mercado mais disputa — não por quem parece bom no papel, mas por quem produz gente cobiçada.</p>
+      <a href="empresa.html" class="btn btn--neon" style="margin-top:24px">Ver a metodologia →</a>
     </div>
-    <div class="quotes">
-      <figure class="quote reveal"><blockquote>A Harpiö reduziu nosso time-to-hire de 45 para 12 dias. A triagem é absurdamente precisa — aprovamos 95% dos candidatos selecionados pela plataforma.</blockquote><figcaption><b>Camila Ferreira</b><span>CHRO · iFood</span></figcaption></figure>
-      <figure class="quote reveal d1"><blockquote>Os agentes do Mind são impressionantes. Cada um configurado para a nossa realidade — não para um template genérico. Isso faz toda a diferença.</blockquote><figcaption><b>Ricardo Lemos</b><span>Head de TA · Nubank</span></figcaption></figure>
-      <figure class="quote reveal d2"><blockquote>O Sense transformou como meu time vê IA. Não é mais medo — é superpoder. A trilha é prática e relevante para o dia a dia do recrutamento.</blockquote><figcaption><b>Amanda Pires</b><span>Diretora de RH · Ambev</span></figcaption></figure>
-      <figure class="quote reveal d3"><blockquote>Nossa consultoria atende 30 clientes com 8 recrutadores. Antes era impossível. Com a Harpiö, cada recrutador tem um exército de agentes com ele.</blockquote><figcaption><b>Marina Oliveira</b><span>CEO · TalentBridge RH</span></figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ FAQ ════════ -->
-<section class="section section--alt" id="faq">
-  <div class="container container--narrow">
-    <div class="section__head reveal"><span class="eyebrow">Perguntas frequentes</span><h2>O que todo head de TA pergunta primeiro.</h2></div>
-    <div class="faq">
-      <details class="faq__item reveal"><summary>Os agentes substituem o meu time?<span class="faq__x">+</span></summary><p>Não — multiplicam. Agentes assumem o trabalho de inteligência (triagem, sourcing, agendamento, comunicação, analytics). O julgamento — fit, oferta, decisão final — segue humano, por desenho de produto.</p></details>
-      <details class="faq__item reveal d1"><summary>E se o agente “sair fazendo” sozinho?<span class="faq__x">+</span></summary><p>Impossível por arquitetura: todo agente nasce em Sombra e sobe a escada com critérios objetivos. Ações irreversíveis (proposta, oferta) pedem aprovação humana sempre — em qualquer nível.</p></details>
-      <details class="faq__item reveal d2"><summary>Meus dados treinam a IA de vocês?<span class="faq__x">+</span></summary><p>Não. Zero retenção e zero treino com a sua base. AES-256, LGPD, SOC 2 Type II, ISO 27001, GDPR — e todo acesso a dado pessoal gera log auditável.</p></details>
-      <details class="faq__item reveal d3"><summary>Preciso trocar minhas ferramentas?<span class="faq__x">+</span></summary><p>Não. 50+ integrações nativas — LinkedIn, Gupy, SAP SuccessFactors, Workday, Greenhouse, Slack, WhatsApp, Teams, Gmail, Calendar, Outlook. Os agentes operam por dentro do seu ecossistema.</p></details>
-      <details class="faq__item reveal d4"><summary>Em quanto tempo vejo resultado?<span class="faq__x">+</span></summary><p>Semana 1: Sofia em Sombra numa vaga real, comparada com a triagem do seu time. Semanas 3–4: subida para Tutelado. Payback médio: menos de um trimestre.</p></details>
+    <div class="tdi__board up u1">
+      <div class="tdi__row"><span class="rk">01</span><span class="co">Nubank</span><span class="sc">98,4</span><span class="bar"><i data-w="98%"></i></span></div>
+      <div class="tdi__row"><span class="rk">02</span><span class="co">Mercado Livre</span><span class="sc">96,1</span><span class="bar"><i data-w="96%"></i></span></div>
+      <div class="tdi__row"><span class="rk">03</span><span class="co">iFood</span><span class="sc">94,7</span><span class="bar"><i data-w="94%"></i></span></div>
+      <div class="tdi__row"><span class="rk">04</span><span class="co">Stone</span><span class="sc">91,2</span><span class="bar"><i data-w="91%"></i></span></div>
+      <div class="tdi__row"><span class="rk">05</span><span class="co">XP Inc.</span><span class="sc">89,8</span><span class="bar"><i data-w="89%"></i></span></div>
     </div>
   </div>
 </section>
 
-<!-- ════════ CTA ════════ -->
-<section class="ctafinal" id="cta">
-  <div class="container">
-    <div class="ctafinal__box reveal">
-      <h2>Veja os cinco operando<br/>uma vaga sua.</h2>
-      <p>60 minutos, sem deck, sem slide. Os agentes ao vivo, uma vaga real, calibragem real — é a forma mais rápida de entender o que está sendo construído aqui.</p>
-      <div class="ctafinal__actions">
-        <a href="mailto:contato@harpio.com.br" class="btn btn--white btn--lg">Agendar demonstração ao vivo</a>
-        <a href="agentes/index.html" class="btn btn--line btn--lg" style="border-color:rgba(255,255,255,.3);color:#fff;background:transparent">Conhecer o time</a>
+<!-- ════════ CTA FINAL ════════ -->
+<section class="sec" id="cta">
+  <div class="wrap">
+    <div class="cta4 vstage">
+      <div class="vcanvas" style="background:radial-gradient(60% 80% at 30% 20%,rgba(235,77,139,.4),transparent 55%),radial-gradient(50% 70% at 75% 60%,rgba(110,58,255,.5),transparent 55%),var(--dark)"></div>
+      <video class="vlayer" muted loop playsinline preload="none" aria-hidden="true"><source src="assets/video/cta.mp4" type="video/mp4" /></video>
+      <div class="vscrim"></div>
+      <h2 class="display">Contrate no <span class="tint">modo fácil.</span></h2>
+      <p>60 minutos, sem deck. Os agentes e os hunters operando uma vaga sua, com calibragem real. É a forma mais rápida de entender o que a Harpiö constrói.</p>
+      <div class="cta4__act">
+        <a href="mailto:contato@harpio.com.br" class="btn btn--violet btn--xl">Agendar demo ao vivo</a>
+        <a href="recrutadores.html" class="btn btn--line btn--xl" style="border-color:rgba(255,255,255,.3);color:#fff;background:transparent">Sou hunter →</a>
       </div>
-      <div class="ctafinal__faces" aria-hidden="true">
-        <span><svg><use href="assets/img/personas.svg#ps-rafael"/></svg></span>
-        <span><svg><use href="assets/img/personas.svg#ps-luna"/></svg></span>
-        <span><svg><use href="assets/img/personas.svg#ps-sofia"/></svg></span>
-        <span><svg><use href="assets/img/personas.svg#ps-iris"/></svg></span>
-        <span><svg><use href="assets/img/personas.svg#ps-vera"/></svg></span>
-      </div>
-      <span class="ctafinal__hint">contato@harpio.com.br · São Paulo, Brasil</span>
     </div>
   </div>
 </section>
 </main>
 
 <footer class="footer">
-  <div class="container footer__grid">
-    <div class="footer__brand">
-      <a href="index.html" class="logo"><span class="logo__mark"></span><span>harpiö</span></a>
-      <p>A primeira HRtech AI-native do Brasil. Inteligência de talentos para recrutadores ocupados.</p>
-    </div>
-    <nav class="footer__col" aria-label="Plataforma"><h4>Plataforma</h4><a href="plataforma.html#mind">Harpiö Mind</a><a href="plataforma.html#flow">Harpiö Flow</a><a href="plataforma.html#sense">Harpiö Sense</a><a href="tecnologia.html">Tecnologia</a></nav>
-    <nav class="footer__col" aria-label="Agentes"><h4>Agentes</h4><a href="agentes/sofia.html">Sofia · Triagem</a><a href="agentes/rafael.html">Rafael · Sourcing</a><a href="agentes/luna.html">Luna · Monitoring</a><a href="agentes/iris.html">Iris · Analytics</a><a href="agentes/vera.html">Vera · Comunicação</a></nav>
-    <nav class="footer__col" aria-label="Negócio"><h4>Negócio</h4><a href="modelos.html">Modelos de entrega</a><a href="empresa.html#jornada">Nossa jornada</a><a href="empresa.html#piloto">Piloto · Seguros</a><a href="empresa.html#roadmap">Roadmap</a></nav>
-    <nav class="footer__col" aria-label="Contato"><h4>Contato</h4><a href="mailto:contato@harpio.com.br">contato@harpio.com.br</a><a href="#">www.harpio.com.br</a><a href="tecnologia.html#seguranca">Segurança &amp; LGPD</a></nav>
+  <div class="wrap footer__grid">
+    <div class="footer__brand"><a href="index.html" class="logo"><span class="logo__mark"></span><span>harpiö</span></a><p>A infraestrutura de talento do R&S brasileiro. Software, agentes de IA e hunters — numa só plataforma.</p></div>
+    <nav class="footer__col" aria-label="Produto"><h4>Produto</h4><a href="plataforma.html#flow">Harpiö Flow</a><a href="plataforma.html#mind">Harpiö Mind</a><a href="plataforma.html#sense">Harpiö Sense</a><a href="tecnologia.html">Tecnologia</a></nav>
+    <nav class="footer__col" aria-label="Marketplace"><h4>Marketplace</h4><a href="index.html">Para empresas</a><a href="recrutadores.html">Para hunters</a><a href="especialidades.html">Especialidades</a><a href="modelos.html">Modelos de entrega</a></nav>
+    <nav class="footer__col" aria-label="Empresa"><h4>Empresa</h4><a href="empresa.html#jornada">Nossa jornada</a><a href="empresa.html#piloto">Piloto · Seguros</a><a href="empresa.html">Clientes</a><a href="mailto:contato@harpio.com.br">Contato</a></nav>
+    <nav class="footer__col" aria-label="Agentes"><h4>Agentes</h4><a href="agentes/sofia.html">Sofia · Triagem</a><a href="agentes/rafael.html">Rafael · Sourcing</a><a href="agentes/luna.html">Luna · Monitoring</a><a href="agentes/vera.html">Vera · Comunicação</a></nav>
   </div>
-  <div class="container footer__base">
-    <span>© 2026 Harpiö · São Paulo, Brasil</span>
-    <span>LGPD · SOC 2 Type II · ISO 27001 · GDPR · AES-256</span>
-  </div>
+  <div class="wrap footer__base"><span>© 2026 Harpiö · São Paulo, Brasil</span><span>LGPD · SOC 2 Type II · ISO 27001 · GDPR · AES-256</span></div>
 </footer>
 
 <script src="assets/js/main.js"></script>

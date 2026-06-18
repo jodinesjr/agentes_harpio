@@ -447,3 +447,131 @@
     }, 0.4);
   });
 })();
+
+/* ════════════════════════════════════════════════════════════
+   v4 · motor de vídeo + canvas sintético + scroll-scrub
+═════════════════════════════════════════════════════════════ */
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $ = function(s,c){ return (c||document).querySelector(s); };
+  var $$ = function(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+
+  /* ── nav v4: sticky + burger ── */
+  var nav = $(".nav4");
+  if(nav){
+    var stick=function(){ nav.classList.toggle("is-stuck", window.scrollY>6); };
+    window.addEventListener("scroll", stick, {passive:true}); stick();
+    var b=$(".burger4"), links=$(".nav4__links");
+    if(b&&links){ b.addEventListener("click",function(){ links.classList.toggle("is-open"); }); }
+  }
+
+  /* ── reveal up ── */
+  var ups=$$(".up");
+  if("IntersectionObserver"in window && !reduce){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("is-in"); io.unobserve(e.target);} }); },{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+    ups.forEach(function(el){ io.observe(el); });
+  } else ups.forEach(function(el){ el.classList.add("is-in"); });
+
+  /* ── TDI bars on reveal ── */
+  var tdi=$(".tdi__board");
+  if(tdi){ var t=new IntersectionObserver(function(es,o){ if(es[0].isIntersecting){ $$(".bar i",tdi).forEach(function(i){ i.style.width=i.getAttribute("data-w"); }); o.disconnect(); } },{threshold:.4}); t.observe(tdi); }
+
+  /* ── VÍDEO REAL: tenta carregar; senão ativa canvas ── */
+  $$(".vlayer").forEach(function(v){
+    var ok=false;
+    v.addEventListener("loadeddata",function(){ ok=true; v.classList.add("is-ready"); var st=v.closest(".vstage"); if(st){ var c=st.querySelector(".vcanvas"); if(c) c.style.display="none"; } });
+    v.addEventListener("error", fall); 
+    // se em 1.2s não carregou (sem arquivo), mantém o canvas
+    setTimeout(function(){ if(!ok) fall(); },1200);
+    function fall(){ /* canvas permanece visível; vídeo fica oculto */ v.style.display="none"; }
+    if(!reduce){ var p=v.play&&v.play(); if(p&&p.catch) p.catch(function(){}); }
+  });
+
+  /* ════════ CANVAS SINTÉTICO · GRAFO DE TALENTO VIVO ════════ */
+  var heroCanvas=$("#talentgraph");
+  if(heroCanvas && !reduce){
+    var ctx=heroCanvas.getContext("2d"), W,H,DPR=Math.min(window.devicePixelRatio||1,2);
+    var AG=[ {c:"#6e3aff"},{c:"#0e9f6e"},{c:"#2d9cdb"},{c:"#f2994a"},{c:"#eb4d8b"} ];
+    var cand=[], agents=[], edges=[], scrollK=0, mx=0,my=0;
+    function size(){ var r=heroCanvas.getBoundingClientRect(); W=r.width; H=r.height; heroCanvas.width=W*DPR; heroCanvas.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0); build(); }
+    function build(){
+      cand=[]; var n=Math.min(72, Math.round(W*H/14000));
+      for(var i=0;i<n;i++) cand.push({ x:Math.random()*W, y:Math.random()*H, r:1.2+Math.random()*1.8, vy:.12+Math.random()*.28, vx:(Math.random()-.5)*.16, m:0 });
+      agents=AG.map(function(a,i){ return { x:W*(.18+.16*i), y:H*(.5+ (i%2?-.12:.12)), c:a.c, ph:Math.random()*6.28, t:Math.random()*200 }; });
+      edges=[];
+    }
+    function loop(){
+      ctx.clearRect(0,0,W,H);
+      // candidatos sobem (funil) — drift
+      var spd=1+scrollK*1.4;
+      for(var i=0;i<cand.length;i++){ var p=cand[i]; p.y-=p.vy*spd; p.x+=p.vx + (mx*.006*(p.r)); if(p.y<-6){ p.y=H+6; p.x=Math.random()*W; p.m=0; }
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.283);
+        if(p.m>0){ ctx.fillStyle="rgba(110,58,255,"+(.25+.5*p.m)+")"; ctx.shadowColor="rgba(110,58,255,.6)"; ctx.shadowBlur=8*p.m; } else { ctx.fillStyle="rgba(120,120,150,.28)"; ctx.shadowBlur=0; }
+        ctx.fill(); p.m*=.985;
+      }
+      ctx.shadowBlur=0;
+      // edges (matches) fade
+      for(var e=edges.length-1;e>=0;e--){ var ed=edges[e]; ed.life-=.018; if(ed.life<=0){ edges.splice(e,1); continue; }
+        ctx.strokeStyle="rgba("+ed.rgb+","+(ed.life*.5)+")"; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(ed.ax,ed.ay); ctx.lineTo(ed.bx,ed.by); ctx.stroke();
+      }
+      // agentes pulsam + escaneiam
+      agents.forEach(function(a){ a.ph+=.02; a.t-=1; a.y+=Math.sin(a.ph)*.18;
+        var pr=6+Math.sin(a.ph)*1.4;
+        // halo
+        var g=ctx.createRadialGradient(a.x,a.y,0,a.x,a.y,28); g.addColorStop(0, hexA(a.c,.22)); g.addColorStop(1, hexA(a.c,0));
+        ctx.fillStyle=g; ctx.beginPath(); ctx.arc(a.x,a.y,28,0,6.283); ctx.fill();
+        ctx.beginPath(); ctx.arc(a.x,a.y,pr,0,6.283); ctx.fillStyle=a.c; ctx.fill();
+        if(a.t<=0){ a.t=120+Math.random()*120; // escaneia: liga ao candidato mais próximo
+          var best=null,bd=1e9; for(var i=0;i<cand.length;i++){ var dx=cand[i].x-a.x,dy=cand[i].y-a.y,d=dx*dx+dy*dy; if(d<bd){bd=d;best=cand[i];} }
+          if(best && bd<40000){ best.m=1; edges.push({ax:a.x,ay:a.y,bx:best.x,by:best.y,life:1,rgb:hexRGB(a.c)}); }
+        }
+      });
+      requestAnimationFrame(loop);
+    }
+    function hexRGB(h){ var n=parseInt(h.slice(1),16); return (n>>16)+","+((n>>8)&255)+","+(n&255); }
+    function hexA(h,a){ return "rgba("+hexRGB(h)+","+a+")"; }
+    window.addEventListener("resize", size);
+    window.addEventListener("scroll", function(){ var r=heroCanvas.getBoundingClientRect(); scrollK=Math.max(0,Math.min(1, -r.top/(r.height||1))); },{passive:true});
+    heroCanvas.closest(".vstage").addEventListener("mousemove", function(ev){ var r=heroCanvas.getBoundingClientRect(); mx=(ev.clientX-r.left-W/2); my=(ev.clientY-r.top-H/2); });
+    size(); loop();
+  }
+
+  /* ════════ HOW IT WORKS · scroll-scrub canvas + steps ════════ */
+  var sec=$(".steps4");
+  if(sec){
+    var steps=$$(".step4",sec), zone=$(".steps4__scrollzone",sec), cv=$("#pipecanvas",sec);
+    var realVid=$(".steps4 .vlayer[data-scrub]");
+    function prog(){ if(!zone) return 0; var r=zone.getBoundingClientRect(); var vh=window.innerHeight; var total=r.height-vh; var p=(-r.top)/(total>0?total:1); return Math.max(0,Math.min(1,p)); }
+    var pctx = cv? cv.getContext("2d"):null, PW,PH,PD=Math.min(window.devicePixelRatio||1,2);
+    function psize(){ if(!cv) return; var r=cv.getBoundingClientRect(); PW=r.width;PH=r.height; cv.width=PW*PD; cv.height=PH*PD; pctx.setTransform(PD,0,0,PD,0,0); }
+    function drawPipe(p){
+      if(!pctx) return; pctx.clearRect(0,0,PW,PH);
+      var cy=PH/2, x0=PW*.08, x1=PW*.92, gates=[x0+(x1-x0)*.18, x0+(x1-x0)*.5, x0+(x1-x0)*.82];
+      // trilho
+      pctx.strokeStyle="rgba(16,16,25,.10)"; pctx.lineWidth=3; pctx.beginPath(); pctx.moveTo(x0,cy); pctx.lineTo(x1,cy); pctx.stroke();
+      // progresso
+      var px=x0+(x1-x0)*p;
+      var grad=pctx.createLinearGradient(x0,0,x1,0); grad.addColorStop(0,"#eb4d8b"); grad.addColorStop(.5,"#6e3aff"); grad.addColorStop(1,"#2d9cdb");
+      pctx.strokeStyle=grad; pctx.lineWidth=4; pctx.beginPath(); pctx.moveTo(x0,cy); pctx.lineTo(px,cy); pctx.stroke();
+      // gates
+      gates.forEach(function(gx,i){ var on=px>=gx-2; pctx.beginPath(); pctx.arc(gx,cy,on?13:9,0,6.283); pctx.fillStyle=on?["#eb4d8b","#6e3aff","#2d9cdb"][i]:"#d7d7e2"; pctx.fill(); pctx.fillStyle="#fff"; pctx.font="700 11px Inter"; pctx.textAlign="center"; pctx.textBaseline="middle"; if(on) pctx.fillText((i+1),gx,cy); });
+      // token candidato
+      pctx.beginPath(); pctx.arc(px,cy,7,0,6.283); pctx.fillStyle="#0b0b13"; pctx.fill(); pctx.fillStyle="#fff"; pctx.beginPath(); pctx.arc(px,cy-1,2.4,0,6.283); pctx.fill();
+    }
+    function onScroll(){
+      var p=prog();
+      if(realVid && realVid.readyState>=2 && realVid.duration){ realVid.currentTime=p*realVid.duration; }
+      drawPipe(p);
+      var idx = p<.34?0 : p<.7?1:2;
+      steps.forEach(function(s,i){ s.classList.toggle("is-on", i===idx); });
+    }
+    window.addEventListener("resize", psize);
+    window.addEventListener("scroll", onScroll, {passive:true});
+    psize(); if(steps[0]) steps[0].classList.add("is-on"); drawPipe(0); onScroll();
+  }
+
+  /* ── audience seg (Empresas/Hunters) marca ativo ── */
+  var seg=$(".nav4__seg");
+  if(seg){ var cur=document.body.getAttribute("data-aud"); $$("a",seg).forEach(function(a){ a.classList.toggle("is-on", a.getAttribute("data-aud")===cur); }); }
+})();

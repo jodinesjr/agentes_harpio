@@ -1,53 +1,60 @@
-# Harpiö · Site institucional — HRtech AI-native de R&S
+# Harpiö · A infraestrutura de talento do R&S brasileiro
 
-Site multi-página da **Harpiö**, a primeira HRtech AI-native do Brasil, com os cinco
-super agentes de Recrutamento & Seleção: **Sofia** (Triagem), **Rafael** (Sourcing),
-**Luna** (Monitoring), **Iris** (Analytics) e **Vera** (Comunicação).
+Site institucional da **Harpiö** — marketplace de talento que junta, numa só plataforma,
+**Software** (Harpiö Flow), **Agentes de IA** (Harpiö Mind) e uma **rede de Hunters**
+especialistas. Posicionamento de marketplace de duas pontas (empresas + recrutadores),
+inspirado na arquitetura de comunicação de referências como a Paraform, adaptado ao R&S
+brasileiro e à tese "Serviços: o Novo Software".
+
+## Posicionamento
+
+> **Contrate no modo fácil.** Hunters especialistas e agentes de IA sob medida trabalham
+> juntos — dentro de uma só plataforma — para preencher as vagas que mais importam.
+
+A tese: *o futuro do R&S não é o software substituindo o humano, nem o humano ignorando o
+software — é os dois juntos, com informação melhor.* Inteligência → máquina; julgamento → humano.
 
 ## Mapa do site
 
-| Página | Conteúdo |
+| Página | Papel |
 | --- | --- |
-| `index.html` | Home: hero com **agentes operando o Flow ao vivo** (cursores multiplayer, kanban, console de skills), dores, 3 pilares, time, widgets de funções, tese, modelos, escada gamificada, resultados + piloto, depoimentos, FAQ |
-| `agentes/index.html` | Hub do time: coleção gamificada (X/5 conhecidos) + diagrama de hand-off |
-| `agentes/sofia.html` … `vera.html` | Subpágina por agente: retrato, voz, 5 habilidades, **demo animada da tela** (triagem, boolean, sinais, gráfico+briefing, composer com crítico de empatia), skills atômicas, navegação próximo/anterior |
-| `plataforma.html` | Mind (3 camadas) · Flow (ATS legado vs Flow + integrações) · Sense (capacitação) |
-| `modelos.html` | Software · Copilot · Autopilot detalhados, tabela comparada, tese 1:6, billing justo |
-| `tecnologia.html` | Bolt-on vs AI-native, os 7 sistemas proprietários, níveis de segurança por skill, LGPD |
-| `empresa.html` | Jornada em 4 atos, manifesto, piloto do setor de seguros, roadmap 18 meses, convite |
+| `index.html` | **Home (Para empresas)** — hero "modo fácil", trio Software/Agentes/Hunters, como-funciona scroll-scrub, especialidades, marketplace 2 lados, tese, modelos, clientes, Índice de Densidade de Talento |
+| `recrutadores.html` | **Para hunters** — "a forma mais rápida de fazer mais placements": clientes, IA, back-office, painel de ganhos |
+| `especialidades.html` | Verticais por setor (seguros, tech, comercial, financeiro, saúde…) |
+| `plataforma.html` | Mind · Flow · Sense |
+| `modelos.html` | Software · Copilot · Autopilot |
+| `tecnologia.html` | 7 sistemas Agentic, AI-native vs bolt-on, segurança/LGPD |
+| `empresa.html` | Jornada em 4 atos, manifesto, piloto de seguros, roadmap |
+| `agentes/*.html` | Hub + subpágina por agente (Sofia, Rafael, Luna, Iris, Vera) com demo de tela |
 
-## Gamificação
+## Sistema de vídeo (autoplay + scroll-scrub)
 
-- Barra de progresso de leitura + trilha lateral com checkpoints (home)
-- **Conquistas** (toasts, uma única vez via localStorage)
-- **Coleção do time**: visitar cada agente marca ✓ nos cards (X/5; conquista ao completar)
-- Escada de autonomia com níveis que se **destravam** em sequência (cadeado → XP)
+O site funciona **lindo sem nenhum arquivo de vídeo**: cada slot tem um fallback sintético.
+Quando você soltar os MP4s em `assets/video/`, eles assumem automaticamente. Veja
+`assets/video/README.md`.
 
-## Motions de produto
+- **Hero** — `assets/video/hero.mp4` (autoplay/loop) sobre um canvas "grafo de talento vivo":
+  candidatos sobem o funil, os 5 agentes pulsam e desenham matches; reage à rolagem e ao mouse.
+- **Como funciona** — `assets/video/como-funciona.mp4` com **scroll-scrub** (a rolagem avança o
+  vídeo). Sem o arquivo, um pipeline em canvas avança Defina → Acesse → Contrate com a rolagem.
+- **CTAs** — `assets/video/cta.mp4` (autoplay/loop) sobre gradiente cinematográfico.
 
-- Cena em loop na home: Sofia pontua e move card no kanban, Vera agenda, Luna alerta, Iris atualiza KPI — com **cursores nomeados** e console de chamadas de função (`sofia.score_resume() → 92 ✓`)
-- Widgets vivos: funil, agenda preenchendo, inbox, gauge NPS, sinais, sparkline
-- Demos por agente: tabela de triagem pontuando, boolean digitando + resultados, feed de sinais, gráfico se desenhando + briefing digitado, composer com checklist de empatia
+Tudo respeita `prefers-reduced-motion`.
 
 ## Stack
 
-HTML/CSS/JS puros, sem build. Retratos corporativos dos agentes em **SVG vetorial
-original** (`assets/img/personas.svg`) — slots prontos para troca por fotografia/3D.
-Fontes: Space Grotesk, Inter, JetBrains Mono.
+HTML/CSS/JS puros, sem build. Retratos dos agentes em SVG vetorial original
+(`assets/img/personas.svg`). Fontes: Space Grotesk, Inter, JetBrains Mono.
 
 ## Como rodar
 
 ```bash
 python3 -m http.server 8000
-# abra http://localhost:8000
+# abra http://localhost:8000  (sirva via HTTP, não file://)
 ```
 
-> Sirva via HTTP (não `file://`) — os retratos usam `<use href="…svg#id">` externo.
+## Design
 
-## Design system
-
-- Base profissional: branco `#ffffff` · cinza `#f4f4f8` · tinta `#101019`
-- Acento: violeta `#6e3aff`; gradiente rosa→violeta→azul reservado a destaques
-- Seções escuras: `#0b0b13` com verde `#3ddc97`
-- Agentes: Sofia violeta · Rafael verde · Luna azul · Iris âmbar · Vera rosa
-- `prefers-reduced-motion` respeitado em todas as animações
+- Base clara, muito respiro, tipografia display grande (mega-plataforma) com pegada jovem.
+- Acento violeta `#6e3aff`; gradiente rosa→violeta→azul nos destaques; verde-neon `#3ddc97`
+  no lado dos hunters. Ink `#0b0b13` nas seções escuras.
